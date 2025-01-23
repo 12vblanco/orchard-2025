@@ -5,11 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "clean": "rm -rf node_modules dist && yarn install"
   },
   "dependencies": {
+    "@vue/cli": "^5.0.8",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
+    "vue": "^3.5.13",
+    "vue-loader": "^17.4.2",
     "vue-router": "^4.0.13",
     "vuex": "^4.0.2"
   },
@@ -20,8 +23,11 @@
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "babel-loader": "^9.2.1",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^9.32.0"
+    "eslint-plugin-vue": "^9.32.0",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4"
   },
   "eslintConfig": {
     "root": true,

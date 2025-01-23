@@ -1,46 +1,71 @@
 <template>
-    <nav class="NavbarWrapper">
-      <!-- Top Div: Logo -->
-      <div class="navbarTop">
-        <div class="logo-container">
-          <img src="../../assets/logo_wht.png" alt="Logo" class="logo" />
-          <p class="logo-sub">&#10020; Edinburgh &#10020;</p>
-        </div>
+  <nav class="NavbarWrapper">
+    <!-- Top Div: Logo -->
+    <div class="navbarTop">
+      <div class="logo-container">
+        <img src="../../assets/logo_wht.png" alt="Logo" class="logo" />
+        <p class="logo-sub">&#10020; Edinburgh &#10020;</p>
       </div>
-      <!-- Bottom Div: Navigation Menu -->
-      <div class="navbarBottom">
-        <ul class="navMenu">
-          <li><a href="#eat-drink">Eat & Drink</a></li>
-          <li><a @click="$emit('toggleBooking')">BOOKINGS</a></li>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#art">Art</a></li>
-          <li><a href="#policies">Policies</a></li>
-        </ul>
-      </div>
-      <BookATable 
-        :show="showBooking"
-        @close="$emit('toggleBooking')"
-      />
-    </nav>
-  </template>
-  
-  <script>
-  import BookATable from './BookATable.vue';
-  
-  export default {
-    name: "NavbarWrapper",
-    components: {
-      BookATable
-    },
-    props: {
-      showBooking: Boolean
+    </div>
+    <!-- Bottom Div: Navigation Menu -->
+    <div class="navbarBottom">
+      <ul class="navMenu">
+        <li><a href="javascript:void(0);" @click="scrollToSection('MenusSection')">Eat & Drink</a></li>
+        <li><a @click="$emit('toggleBooking')">BOOKINGS</a></li>
+        <li><a href="javascript:void(0);" @click="scrollToSection('AboutSection')">About Us</a></li>
+        <li><a href="javascript:void(0);" @click="scrollToSection('ExhibitionsSection')">Art</a></li>
+        <li><a href="javascript:void(0);" @click="togglePolicies">Policies</a></li>
+      </ul>
+    </div>
+    <BookATable 
+      :show="showBooking"
+      @close="$emit('toggleBooking')"
+    />
+    <PoliciesComp 
+      :show="showPolicies"
+      @close="togglePolicies"
+    />
+  </nav>
+</template>
+
+<script>
+import BookATable from './BookATable.vue';
+import PoliciesComp from './PoliciesComp.vue';
+
+export default {
+  name: "NavbarWrapper",
+  components: {
+    BookATable,
+    PoliciesComp
+  },
+  props: {
+    showBooking: Boolean,
+    scrollToSection: Function // Define scrollToSection as a prop
+  },
+  data() {
+    return {
+      showPolicies: false
+    };
+  },
+  methods: {
+    togglePolicies() {
+      this.showPolicies = !this.showPolicies;
     }
-  };
-  </script>
+  },
+  mounted() {
+  console.log('NavbarWrapper.vue - scrollToSection:', this.scrollToSection);
+}
+};
+
+
+
+</script>
   
-  <style scoped>
+  <style lang="scss" scoped>
+  @import '@/styles/styles.scss';
   /* Wrapper for Navbar */
-  .navbarWrapper {
+  .NavbarWrapper {
+    font-family: $font-family-primary;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -71,10 +96,11 @@
   }
 
   .logo-sub {
-    color: white;
+    color: $color-text-light;
     letter-spacing: 6px;
-    font-size: 13px;    
+    font-size: $font-small;    
     font-weight: 500;
+    margin: 0;
   }
   
   /* Bottom Div: Navigation Menu */
@@ -105,16 +131,16 @@
   
   .navMenu a {
     text-decoration: none;
-    color: #ffffff;
+    color: $color-text-light;
     font-weight: bold;
     text-transform: uppercase;
     transition: color 0.3s ease;
     font-weight: 500;
-    font-size: 15px;
+    font-size: $font-small;
     cursor: pointer;
   }
   
   .navMenu a:hover {
-    color: #f1c40f; }
+    color: $color-primary; }
   </style>
   

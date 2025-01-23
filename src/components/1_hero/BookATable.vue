@@ -50,14 +50,16 @@
   }
   </script>
   
-  <style scoped>
+  <style lang="scss" scoped>
+    @import '@/styles/styles.scss';
+
   .booking-container {
     position: absolute;
     top: 150px;
     left: 0;
     width: 340px;
     height: 580px;
-    background: rgba(0, 0, 0, 0.1);
+    background: $color-overlay-light;
     border-radius: 0 0 8px 0;
     padding: 1rem 20px 3rem 0;
     z-index: 100;
@@ -70,16 +72,16 @@
   }
   
   .close-text {
-    font-size: 14px;
-    color: white;
+    font-size: $font-small;
+    color: $color-text-light;
     cursor: pointer;
     margin-right: 6px;
-    margin-top: 4px;
+    margin-top: 14px;
   }
   
   .close-icon {
-    color: white;
-    font-size: 36px;
+    color: $color-text-light;
+    font-size: $font-xxl;
     margin-right: 12px;
     cursor: pointer;
   }
@@ -114,8 +116,8 @@
   }
   
   .loading-text {
-    color: #f1c40f;
-    font-size: 16px;
+    color: $color-primary;
+    font-size: $font-base;
     text-align: center;
     margin: 0;
   }
@@ -124,7 +126,7 @@
     width: 50px;
     height: 50px;
     border: 4px solid rgba(255, 255, 255, 0.1);
-    border-top: 4px solid #f1c40f;
+    border-top: 4px solid $color-primary;
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }

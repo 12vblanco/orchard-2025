@@ -1,0 +1,52 @@
+/* SCSS File for Standardized Variables */
+
+/* Colors */
+$color-primary: #f1c40f; /* Highlight color used for hover effects */
+$color-secondary: #8e7427; /* Border color for menus and subsections */
+$color-accent: #c81700; /*red accent colour for menu sections */
+$color-background-dark: #060303; /* Background color for dark sections */
+$color-background-black: #000000; /* Background color for dark sections */
+$color-text-light: #ffffff; /* White text color */
+
+$color-text-muted: rgba(255, 255, 255, 0.7); /* Muted white text */
+$color-overlay: rgba(0, 0, 0, 0.55); /* Overlay black with opacity */
+$color-overlay-light: rgba(0, 0, 0, 0.1); /* Light overlay */
+
+/* Fonts */
+$font-family-primary: 'Plus Jakarta Sans', sans-serif;
+$font-base: 16px;
+$font-small: 14px;
+$font-medium: 18px;
+$font-large: 22px;
+$font-xl: 28px;
+$font-xxl: 36px;
+
+/* Margins and Paddings */
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 2rem;
+$spacing-xlarge: 5rem;
+
+/* Border Radius */
+$border-radius: 8px;
+$border-radius-large: 12px;
+
+/* Box Shadows */
+$box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-heavy: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+/* Animation */
+$transition: 0.3s ease;
+
+
+#app {
+    font-family: $font-family-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+
+  
+  

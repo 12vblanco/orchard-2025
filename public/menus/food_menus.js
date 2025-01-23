@@ -144,55 +144,85 @@ export const menuItems = [
 
   // Sunday Roast Menu
   {
-    menu: "Sunday Roast",
+    menu: "Sunday Roasts",
     categories: [
       {
-        category: "Roasts",
+        category: "Roasts, Sunday 12-8.30pm",
         items: [
           {
-            name: "Roast Lamb",
-            description: "With roasted vegetables, gravy, and potatoes",
-            price: "£18.00",
-          },
-          {
-            name: "Roast Chicken",
-            description: "With seasonal vegetables and stuffing",
-            price: "£16.50",
-          },
-          {
-            name: "Vegetarian Roast",
+            name: "Sirloin of Scotch Beef or Lamb",
             description:
-              "Stuffed butternut squash with quinoa, lentils, and spinach",
-            price: "£15.00",
-            vegetarian: true,
+              "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy ",
+            price: "£25.95",
+          },
+          {
+            name: "Chicken Supreme",
+            description:
+              "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy ",
+            price: "£24.95",
+          },
+          {
+            name: "",
+            description:
+              "**please help us by pre ordering your roast dinner if possible. This will help to guarantee availability for all.",
+            price: "",
           },
         ],
       },
     ],
   },
 
-  // Kids Menu
+  // Children’s Menu
   {
     menu: "Kids Menu",
     categories: [
       {
-        category: "Main Courses",
+        category: "Main Meals",
         items: [
           {
-            name: "Mini Burger and Chips",
-            description: "Beef burger with fries",
-            price: "£7.00",
+            name: "Freshly made Soup of the Day",
+            description: "",
+            price: "£3",
           },
           {
-            name: "Chicken Tenders and Chips",
-            description: "With a choice of dip",
-            price: "£7.50",
+            name: "Garlic Bread",
+            description: "",
+            price: "£3",
           },
           {
-            name: "Pasta with Tomato Sauce",
-            description: "Vegan pasta with fresh tomato sauce",
+            name: "Fresh battered haddock with hand cut chips or salad",
+            description: "",
             price: "£6.50",
-            vegan: true,
+          },
+          {
+            name: "Sliced chicken breast (battered or pan-fried) with hand cut chips or salad",
+            description: "",
+            price: "£6.50",
+          },
+          {
+            name: "Penne pasta with cheesy sauce or sundried tomato pesto",
+            description: "",
+            price: "£6.50",
+          },
+        ],
+      },
+      {
+        category: "Includes",
+        items: [
+          {
+            name: "Main meal price includes an ice lolly",
+            description: "",
+            price: "",
+          },
+        ],
+      },
+      {
+        category: "Soft Drinks & Fruit Juices",
+        items: [
+          {
+            name: "A selection of soft drinks & fruit juices are available",
+            description: "",
+            price: "",
           },
         ],
       },
