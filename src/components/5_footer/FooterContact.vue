@@ -42,6 +42,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-right: .6rem;
   }
   
   .footer-row {

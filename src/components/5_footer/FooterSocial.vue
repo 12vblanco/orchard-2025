@@ -52,7 +52,7 @@
     flex-direction: column;
     align-items: center;
   
-    @media (max-width: 768px) {
+    @media (max-width: 781px) {
       margin-bottom: 0rem;
       flex-direction: column-reverse;
     }
@@ -62,7 +62,7 @@
     display: flex;
     padding: 1rem;
   
-    @media (max-width: 768px) {
+    @media (max-width: 781px) {
       padding: 2rem;
       padding-bottom: 0;
     }
@@ -91,7 +91,7 @@
         margin-bottom: 0.5rem;
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 781px) {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -114,7 +114,7 @@
       color: $color-primary; 
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 781px) {
       margin-bottom: 0 !important;
     }
     @media (max-width: 400px) {

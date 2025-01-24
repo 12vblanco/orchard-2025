@@ -123,7 +123,7 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 781px) {
   .footer-top {
     flex-direction: column;
     align-items: center;

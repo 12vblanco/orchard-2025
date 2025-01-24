@@ -79,7 +79,8 @@
     padding-left: 3rem;
     text-align: left;
     @media (max-width: 800px) {
-      margin-top: 2rem;;
+      margin-top: 2rem;
+      padding: 1rem;
     }
   }
   
@@ -108,6 +109,9 @@
     justify-content: center;
     align-items: center;
     padding-left: 2rem;
+    @media (max-width: 800px) {
+      padding: 1rem 2rem;
+    }
   }
   
   .image-section img {
