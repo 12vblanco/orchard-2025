@@ -1,8 +1,9 @@
 <template>
   <section id="MenusSection" class="MenusSection">
-          <h2 class="menus-title">MENUS</h2>
-      <div class="menus-options">
-        <div class="menus-options_top"><a
+    <h2 class="menus-title">MENUS</h2>
+    <div class="menus-options">
+      <div class="menus-options_top">
+        <a
           href="#food-menu"
           @click.prevent="setSelectedMenu('Food Menu')"
           :class="{ active: selectedMenu === 'Food Menu' }"
@@ -24,9 +25,11 @@
           href="#gluten-free"
           @click.prevent="setSelectedMenu('Gluten Free')"
           :class="{ active: selectedMenu === 'Gluten Free' }"
-          >Gluten Free</a></div>
-        
-        <div class="menu-options_bottom"><a
+          >Gluten Free</a>
+      </div>
+      
+      <div class="menus-options_bottom">
+        <a
           href="#wine"
           @click.prevent="setSelectedMenu('Wine')"
           :class="{ active: selectedMenu === 'Wine' }"
@@ -60,49 +63,48 @@
           href="#tea-coffee-sherry"
           @click.prevent="setSelectedMenu('Tea, Coffee & Sherry')"
           :class="{ active: selectedMenu === 'Tea, Coffee & Sherry' }"
-          >Tea Coffee & Sherry</a></div>
+          >Tea Coffee & Sherry</a>
       </div>
-  
-      <div class="menus-content">
+    </div>
+
+    <div class="menus-content">
       <div class="menus-content_square1"></div>
       <div class="menus-content_square2"></div>
       <div class="menus-content_square3"></div>
       <div class="menus-content_square4"></div>
-        <div v-if="selectedMenu" class="menus-text">
-          <!-- Dynamically render the content based on the selected menu -->
-          <div v-for="(item, index) in menuItems" :key="index">
-            <div v-if="item.menu === selectedMenu">
-              <h3 class="menu-type">{{ item.menu }}</h3>
-              <div v-for="(category, idx) in item.categories" :key="idx">
-                <h4 class="menu-category">{{ category.category }}</h4>
-                <ul>
-                  <li v-for="(menuItem, i) in category.items" :key="i">
-                    <div class="menu-name">{{ menuItem.name }} <span class="menu-price">{{ menuItem.price }}</span></div>
-                    <span class="menu-description">{{ menuItem.description }} </span><br />
-                  </li>
-                </ul>
-              </div>
+      <div v-if="selectedMenu" class="menus-text">
+        <!-- Dynamically render the content based on the selected menu -->
+        <div v-for="(item, index) in menuItems" :key="index">
+          <div v-if="item.menu === selectedMenu">
+            <h3 class="menu-type">{{ item.menu }}</h3>
+            <div v-for="(category, idx) in item.categories" :key="idx">
+              <h4 class="menu-category">{{ category.category }}</h4>
+              <ul>
+                <li v-for="(menuItem, i) in category.items" :key="i">
+                  <div class="menu-name">{{ menuItem.name }} <span class="menu-price">{{ menuItem.price }}</span></div>
+                  <span class="menu-description">{{ menuItem.description }} </span><br />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <p v-else class="menus-text">Please select a menu to view its content.</p>
       </div>
-    </section>
-  </template>
+      <p v-else class="menus-text">Please select a menu to view its content.</p>
+    </div>
+  </section>
+</template>
   
   <script>
-  // Import menu data
   import { menuItems } from "../../../public/menus/food_menus.js"; // Ensure the correct path
   
   export default {
     data() {
       return {
-        selectedMenu: 'Food Menu', // Default to 'Food Menu'
-        menuItems, // Importing the menuItems from foo_menu.js
+        selectedMenu: 'Food Menu', 
+        menuItems, 
       };
     },
     methods: {
-      // Set the selected menu when a link is clicked
       setSelectedMenu(menuName) {
         this.selectedMenu = menuName;
       },
@@ -113,124 +115,139 @@
   <style lang="scss" scoped>
     @import '@/styles/styles.scss';
     
-  /* Main Menus Section */
-  .MenusSection {
-    background-color: black;
-    color: $color-text-light;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 5rem 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    border-top: 2px solid $color-secondary;
-    @media (max-width: 940px) {
+/* Main Menus Section */
+.MenusSection {
+  background-color: black;
+  color: $color-text-light;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-top: 2px solid $color-secondary;
+
+  @media (max-width: 940px) {
     padding: 2rem;
-    }
-    @media (max-width: 640px) {
+  }
+  @media (max-width: 640px) {
     padding: 2rem 1rem;
-    }
   }
-  
-  /* Title Styling */
-  .menus-title {
-    font-size: $font-xxl;
-    letter-spacing: 8px;
-    font-weight: 500;
-    text-align: left;
-    text-transform: uppercase;
-    /* margin-bottom: 1rem; */
-  }
-  
-   .menus-options{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    @media (max-width: 800px) {
+}
+
+/* Title Styling */
+.menus-title {
+  font-size: $font-xxl;
+  letter-spacing: 8px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Menu Options */
+.menus-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 800px) {
     padding: 2rem 1rem 3rem 1rem;
-    }
-    @media (max-width: 640px) {
-    padding: 2rem 0rem;
-    }
+  }
+  @media (max-width: 640px) {
+    padding: 2rem 0;
+  }
 }
 
-.menus-options_top{
-margin-top: -2rem;
-margin-bottom: 1rem;
+.menus-options_top,
+.menus-options_bottom {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center;
+  gap: 0.5rem; /* Add spacing between items */
+  margin: 0.5rem 0; /* Add vertical spacing */
 }
 
-  .menus-options a {
-    text-decoration: none;
-    font-size: $font-base;
-    font-weight: 500;
-    color: $color-text-light;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 0 1.2rem;
-    @media (max-width: 940px) {
-      font-size: $font-small;
-    }
-    @media (max-width: 640px) {
-      font-size: 13px;
-    }
-  }
-  
-  .menus-options a:hover {
-    color: $color-primary;
-  }
-  
-  /* Highlight Active Link */
-  .menus-options a.active {
-    color: $color-primary;
-  }
-  
-  /* Subsection Styling */
-  .menus-content {
-    position: relative;
-    background: $color-background-dark;
-    border: 2px solid $color-secondary;
-    border-radius: $border-radius;
-    padding: 2rem;
-  }
+.menus-options a {
+  text-decoration: none;
+  font-size: $font-base;
+  font-weight: 500;
+  color: $color-text-light;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0.5rem; /* Reduce horizontal spacing */
 
-  .menus-content_square1{
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    border: 2px solid $color-secondary;
-    width: 30px;
-    height: 30px;
-    border-radius: 12px 0 0 0;
+  @media (max-width: 940px) {
+    font-size: $font-small;
   }
-  .menus-content_square2{
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    border: 2px solid $color-secondary;
-    width: 30px;
-    height: 30px;
-    border-radius:  0 12px 0 0;
+  @media (max-width: 640px) {
+    font-size: 13px;
+    margin: 0 0.3rem; /* Further reduce spacing */
   }
-  .menus-content_square3{
-    position: absolute;
-    bottom: -15px;
-    left: -15px;
-    border: 2px solid $color-secondary;
-    width: 30px;
-    height: 30px;
-    border-radius: 0 0 0 12px ;
+}
+
+.menus-options a:hover {
+  color: $color-primary;
+}
+
+/* Highlight Active Link */
+.menus-options a.active {
+  color: $color-primary;
+}
+
+/* Menu Divider */
+.menu-divider {
+  font-size: $font-small;
+  font-weight: 300;
+
+  @media (max-width: 420px) {
+    font-size: 10px;
   }
-  .menus-content_square4{
-    position: absolute;
-    bottom: -15px;
-    right: -15px;
-    border: 2px solid $color-secondary;
-    width: 30px;
-    height: 30px;
-    border-radius: 0 0 12px 0;
-  }
+}
+
+/* Menu Content */
+.menus-content {
+  position: relative;
+  background: $color-background-dark;
+  border: 2px solid $color-secondary;
+  border-radius: $border-radius;
+  padding: 2rem;
+}
+
+  .menus-content_square1,
+.menus-content_square2,
+.menus-content_square3,
+.menus-content_square4 {
+  position: absolute;
+  border: 2px solid $color-secondary;
+  width: 30px;
+  height: 30px;
+}
+
+.menus-content_square1 {
+  top: -15px;
+  left: -15px;
+  border-radius: 12px 0 0 0;
+}
+
+.menus-content_square2 {
+  top: -15px;
+  right: -15px;
+  border-radius: 0 12px 0 0;
+}
+
+.menus-content_square3 {
+  bottom: -15px;
+  left: -15px;
+  border-radius: 0 0 0 12px;
+}
+
+.menus-content_square4 {
+  bottom: -15px;
+  right: -15px;
+  border-radius: 0 0 12px 0;
+}
 
   .menus-text{
     text-align: center;
@@ -238,7 +255,11 @@ margin-bottom: 1rem;
   
   .menu-divider {
     font-size: $font-small;
-    font-weight: 400;
+    font-weight: 300;
+    @media (max-width: 420px){
+      font-size: 10px;
+  }
+
   }
   
   .MenusSection li {

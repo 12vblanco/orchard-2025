@@ -11,9 +11,9 @@
       />
       <div class="hero-text">
         <p class="hero-paragraph">
-          Welcome to The Orchard Bar. A casual, relaxed restaurant and bar
+          Welcome to <b>The Orchard Bar</b>. A casual, relaxed restaurant and bar
           located in Canonmills just a few minutes' walk from the botanic gardens.
-          We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. <a href="#menus" class="inline-menus">See our menus</a>
+          We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')"><b>See our menus</b></a>
         </p>
       </div>
     </div>

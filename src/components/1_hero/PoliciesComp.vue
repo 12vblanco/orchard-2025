@@ -10,8 +10,8 @@
             <h3>Children in The Orchard</h3>
             <p>
               Children and young persons are only
-permitted on the premises in the company of
-an adult. They are allowed in the side room or
+permitted on the premises <b>in the company of
+an adult</b>. They are allowed in the side room or
 snug area when consuming a meal between
 our opening hours and 10pm.
 They must be supervised at all times and
@@ -23,7 +23,7 @@ the toilets.
           <div class="text-block">
             <h3>Dogs in The Orchard</h3>
             <p>
-              Dogs are not permitted on these premises
+              Dogs are <b>not permitted</b> on these premises
 unless they are assistance dogs.
             </p>
           </div>

@@ -90,7 +90,7 @@
     right: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: 999;
     transition: right 0.3s ease;
   }
@@ -107,7 +107,9 @@
   }
   
   .menu-list li {
-    margin: 20px 0;
+    cursor: pointer;
+    width: fit-content;
+    margin: 20px auto;
   }
   
   .menu-list a {
