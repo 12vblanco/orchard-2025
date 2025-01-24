@@ -7,6 +7,7 @@
         <p class="logo-sub">&#10020; Edinburgh &#10020;</p>
       </div>
     </div>
+
     <!-- Bottom Div: Navigation Menu -->
     <div class="navbarBottom">
       <ul class="navMenu">
@@ -17,130 +18,140 @@
         <li><a href="javascript:void(0);" @click="togglePolicies">Policies</a></li>
       </ul>
     </div>
-    <BookATable 
-      :show="showBooking"
-      @close="$emit('toggleBooking')"
+
+    <!-- Burger Menu -->
+    <BurgerMenu
+      @toggleBooking="$emit('toggleBooking')"
+      @togglePolicies="togglePolicies"
+      @scrollToSection="scrollToSection"
     />
-    <PoliciesComp 
-      :show="showPolicies"
-      @close="togglePolicies"
-    />
+
+    <!-- Modals -->
+    <BookATable :show="showBooking" @close="$emit('toggleBooking')" />
+    <PoliciesComp :show="showPolicies" @close="togglePolicies" />
   </nav>
 </template>
 
 <script>
 import BookATable from './BookATable.vue';
+import BurgerMenu from './BurgerMenu.vue'; // Import the BurgerMenu component
 import PoliciesComp from './PoliciesComp.vue';
 
 export default {
   name: "NavbarWrapper",
   components: {
     BookATable,
-    PoliciesComp
+    PoliciesComp,
+    BurgerMenu,
   },
   props: {
     showBooking: Boolean,
-    scrollToSection: Function // Define scrollToSection as a prop
+    scrollToSection: Function,
   },
   data() {
     return {
-      showPolicies: false
+      showPolicies: false,
     };
   },
   methods: {
     togglePolicies() {
       this.showPolicies = !this.showPolicies;
-    }
+    },
   },
-  mounted() {
-  console.log('NavbarWrapper.vue - scrollToSection:', this.scrollToSection);
-}
 };
-
-
-
 </script>
-  
-  <style lang="scss" scoped>
-  @import '@/styles/styles.scss';
-  /* Wrapper for Navbar */
-  .NavbarWrapper {
-    font-family: $font-family-primary;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Top Div: Logo */
-  .navbarTop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-  }
-  
-.logo-container{
-    max-width: 340px;
-    padding-left: 1.8rem;
+
+<style lang="scss" scoped>
+@import '@/styles/styles.scss';
+
+.NavbarWrapper {
+  font-family: $font-family-primary;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-  .logo {
-    height: auto;
-    width: 280px;
-    margin-top: 1rem;
-    border-radius: 125px;
-  }
+.navbarTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
 
-  .logo-sub {
-    color: $color-text-light;
-    letter-spacing: 6px;
-    font-size: $font-small;    
-    font-weight: 500;
-    margin: 0;
+.logo-container {
+  max-width: 240px;
+  padding-left: 1.4rem;
+  @media (max-width: 420px){
+    width: 200px;
   }
-  
-  /* Bottom Div: Navigation Menu */
+}
+
+.logo {
+  height: auto;
+  width: 250px;
+  margin-top: 1rem;
+  border-radius: 125px;
+  @media (max-width: 420px){
+    width: 180px;
+    margin-top: 1.4rem;
+  }
+}
+
+.logo-sub {
+  color: $color-text-light;
+  letter-spacing: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.navbarBottom {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding: 0;
+}
+
+.navMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.navMenu li {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+  letter-spacing: 3px;
+}
+
+.navMenu a {
+  text-decoration: none;
+  color: $color-text-light;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: $font-small;
+  cursor: pointer;
+}
+
+.navMenu a:hover {
+  color: $color-primary;
+}
+
+@media (max-width: 759px) {
   .navbarBottom {
-    position: absolute;
-    top: 120px;
-    left: 0;
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    padding: 0;
+    display: none; /* Hide regular menu on small screens */
   }
-  
-  .navMenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 50px; 
-  }
-  
-  .navMenu li {
-    display: inline-block;
-    background-color: rgba(0,0,0,.1);
-    letter-spacing: 3px;
-  }
-  
-  .navMenu a {
-    text-decoration: none;
-    color: $color-text-light;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-    font-weight: 500;
-    font-size: $font-small;
-    cursor: pointer;
-  }
-  
-  .navMenu a:hover {
-    color: $color-primary; }
-  </style>
-  
+}
+</style>

@@ -4,6 +4,7 @@
     <MenuSection />
     <AboutSection />
     <ExhibitionSection />
+    <FooterSection/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import HeroSection from './components/1_hero/HeroSection.vue';
 import MenuSection from './components/2_menus/MenuSection.vue';
 import AboutSection from './components/3_about/AboutSection.vue';
 import ExhibitionSection from './components/4_exhibition/ExhibitionSection.vue';
+import FooterSection from './components/5_footer/FooterSection.vue';
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     MenuSection,
     AboutSection,
     ExhibitionSection,
+    FooterSection,
   },
   methods: {
     scrollToSection(sectionId) {

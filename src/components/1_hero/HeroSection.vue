@@ -86,10 +86,20 @@ export default {
 /* Hero Text */
 .hero-text {
   position: relative;
-  top: 2rem;
+  top: 12rem;
   z-index: 1; 
   max-width: 540px;
   text-align: justify;
+  @media (max-width: 420px){
+    max-width: 100%;
+    padding: 0 1.4rem 0 .3rem;
+    text-align: center;
+  }
+  @media (max-width: 620px){
+    max-width: 100%;
+    padding: 0 1.4rem 0 .3rem;
+    text-align: center;
+  }
 }
 
 .hero-paragraph {
@@ -98,6 +108,16 @@ export default {
   line-height: 1.5;
   letter-spacing: 1.2px;
   font-weight: 500;
+  @media (max-width: 420px){
+    font-size: $font-medium;
+    line-height: 1.5;
+    font-weight: 500;  
+    font-size: 17px}
+    @media (max-width: 620px){
+    font-size: $font-medium;
+    line-height: 1.5;
+    font-weight: 500;  
+    font-size: 17px}
 }
 
 .inline-menus {

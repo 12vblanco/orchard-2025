@@ -43,6 +43,9 @@ export default {
   flex-direction: column;
   gap: 2rem;
   border-top: 2px solid $color-secondary;
+  @media (max-width: 800px) {
+    padding: 2rem 1rem 3rem 1rem;
+    }
 }
 
 /* Title Styling */
@@ -53,6 +56,9 @@ export default {
   font-weight: 500;
   text-align: right;
   margin-bottom: 1rem;
+  @media (max-width: 800px) {
+      margin-bottom: 0rem;;
+    }
 }
 
 /* Container for image and text */
@@ -61,6 +67,9 @@ export default {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  @media (max-width: 800px) {
+      flex-direction: column-reverse;
+    }
 }
 
 /* Image Section */
@@ -81,7 +90,9 @@ export default {
 .text-section {
   flex: 1;
   text-align: center;
-  
+  @media (max-width: 800px) {
+      margin-top: 2rem;;
+    }
 }
 
 .text{

@@ -2,12 +2,9 @@
     <section id="ExhibitionsSection" class="ExhibitionsSection">
       <h2 class="exhibitions-title">Exhibitions</h2>
       <div class="exhibitions-container">
-
-        <!-- Image Section -->
         <div class="image-section">
           <img src="../../assets/images/new9.jpg" alt="Exhibition Image" />
         </div>
-        <!-- Contact Details Section -->
         <div class="text-section">
           <h3>About Our Exhibitions:</h3>
           <p>
@@ -35,13 +32,11 @@
   
   <script>
   export default {
-    // Add any relevant logic if needed
   };
   </script>
   
   <style lang="scss" scoped>
     @import '@/styles/styles.scss';
-  /* Main Exhibitions Section */
   .ExhibitionsSection {
     background-color: $color-background-black;
     color: $color-text-light;
@@ -53,6 +48,9 @@
     flex-direction: column;
     gap: 2rem;
     border-top: 2px solid $color-secondary;
+    @media (max-width: 800px) {
+    padding: 2rem 1rem 3rem 1rem;
+    }
   }
   
   /* Title Styling */
@@ -66,19 +64,23 @@
 
   }
   
-  /* Container for image and text */
   .exhibitions-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
   }
   
-  /* Text Section */
   .text-section {
     flex: 1;
     padding-left: 3rem;
     text-align: left;
+    @media (max-width: 800px) {
+      margin-top: 2rem;;
+    }
   }
   
   .text-section h3 {
@@ -100,7 +102,6 @@
     text-decoration: underline;
   }
   
-  /* Image Section */
   .image-section {
     flex: 1;
     display: flex;
@@ -114,5 +115,8 @@
     height: auto;
     border-radius: 8px;
   }
+
+  
+
   </style>
   

@@ -125,6 +125,12 @@
     flex-direction: column;
     gap: 2rem;
     border-top: 2px solid $color-secondary;
+    @media (max-width: 940px) {
+    padding: 2rem;
+    }
+    @media (max-width: 640px) {
+    padding: 2rem 1rem;
+    }
   }
   
   /* Title Styling */
@@ -142,6 +148,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (max-width: 800px) {
+    padding: 2rem 1rem 3rem 1rem;
+    }
+    @media (max-width: 640px) {
+    padding: 2rem 0rem;
+    }
 }
 
 .menus-options_top{
@@ -157,6 +169,12 @@ margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin: 0 1.2rem;
+    @media (max-width: 940px) {
+      font-size: $font-small;
+    }
+    @media (max-width: 640px) {
+      font-size: 13px;
+    }
   }
   
   .menus-options a:hover {
