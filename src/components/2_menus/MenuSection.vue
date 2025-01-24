@@ -89,7 +89,7 @@
           </div>
         </div>
       </div>
-      <p v-else class="menus-text">Please select a menu to view its content.</p>
+      <p v-else class="menus-text"></p>
     </div>
   </section>
 </template>
