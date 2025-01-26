@@ -43,7 +43,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: $font-family-primary;
-  border: 1px solid red;
+  overflow-x: hidden;
 }
 
 html, body {
