@@ -11,9 +11,9 @@
     <!-- Bottom Div: Navigation Menu -->
     <div class="navbarBottom">
       <ul class="navMenu">
-        <li><a href="javascript:void(0);" @click="scrollToSection('MenusSection')">Eat & Drink</a></li>
-        <li><a @click="$emit('toggleBooking')">BOOKINGS</a></li>
-        <li><a href="javascript:void(0);" @click="scrollToSection('AboutSection')">About Us</a></li>
+        <li><a href="javascript:void(0);" @click="scrollToSection('MenusSection')">Food & Drinks</a></li>
+        <li><a @click="$emit('toggleBooking')">Book A Table</a></li>
+        <li><a href="javascript:void(0);" @click="scrollToSection('AboutSection')">Contact</a></li>
         <li><a href="javascript:void(0);" @click="scrollToSection('ExhibitionsSection')">Art</a></li>
         <li><a href="javascript:void(0);" @click="togglePolicies">Policies</a></li>
       </ul>

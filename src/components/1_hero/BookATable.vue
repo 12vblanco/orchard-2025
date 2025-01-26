@@ -63,6 +63,9 @@
     border-radius: 0 0 8px 0;
     padding: 1rem 20px 3rem 0;
     z-index: 100;
+    @media (max-width: 800px) {
+      top: 100px !important;
+  }
   }
   
   .row-div {

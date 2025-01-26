@@ -10,9 +10,9 @@
       <!-- Overlay Menu -->
       <div class="overlay-menu" :class="{ open: isOpen }">
         <ul class="menu-list">
-          <li><a href="javascript:void(0);" @click="handleClick('MenusSection')">Eat & Drink</a></li>
-          <li><a @click="handleClick('Bookings')">BOOKINGS</a></li>
-          <li><a href="javascript:void(0);" @click="handleClick('AboutSection')">About Us</a></li>
+          <li><a href="javascript:void(0);" @click="handleClick('MenusSection')">Food & Drinks</a></li>
+          <li><a @click="handleClick('Bookings')">Book A Table</a></li>
+          <li><a href="javascript:void(0);" @click="handleClick('AboutSection')">Contact</a></li>
           <li><a href="javascript:void(0);" @click="handleClick('ExhibitionsSection')">Art</a></li>
           <li><a href="javascript:void(0);" @click="handleClick('Policies')">Policies</a></li>
         </ul>
