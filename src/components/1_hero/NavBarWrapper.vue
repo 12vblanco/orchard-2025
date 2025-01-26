@@ -66,17 +66,18 @@ export default {
 
 .NavbarWrapper {
   font-family: $font-family-primary;
-  width: 100vw;
+  width: 100%; /* Changed from 100vw */
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
 }
 
 .navbarTop {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%; /* Changed from 100vw */
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -85,8 +86,9 @@ export default {
 .logo-container {
   max-width: 240px;
   padding-left: 1.4rem;
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     width: 200px;
+    padding-left: 1rem; /* Reduced padding for mobile */
   }
 }
 
@@ -95,7 +97,7 @@ export default {
   width: 250px;
   margin-top: 1rem;
   border-radius: 125px;
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     width: 180px;
     margin-top: 1.4rem;
   }
@@ -126,6 +128,9 @@ export default {
   display: flex;
   justify-content: center;
   gap: 50px;
+  @media (max-width: 759px) {
+    gap: 20px; /* Reduced gap for mobile */
+  }
 }
 
 .navMenu li {
