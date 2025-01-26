@@ -57,7 +57,7 @@ export default {
   text-align: right;
   margin-bottom: 1rem;
   @media (max-width: 800px) {
-      margin-bottom: 0rem;;
+      margin-bottom: 0rem;
     }
 }
 
@@ -91,13 +91,16 @@ export default {
   flex: 1;
   text-align: center;
   @media (max-width: 800px) {
-      margin-top: 2rem;;
+      margin-top: 2rem;
     }
 }
 
 .text{
   text-align: left;
   margin-left: 5rem;
+  @media (max-width: 800px) {
+      margin: 1rem;
+    }
 }
 
 .text-section h3 {
