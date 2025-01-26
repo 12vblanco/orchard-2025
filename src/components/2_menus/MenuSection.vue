@@ -213,6 +213,7 @@
   border: 2px solid $color-secondary;
   border-radius: $border-radius;
   padding: 2rem;
+  overflow: visible;
 }
 
   .menus-content_square1,
