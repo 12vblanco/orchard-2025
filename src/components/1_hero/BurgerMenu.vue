@@ -52,7 +52,7 @@
   .burger-icon {
     position: fixed;
     top: 36px;
-    right: 42px;
+    right: 32px;
     width: 36px;
     cursor: pointer;
     z-index: 1000;
