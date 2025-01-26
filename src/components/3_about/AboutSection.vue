@@ -1,6 +1,6 @@
 <template>
   <section id="AboutSection" class="AboutSection">
-    <h2 class="about-title">About Us</h2>
+    <h2 class="about-title">Contact Us</h2>
     <div class="about-container">
       
       <!-- Contact Details Section -->

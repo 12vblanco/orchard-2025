@@ -50,7 +50,7 @@ unless they are assistance dogs.
     right: 0; 
     width: 420px;
     height: fit-content;
-    background: $color-overlay-light;
+    background: $color-overlay;
     border-radius: 0 8px 0 8px;
     padding: 1rem 2px 2rem 0;
     z-index: 9900;
@@ -60,6 +60,7 @@ unless they are assistance dogs.
     display: flex;
     align-items: center;
     justify-content: flex-end;
+height: 40px;
   }
   
   .close-text {
