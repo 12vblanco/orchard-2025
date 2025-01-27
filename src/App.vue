@@ -53,4 +53,9 @@ html, body {
   font-family: $font-family-primary;
   font-size: $font-base;
 }
+
+img{
+  pointer-events: none;
+}
+
 </style>
