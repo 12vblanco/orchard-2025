@@ -160,14 +160,7 @@
   }
 }
 
-.menus-options_top,
-.menus-options_bottom {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  justify-content: center;
-  gap: 0.5rem; /* Add spacing between items */
-  margin: 0.5rem 0; /* Add vertical spacing */
-}
+
 
 .menus-options a {
   text-decoration: none;
@@ -258,7 +251,7 @@
     font-size: $font-small;
     font-weight: 300;
     @media (max-width: 420px){
-      font-size: 10px;
+      display: none;
   }
 
   }
