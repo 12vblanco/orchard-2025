@@ -1,6 +1,5 @@
 <template>
-  <nav class="NavbarWrapper">
-    <!-- Top Div: Logo -->
+<nav class="NavbarWrapper" role="navigation" aria-label="Main navigation">   
     <div class="navbarTop">
       <div class="logo-container">
         <img src="../../assets/logo_wht.png" alt="Logo" class="logo" />
@@ -24,10 +23,10 @@
       @toggleBooking="$emit('toggleBooking')"
       @togglePolicies="togglePolicies"
       @scrollToSection="scrollToSection"
-    />
+      :scrollToSection="scrollToSection"    />
 
     <!-- Modals -->
-    <BookATable :show="showBooking" @close="$emit('toggleBooking')" />
+    <BookATable :show="showBooking" @close="$emit('toggleBooking')"/>
     <PoliciesComp :show="showPolicies" @close="togglePolicies" />
   </nav>
 </template>

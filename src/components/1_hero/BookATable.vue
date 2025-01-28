@@ -63,9 +63,15 @@
     border-radius: 0 0 8px 0;
     padding: 1rem 20px 3rem 0;
     z-index: 100;
-    @media (max-width: 800px) {
-      top: 100px !important;
   }
+
+  @media (max-width: 640px) {
+    .booking-container {
+      width: 100%;
+      height: 100%;
+      top: 100px;
+      padding: 0;
+    }
   }
   
   .row-div {
@@ -152,12 +158,4 @@
     100% { transform: rotate(360deg); }
   }
   
-  @media (max-width: 640px) {
-    .booking-container {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      border-radius: 0;
-    }
-  }
   </style>

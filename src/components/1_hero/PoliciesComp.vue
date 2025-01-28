@@ -10,14 +10,14 @@
             <h3>Children in The Orchard</h3>
             <p>
               Children and young persons are only
-permitted on the premises <b>in the company of
-an adult</b>. They are allowed in the side room or
-snug area when consuming a meal between
-our opening hours and 10pm.
-They must be supervised at all times and
-escorted through the main bar area when
-entering and leaving the premises or using
-the toilets.
+              permitted on the premises <b>in the company of
+              an adult</b>. They are allowed in the side room or
+              snug area when consuming a meal between
+              our opening hours and 10pm.
+              They must be supervised at all times and
+              escorted through the main bar area when
+              entering and leaving the premises or using
+              the toilets.
             </p>
           </div>
           <div class="text-block">
@@ -113,7 +113,7 @@ height: 40px;
     .policies-container {
       width: 100%;
       height: 100%;
-      top: 0;
+      top: 100px;
       border-radius: 0;
     }
   }

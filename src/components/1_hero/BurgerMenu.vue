@@ -10,41 +10,62 @@
       <!-- Overlay Menu -->
       <div class="overlay-menu" :class="{ open: isOpen }">
         <ul class="menu-list">
-          <li><a href="javascript:void(0);" @click="handleClick('MenusSection')">Food & Drinks</a></li>
-          <li><a @click="handleClick('Bookings')">Book A Table</a></li>
-          <li><a href="javascript:void(0);" @click="handleClick('AboutSection')">Contact</a></li>
-          <li><a href="javascript:void(0);" @click="handleClick('ExhibitionsSection')">Art</a></li>
-          <li><a href="javascript:void(0);" @click="handleClick('Policies')">Policies</a></li>
-        </ul>
+  <li><a href="javascript:void(0);" @click="handleClick('MenusSection')">Food & Drinks</a></li>
+  <li><a href="#" @click="handleBookingsClick">Bookings</a></li>
+  <li><a href="javascript:void(0);" @click="handleClick('AboutSection')">Contact</a></li>
+  <li><a href="javascript:void(0);" @click="handleClick('ExhibitionsSection')">Art</a></li>
+  <li><a href="#" @click="handlePoliciesClick">Policies</a></li>
+</ul>
       </div>
     </div>
   </template>
   
   <script>
-  export default {
-    name: "BurgerMenu",
-    data() {
-      return {
-        isOpen: false,
-      };
+export default {
+  name: "BurgerMenu",
+  
+  // Add props to receive scrollToSection
+  props: {
+    scrollToSection: {
+      type: Function,
+      required: true
+    }
+  },
+
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+
+  methods: {
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
     },
-    methods: {
-      toggleMenu() {
-        this.isOpen = !this.isOpen;
-      },
-      handleClick(section) {
-        this.toggleMenu();
-        if (section === "Bookings") {
-          this.$emit("toggleBooking");
-        } else if (section === "Policies") {
-          this.$emit("togglePolicies");
-        } else {
-          this.$emit("scrollToSection", section);
-        }
-      },
+
+    handlePoliciesClick() {
+      this.scrollToSection('HeroSection');
+      this.handleClick('Policies');
     },
-  };
-  </script>
+
+    handleBookingsClick() {
+      this.scrollToSection('HeroSection');
+      this.handleClick('Bookings');  
+    },
+
+    handleClick(section) {
+      this.toggleMenu();
+      if (section === "Bookings") {
+        this.$emit("toggleBooking");
+      } else if (section === "Policies") {
+        this.$emit("togglePolicies");
+      } else {
+        this.$emit("scrollToSection", section);
+      }
+    },
+  },
+};
+</script>
   
   <style lang="scss" scoped>
 @import '@/styles/styles.scss';
