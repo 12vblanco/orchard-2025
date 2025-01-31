@@ -43,6 +43,9 @@
     align-items: center;
     text-align: center;
     margin-right: .6rem;
+    @media (max-width: 640px){
+      margin-right: 0;
+    }
   }
   
   .footer-row {

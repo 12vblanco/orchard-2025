@@ -83,7 +83,7 @@ export default {
 }
 
 .logo-container {
-  max-width: 240px;
+  max-width: 274px;
   padding-left: 1.4rem;
   @media (max-width: 420px) {
     width: 200px;

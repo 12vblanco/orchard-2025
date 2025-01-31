@@ -110,7 +110,8 @@
     align-items: center;
     padding-left: 2rem;
     @media (max-width: 800px) {
-      padding: 1rem 2rem;
+      padding: 1rem 0;
+      width: 100VW;
     }
   }
   

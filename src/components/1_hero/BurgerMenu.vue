@@ -1,7 +1,10 @@
 <template>
     <div>
       <!-- Burger Icon -->
-      <div class="burger-icon" :class="{ open: isOpen }" @click="toggleMenu">
+      <div class="burger-icon" :class="{ 
+      open: isOpen,
+      'scrolled': isScrolled 
+    }" @click="toggleMenu">
         <span class="line line-1"></span>
         <span class="line line-2"></span>
         <span class="line line-3"></span>
@@ -35,10 +38,22 @@ export default {
   data() {
     return {
       isOpen: false,
+      isScrolled:false,
     };
   },
 
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  
   methods: {
+    handleScroll() {
+      this.isScrolled = window.scrollY > 100;
+    },    
     toggleMenu() {
       this.isOpen = !this.isOpen;
     },
@@ -77,7 +92,17 @@ export default {
     width: 36px;
     cursor: pointer;
     z-index: 1000;
+    width: 44px;
+    padding: 0px 4px;
+    border-radius: 18px;
     display: none; 
+  border-radius: 8px;  
+  transition: background-color 0.3s ease;  
+  
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.4);  
+  }
+
     @media (max-width: 420px){
       top: 36px;
   }
@@ -89,6 +114,7 @@ export default {
   
   .burger-icon.open .line-2 {
     opacity: 0;
+
   }
   
   .burger-icon.open .line-3 {

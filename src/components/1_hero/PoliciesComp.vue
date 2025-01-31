@@ -50,10 +50,10 @@ unless they are assistance dogs.
     right: 0; 
     width: 420px;
     height: fit-content;
-    background: $color-overlay;
+    background: $color-overlay-light;
     border-radius: 0 8px 0 8px;
     padding: 1rem 2px 2rem 0;
-    z-index: 9900;
+    z-index: 9;
   }
   
   .row-div {
@@ -115,6 +115,8 @@ height: 40px;
       height: 100%;
       top: 100px;
       border-radius: 0;
+      background: black;
+      border-radius: 20px;
     }
   }
   </style>
