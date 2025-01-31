@@ -1,5 +1,7 @@
 <template>
   <section id="HeroSection" class="HeroSection">
+    <!-- Dynamic Background -->
+    <DynamicBackground />
     <!-- Overlay -->
     <div class="overlay"></div>
     <!-- Hero Content -->
@@ -22,10 +24,12 @@
 
 <script>
 import NavbarWrapper from './NavBarWrapper.vue';
+import DynamicBackground from './DynamicBackground.vue'; // Import the new component
 
 export default {
   components: {
     NavbarWrapper,
+    DynamicBackground, // Register the new component
   },
   props: {
     scrollToSection: Function // Define scrollToSection as a prop
@@ -41,18 +45,14 @@ export default {
     }
   },
   mounted() {
-  console.log('HeroSection.vue - scrollToSection:', this.scrollToSection);
-}
+    console.log('HeroSection.vue - scrollToSection:', this.scrollToSection);
+  }
 };
-
 </script>
-
 
 <style lang="scss" scoped>
 /* Hero Section */
 .HeroSection {
-  background: url('../../assets/images/home4.jpg') no-repeat center center;
-  background-size: cover;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -132,5 +132,4 @@ export default {
 .iframe-visible .iframe-container {
   display: flex; /* Show iframe when activated */
 }
-
 </style>
