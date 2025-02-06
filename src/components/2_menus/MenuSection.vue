@@ -48,6 +48,12 @@
           >Whisky</a>
         <span class="menu-divider">&#10020;</span>
         <a
+          href="#whisky-detailed"
+          @click.prevent="setSelectedMenu('Whisky-Detailed')"
+          :class="{ active: selectedMenu === 'Whisky-Detailed' }"
+          >Whisky-Detailed</a>
+        <span class="menu-divider">&#10020;</span>
+        <a
           href="#rums"
           @click.prevent="setSelectedMenu('Rums')"
           :class="{ active: selectedMenu === 'Rums' }"
