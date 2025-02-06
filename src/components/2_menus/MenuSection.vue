@@ -166,8 +166,6 @@
   }
 }
 
-
-
 .menus-options a {
   text-decoration: none;
   font-size: $font-base;
@@ -264,8 +262,10 @@
   
   .MenusSection li {
     list-style: none;
-    margin-bottom: 1rem;
     line-height: 1.25;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
   }
   
   .menu-type {
