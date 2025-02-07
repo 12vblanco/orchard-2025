@@ -24,15 +24,15 @@
 
 <script>
 import NavbarWrapper from './NavBarWrapper.vue';
-import DynamicBackground from './DynamicBackground.vue'; // Import the new component
+import DynamicBackground from './DynamicBackground.vue'; 
 
 export default {
   components: {
     NavbarWrapper,
-    DynamicBackground, // Register the new component
+    DynamicBackground, 
   },
   props: {
-    scrollToSection: Function // Define scrollToSection as a prop
+    scrollToSection: Function 
   },
   data() {
     return {
