@@ -39,14 +39,22 @@ $box-shadow-heavy: 0 4px 8px rgba(0, 0, 0, 0.3);
 $transition: 0.3s ease;
 
 
-#app {
-    font-family: $font-family-primary;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-  
 
-  
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-primary;
+  overflow-x: hidden;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-family: $font-family-primary;
+  background: $color-background-dark;
+  font-size: $font-base;
+}
+
+img{
+  pointer-events: none;
+}

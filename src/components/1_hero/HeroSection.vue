@@ -7,24 +7,24 @@
     <!-- Hero Content -->
     <div class="hero-content">
       <NavbarWrapper 
-        @toggleBooking="toggleBooking"
-        :showBooking="showBooking"
+        :show-booking="showBooking"
+        @update:showBooking="showBooking = $event"
         :scrollToSection="scrollToSection" 
       />
       <div class="hero-text">
         <p class="hero-paragraph">
           Welcome to <b>The Orchard Bar</b>. A casual, relaxed restaurant and bar
           located in Canonmills just a few minutes' walk from the botanic gardens.
-          We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')"><b>See our menus</b></a>
-        </p>
+          We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. 
+          <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')" ><b>See our menus</b><br/><br/></a><b style="text-transform: uppercase;">Please note dogs are not allowed in the Orchard unless they are assistance dogs. </b></p>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import DynamicBackground from './DynamicBackground.vue';
 import NavbarWrapper from './NavBarWrapper.vue';
-import DynamicBackground from './DynamicBackground.vue'; 
 
 export default {
   components: {

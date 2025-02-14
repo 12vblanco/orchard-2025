@@ -60,7 +60,7 @@ unless they are assistance dogs.
     display: flex;
     align-items: center;
     justify-content: flex-end;
-height: 40px;
+    height: 40px;
   }
   
   .close-text {
@@ -87,7 +87,7 @@ height: 40px;
   }
   
   .text-block {
-    background: $color-overlay-light;
+    background: $color-overlay;
     padding: .5rem 0 .5rem 0;
     border-radius: 8px;
     text-align: left;

@@ -58,7 +58,7 @@
     top: 150px;
     left: 0;
     width: 340px;
-    height: 580px;
+    height: auto;
     background: $color-overlay-light;
     border-radius: 0 0 8px 0;
     padding: 1rem 20px 3rem 0;

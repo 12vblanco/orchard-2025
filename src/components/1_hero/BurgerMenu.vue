@@ -1,44 +1,46 @@
 <template>
-    <div>
-      <!-- Burger Icon -->
-      <div class="burger-icon" :class="{ 
+  <div>
+    <!-- Burger Icon -->
+    <div class="burger-icon" :class="{ 
       open: isOpen,
       'scrolled': isScrolled 
-    }" @click="toggleMenu">
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-      </div>
-  
-      <!-- Overlay Menu -->
-      <div class="overlay-menu" :class="{ open: isOpen }">
-        <ul class="menu-list">
-  <li><a href="javascript:void(0);" @click="handleClick('MenusSection')">Food & Drinks</a></li>
-  <li><a href="#" @click="handleBookingsClick">Bookings</a></li>
-  <li><a href="javascript:void(0);" @click="handleClick('AboutSection')">Contact</a></li>
-  <li><a href="javascript:void(0);" @click="handleClick('ExhibitionsSection')">Art</a></li>
-  <li><a href="#" @click="handlePoliciesClick">Policies</a></li>
-</ul>
-      </div>
+    }" @click="$emit('toggleMenu')">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
     </div>
-  </template>
-  
-  <script>
+
+    <!-- Overlay Menu -->
+    <div class="overlay-menu" :class="{ open: isOpen }">
+      <ul class="menu-list">
+        <li><a href="javascript:void(0);" @click="handleClick('MenusSection')">Food & Drinks</a></li>
+        <li><a href="#" @click="handleBookingsClick">Bookings</a></li>
+        <li><a href="javascript:void(0);" @click="handleClick('AboutSection')">Contact</a></li>
+        <li><a href="javascript:void(0);" @click="handleClick('ExhibitionsSection')">Art</a></li>
+        <li><a href="#" @click="handlePoliciesClick">Policies</a></li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script>
 export default {
   name: "BurgerMenu",
   
-  // Add props to receive scrollToSection
   props: {
     scrollToSection: {
       type: Function,
+      required: true
+    },
+    isOpen: {
+      type: Boolean,
       required: true
     }
   },
 
   data() {
     return {
-      isOpen: false,
-      isScrolled:false,
+      isScrolled: false,
     };
   },
 
@@ -54,9 +56,6 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 100;
     },    
-    toggleMenu() {
-      this.isOpen = !this.isOpen;
-    },
 
     handlePoliciesClick() {
       this.scrollToSection('HeroSection');
@@ -69,7 +68,7 @@ export default {
     },
 
     handleClick(section) {
-      this.toggleMenu();
+      this.$emit('toggleMenu');
       if (section === "Bookings") {
         this.$emit("toggleBooking");
       } else if (section === "Policies") {

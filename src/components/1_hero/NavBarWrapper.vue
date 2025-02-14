@@ -1,64 +1,103 @@
 <template>
-<nav class="NavbarWrapper" role="navigation" aria-label="Main navigation">   
-    <div class="navbarTop">
-      <div class="logo-container">
-        <img src="../../assets/logo_wht.png" alt="Logo" class="logo" />
-        <p class="logo-sub">&#10020; Edinburgh &#10020;</p>
+  <nav class="NavbarWrapper" role="navigation" aria-label="Main navigation">   
+      <div class="navbarTop">
+        <div class="logo-container">
+          <img src="../../assets/logo_wht.png" alt="Logo" class="logo" />
+          <p class="logo-sub">&#10020; Edinburgh &#10020;</p>
+        </div>
       </div>
-    </div>
-
-    <!-- Bottom Div: Navigation Menu -->
-    <div class="navbarBottom">
-      <ul class="navMenu">
-        <li><a href="javascript:void(0);" @click="scrollToSection('MenusSection')">Food & Drinks</a></li>
-        <li><a @click="$emit('toggleBooking')">Book A Table</a></li>
-        <li><a href="javascript:void(0);" @click="scrollToSection('AboutSection')">Contact</a></li>
-        <li><a href="javascript:void(0);" @click="scrollToSection('ExhibitionsSection')">Art</a></li>
-        <li><a href="javascript:void(0);" @click="togglePolicies">Policies</a></li>
-      </ul>
-    </div>
-
-    <!-- Burger Menu -->
-    <BurgerMenu
-      @toggleBooking="$emit('toggleBooking')"
-      @togglePolicies="togglePolicies"
-      @scrollToSection="scrollToSection"
-      :scrollToSection="scrollToSection"    />
-
-    <!-- Modals -->
-    <BookATable :show="showBooking" @close="$emit('toggleBooking')"/>
-    <PoliciesComp :show="showPolicies" @close="togglePolicies" />
-  </nav>
-</template>
-
-<script>
-import BookATable from './BookATable.vue';
-import BurgerMenu from './BurgerMenu.vue'; // Import the BurgerMenu component
-import PoliciesComp from './PoliciesComp.vue';
-
-export default {
-  name: "NavbarWrapper",
-  components: {
-    BookATable,
-    PoliciesComp,
-    BurgerMenu,
-  },
-  props: {
-    showBooking: Boolean,
-    scrollToSection: Function,
-  },
-  data() {
-    return {
-      showPolicies: false,
-    };
-  },
-  methods: {
-    togglePolicies() {
-      this.showPolicies = !this.showPolicies;
+  
+      <!-- Bottom Div: Navigation Menu -->
+      <div class="navbarBottom">
+        <ul class="navMenu">
+          <li><a href="javascript:void(0);" @click="scrollToSection('MenusSection')">Food & Drinks</a></li>
+          <li><a @click="handleBookingToggle">Book A Table</a></li>
+          <li><a href="javascript:void(0);" @click="scrollToSection('AboutSection')">Contact</a></li>
+          <li><a href="javascript:void(0);" @click="scrollToSection('ExhibitionsSection')">Art</a></li>
+          <li><a href="javascript:void(0);" @click="handlePoliciesToggle">Policies</a></li>
+        </ul>
+      </div>
+  
+      <!-- Burger Menu -->
+      <BurgerMenu
+        @toggleBooking="handleBookingToggle"
+        @togglePolicies="handlePoliciesToggle"
+        @scrollToSection="scrollToSection"
+        :scrollToSection="scrollToSection"
+        :isOpen="isBurgerOpen"
+        @toggleMenu="handleBurgerToggle"
+      />
+  
+      <!-- Modals -->
+      <BookATable :show="showBooking" @close="handleBookingToggle"/>
+      <PoliciesComp :show="showPolicies" @close="handlePoliciesToggle" />
+    </nav>
+  </template>
+  
+  <script>
+  import BookATable from './BookATable.vue';
+  import BurgerMenu from './BurgerMenu.vue';
+  import PoliciesComp from './PoliciesComp.vue';
+  
+  export default {
+    name: "NavbarWrapper",
+    components: {
+      BookATable,
+      PoliciesComp,
+      BurgerMenu,
     },
-  },
-};
-</script>
+    props: {
+      showBooking: Boolean,
+      scrollToSection: Function,
+    },
+    data() {
+      return {
+        showPolicies: false,
+        isBurgerOpen: false,
+        localShowBooking: false
+      };
+    },
+    watch: {
+      showBooking(newVal) {
+        this.localShowBooking = newVal;
+        if (newVal) {
+          this.closeOtherModals('booking');
+        }
+      }
+    },
+    methods: {
+      closeOtherModals(except) {
+        if (except !== 'booking') this.localShowBooking = false;
+        if (except !== 'policies') this.showPolicies = false;
+        if (except !== 'burger') this.isBurgerOpen = false;
+        
+        // Emit booking state change if necessary
+        if (this.localShowBooking !== this.showBooking) {
+          this.$emit('update:showBooking', this.localShowBooking);
+        }
+      },
+      handleBookingToggle() {
+        this.localShowBooking = !this.localShowBooking;
+        this.$emit('update:showBooking', this.localShowBooking);
+        if (this.localShowBooking) {
+          this.closeOtherModals('booking');
+        }
+      },
+      handlePoliciesToggle() {
+        this.showPolicies = !this.showPolicies;
+        if (this.showPolicies) {
+          this.closeOtherModals('policies');
+        }
+      },
+      handleBurgerToggle() {
+        this.isBurgerOpen = !this.isBurgerOpen;
+        if (this.isBurgerOpen) {
+          this.closeOtherModals('burger');
+        }
+      }
+    },
+  };
+  </script>
 
 <style lang="scss" scoped>
 @import '@/styles/styles.scss';
