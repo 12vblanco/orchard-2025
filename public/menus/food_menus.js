@@ -330,57 +330,57 @@ export const menuItems = [
       {
         category: "Draught (ABV)",
         items: [
-          { name: "Deuchars IPA (3.8)", price: "£5.05" },
-          { name: "Tennents (4.0)", price: "£5.05" },
-          { name: "Stella Artois (4.8)", price: "£5.95" },
-          { name: "Innis & Gunn Lager (4.6)", price: "£6.10" },
-          { name: "West 4 (4.0)", price: "£6.05" },
-          { name: "Pravha (4.0)", price: "£5.95" },
-          { name: "Maltsmiths IPA (4.6)", price: "£6.05" },
-          { name: "Belhaven Best (3.2)", price: "£4.95" },
-          { name: "Belhaven Black Stout (4.2)", price: "£5.50" },
-          { name: "Guinness (4.2)", price: "£5.95" },
-          { name: "Aspall cider (5.5)", price: "£5.90" },
+          { name: "Deuchars IPA (3.8)", price: "£5.30" },
+          { name: "Tennents (4.0)", price: "£5.25" },
+          { name: "Stella Artois (4.8)", price: "£6.10" },
+          { name: "Innis & Gunn Lager (4.6)", price: "£6.30" },
+          { name: "West 4 (4.0)", price: "£6.25" },
+          { name: "Pravha (4.0)", price: "£6.10" },
+          { name: "Maltsmiths IPA (4.6)", price: "£6.40" },
+          { name: "Belhaven Best (3.2)", price: "£5.15" },
+          { name: "Belhaven Black Stout (4.2)", price: "£5.70" },
+          { name: "Guinness (4.2)", price: "£6.20" },
+          { name: "Aspall cider (5.5)", price: "£6.10" },
           { name: "Please ask at the bar about our Cask Ales", price: "" },
         ],
       },
       {
         category: "Bottled Beers & Ales",
         items: [
-          { name: "Budweiser (4.5) 330ml", price: "£5.30" },
-          { name: "Peroni (5) 330ml", price: "£5.30" },
-          { name: "Peroni Gluten Free (5) 330ml", price: "£5.30" },
-          { name: "Budvar (5) 330ml", price: "£5.30" },
-          { name: "Leffe Blonde (6.6) 330ml", price: "£5.60" },
-          { name: "Punk IPA (5.4) 330ml", price: "£5.80" },
-          { name: "Heineken (5) 330ml", price: "£5.30" },
-          { name: "Corona (4.5) 330ml", price: "£5.30" },
-          { name: "Erdinger Weissbier (5.3) 500ml", price: "£6.10" },
-          { name: "Greene King Gluten free IPA (3.6) 500ml", price: "£5.50" },
+          { name: "Budweiser (4.5) 330ml", price: "£5.60" },
+          { name: "Peroni (5) 330ml", price: "£5.60" },
+          { name: "Peroni Gluten Free (5) 330ml", price: "£5.60" },
+          { name: "Budvar (5) 330ml", price: "£5.60" },
+          { name: "Leffe Blonde (6.6) 330ml", price: "£6.30" },
+          { name: "Punk IPA (5.4) 330ml", price: "£6.10" },
+          { name: "Heineken (5) 330ml", price: "£5.60" },
+          { name: "Corona (4.5) 330ml", price: "£5.60" },
+          { name: "Erdinger Weissbier (5.3) 500ml", price: "£6.30" },
+          { name: "Greene King Gluten Free IPA (3.6) 500ml", price: "£5.70" },
         ],
       },
       {
         category: "Bottled Ciders",
         items: [
           {
-            name: "Rekorderlig Flavoured Cider 500ml",
+            name: "Rekorderlig (4) 500ml",
             description: "Strawberry and Lime, Mango & Raspberry, Wild Berries",
-            price: "£5.70",
+            price: "£6.05",
           },
           {
             name: "Old Mout Non-Alcoholic Pineapple & Rasp' (0%) 500ml",
-            price: "£5.70",
+            price: "£5.85",
           },
-          { name: "Magners (4.5) 568ml", price: "£5.70" },
-          { name: "Crabbies Gingerbeer (4) 500ml", price: "£4.80" },
+          { name: "Magners (4.5) 568ml", price: "£6.05" },
+          { name: "Crabbies Gingerbeer (4) 500ml", price: "£6.05" },
         ],
       },
       {
         category: "Non-Alcohol Beer",
         items: [
-          { name: "Heineken (0.0%) 330ml", price: "£4.60" },
-          { name: "Erdinger (<0.5%) 500ml", price: "£5.30" },
-          { name: "Guinness (0.0%) 538ml", price: "£5.10" },
+          { name: "Heineken (0.0%) 330ml", price: "£4.80" },
+          { name: "Erdinger (<0.5%) 500ml", price: "£5.50" },
+          { name: "Guinness (0.0%) 538ml", price: "£5.40" },
         ],
       },
     ],
@@ -503,40 +503,158 @@ export const menuItems = [
     menu: "Whisky",
     categories: [
       {
-        category: "Lowlands",
+        category: "Whisky List",
         items: [
-          { name: "Auchentoshan 12 year old", price: "£5.95" },
-          { name: "Auchentoshan Three Wood", price: "£6.20" },
-          { name: "Glenkinchie 12 Year Old", price: "£5.95" },
-          { name: "Daftmill 2010 Cask Strength", price: "£9.40" },
+          { name: "Aberfeldy 12", price: "£6.20" },
+          { name: "Aberlour 12", price: "£6.30" },
+          { name: "Ancnoc 12", price: "£5.90" },
+          { name: "Ardbeg 10", price: "£6.80" },
+          { name: "Ardbeg An Oa", price: "£6.75" },
+          { name: "Ardnamurchan 6, Cadenheads", price: "£7.40" },
+          { name: "Ardnamurchan AD 46.8", price: "£5.95" },
+          { name: "Ardnamurchan AD/09 Cask 58.4%", price: "£6.95" },
+          { name: "Ardnamurchan Thomson Brothers 6yr", price: "£8.40" },
+          { name: "Arran 10", price: "£5.95" },
+          { name: "Arran, Sauternes Cask 50%", price: "£5.95" },
+          { name: "Arran, Amarone Cask 50%", price: "£5.95" },
+          { name: "Arran Machrie Moor, 46%", price: "£6.45" },
+          { name: "Arran small batch, RMW Excl 57.4%", price: "£7.80" },
+          { name: "Auchentoshan 12", price: "£5.95" },
+          { name: "Auchentoshan 3 wood", price: "£6.20" },
+          { name: "Auchentoshan 18", price: "£8.30" },
+          { name: "Balblair 10, Cadenheads Rum Cask 60.5%", price: "£7.25" },
+          { name: "Ballindalloch 2015, 46%", price: "£8.40" },
+          { name: "Ballindalloch 2016, single cask 61%", price: "£9.40" },
+          { name: "Balvenie 12", price: "£6.25" },
+          { name: "Balvenie 14, Caribbean Cask", price: "£7.90" },
+          { name: "Ben Nevis 10", price: "£6.10" },
+          { name: "Benrinnes 9, RMW, 46%", price: "£6.45" },
+          { name: "Ben Riach 12", price: "£5.95" },
+          { name: "Bimber Batch no.4", price: "£7.80" },
+          { name: "Bowmore 12", price: "£6.20" },
+          { name: "Bruichladdich 8, The Classic Laddie", price: "£6.05" },
+          { name: "Bunnahabhain 12", price: "£5.95" },
+          { name: "Campbeltown Loch, Blend", price: "£5.10" },
+          { name: "Caol Ila 12", price: "£6.10" },
+          { name: "Caol Ila 9, Carn Mor, Ruby Port cask", price: "£7.40" },
+          { name: "Caol Ila, 10, Bourbon Cask, 58.7%", price: "£7.75" },
+          { name: "Clynelish 14", price: "£6.25" },
+          { name: "Craigellachie 16, Oloroso cask, 57.1%", price: "£7.75" },
+          { name: "Daftmill 2010, 11 year old 59.5%", price: "£9.40" },
+          { name: "Dailluaine 14, Fino cask, 51.7%", price: "£6.70" },
+          { name: "Dalmore 12", price: "£6.60" },
+          { name: "Dalwhinnie 15", price: "£6.75" },
+          { name: "Deanston 12, 46.3%", price: "£5.95" },
+          { name: "Fettercairn 14, Carvelos wine cask, 56.1%", price: "£7.60" },
+          { name: "Glenallachie 8, Scottish Oak cask, 46%", price: "£6.40" },
+          { name: "Glenallachie 10 cask strength 57.2%", price: "£7.05" },
+          { name: "Glenallachie 12", price: "£5.95" },
+          { name: "Glenallachie 15", price: "£7.10" },
+          {
+            name: "Glenallachie 15, refill sherry butt, 64.3%",
+            price: "£7.45",
+          },
+          { name: "Glenallachie 18", price: "£11.25" },
+          { name: "Glendronach 12", price: "£6.15" },
+          { name: "Glendronach no11 Cask, 59.8%", price: "£7.80" },
+          { name: "Glendronach Port wood", price: "£5.95" },
+          { name: "Glen Elgin 12, RMW, 57.1%", price: "£6.95" },
+          { name: "Glenfarclas 10", price: "£5.95" },
+          {
+            name: "Glenfarclas 21, Cadenheads Madeira cask, 49%",
+            price: "£11.75",
+          },
+          { name: "Glenfiddich 12", price: "£5.95" },
+          { name: "Glenfiddich 15", price: "£7.50" },
+          { name: "Glenfiddich 18", price: "£9.10" },
+          { name: "Glen Keith 25, Cadenheads 47.8%", price: "£11.95" },
+          { name: "Glenlivet 12", price: "£5.95" },
+          { name: "Glenlivet 15", price: "£7.45" },
+          { name: "Glenmorangie 10", price: "£5.95" },
+          { name: "Glenmorangie 14, Quinta Ruben", price: "£7.30" },
+          { name: "Glenrothes 16, Olorosso cask, 57.4%", price: "£7.40" },
+          { name: "Glen Scotia 15", price: "£7.40" },
+          { name: "Glen Scotia 18", price: "£9.70" },
+          {
+            name: "Glen Scotia 12, The Mermaid, Palo Cortado 54.1%",
+            price: "£8.10",
+          },
+          {
+            name: "Glen Scotia 14, Dragon, Peated, Barolo cask, 56.8%",
+            price: "£8.20",
+          },
+          { name: "Glen Scotia Victoriana 54.2%", price: "£6.95" },
+          { name: "Hazelburn 12, Olorroso cask 49.9%", price: "£8.10" },
+          { name: "Hazelburn 21", price: "£14.70" },
+          { name: "Hibiki Harmony", price: "£7.80" },
+          { name: "Highland Park 12", price: "£6.15" },
+          { name: "Highland Park 15, Bourbon cask, RMW 54%", price: "£8.80" },
+          { name: "Inchgower 13, refill PX hogshead, 58.3%", price: "£6.15" },
+          { name: "Jura 10", price: "£5.95" },
+          { name: "Kilchoman Sanaig", price: "£6.95" },
+          { name: "Kilchoman 13th Edition, 50%", price: "£7.80" },
+          { name: "Kilkerran 12", price: "£6.10" },
+          { name: "Kilkerran 16", price: "£7.70" },
+          { name: "Lagavulin 16", price: "£7.80" },
+          { name: "Lagg, Batch 1", price: "£7.10" },
+          { name: "Lagg, Batch 3, ex red wine cask", price: "£7.10" },
+          { name: "Lindores Abbey, Friar John Cor, 60.2%", price: "£7.10" },
+          { name: "Linkwood 8, RMW, 46%", price: "£5.75" },
+          {
+            name: "Linkwood 17, Signatory, PX & Olorosso casks, 57.1%",
+            price: "£7.75",
+          },
+          { name: "Lochlea Harvest", price: "£5.60" },
+          { name: "Lochlea Our Barley", price: "£5.60" },
+          { name: "Longmorn 12, Bourbon cask, 58.3%", price: "£7.80" },
+          { name: "Longrow 18", price: "£11.60" },
+          { name: "Longrow Peated", price: "£5.95" },
+          { name: "Macallan 12 Double cask", price: "£8.20" },
+          { name: "Macallan 12 Sherry cask", price: "£8.90" },
+          {
+            name: "Macallan 13, Signatory, Oloroso Cask, 57.1%",
+            price: "£7.40",
+          },
+          { name: "Miltonduff 33, RMW, 50.5%", price: "£13.40" },
+          { name: "Mortlach 12", price: "£6.75" },
+          { name: "Mossburn 12, Foursquare rum cask, 57.7%", price: "£7.10" },
+          { name: "Nikka Coffey Grain", price: "£6.40" },
+          { name: "Nikka The Barrel", price: "£6.45" },
+          { name: "Oban 14", price: "£7.45" },
+          { name: "Paul John 7, Cadenheads, Goa, 55.4%", price: "£7.90" },
+          { name: "Port Charlotte 10, 50%", price: "£5.95" },
+          {
+            name: "Port Charlotte PMC:01, Pomerol Cask, 54.5%",
+            price: "£9.80",
+          },
+          { name: "Raasay", price: "£5.95" },
+          { name: "Scapa Skiren", price: "£6.10" },
+          { name: "Scapa Glanska", price: "£6.10" },
+          {
+            name: "Speyside – Glenlivet, 26, Cadenheads 48.9%",
+            price: "£9.40",
+          },
+          { name: "Springbank 10", price: "£6.40" },
+          { name: "Springbank 15", price: "£7.70" },
+          { name: "Strathmill 27, Cadenheads 51.2%", price: "£11.80" },
+          { name: "Talisker 10", price: "£6.10" },
+          { name: "Tamnavulin Sherry cask", price: "£5.60" },
+          { name: "Tomatin 12", price: "£5.95" },
+          { name: "Tomatin 9, Rarefind, Sherry casks, 58.3%", price: "£7.10" },
+          {
+            name: "Tomintoul 16, Cadenheads, Fino cask, 54.1%",
+            price: "£7.85",
+          },
+          { name: "Tullibardine 26, Cadenheads 43.9%", price: "£9.95" },
+          { name: "Yamazaki 12", price: "£11.25" },
         ],
-      },
-      {
-        category: "Highlands",
-        items: [
-          { name: "Aberfeldy 12 Year Old", price: "£6.20" },
-          { name: "Dalmore 12 Year Old", price: "£6.60" },
-          { name: "Glenmorangie 10 Year Old", price: "£5.95" },
-        ],
-      },
-      {
-        category: "Islay",
-        items: [
-          { name: "Ardbeg 10 Year Old", price: "£6.80" },
-          { name: "Laphroaig 10 Year Old", price: "£6.15" },
-          { name: "Lagavulin 16 Year Old", price: "£7.80" },
-        ],
-      },
-      {
-        category: "International",
-        items: [{ name: "Paul John 7 Year Old (India)", price: "£7.90" }],
       },
     ],
   },
+
   // Updated Whisky-Detailed Menu
   {
     menu: "Whisky-Detailed",
-
     categories: [
       {
         category: "Lowlands",
@@ -545,54 +663,49 @@ export const menuItems = [
             name: "Auchentoshan 12 Year Old",
             price: "£5.95",
             description:
-              "Triple distilled and matured solely in American bourbon casks. Sweet aromas of vanilla and coconut with smooth, delicate taste.",
-            abv: "40%",
+              "Triple distilled and matured solely in American bourbon casks. The result: a Lowland Single Malt Whisky with the sweet aromas of vanilla and coconut along with the signature smooth, delicate, Auchentoshan taste.",
           },
           {
             name: "Auchentoshan Three Wood",
             price: "£6.20",
             description:
-              "Rich and elegant, matured in Bourbon, Oloroso and PX sherry casks. Notes of Black Forest Gateaux, liqueur cherries in dark chocolate with ripe dark forest fruits.",
+              "Rich and elegant, matured in Bourbon, Oloroso and PX sherry casks. Like a rich Black Forest Gateaux, liqueur cherries in dark chocolate with ripe dark forest fruits.",
           },
           {
             name: "Auchentoshan 18 Year Old",
             price: "£8.30",
             description:
-              "Matured in American oak casks. Toasty vanilla, dark nuttiness, and a zesty finish.",
+              "Matured in American oak casks we have here toasty vanilla, dark nuttiness and something zesty softening after a time.",
           },
           {
-            name: "Daftmill 2010 Cask Strength",
+            name: "Daftmill 2010, Cask Strength, 11 Year Old, 59.5%",
             price: "£9.40",
             description:
-              "A combination of 5 ex-bourbon casks from 2010. Juicy, sweetly fruity whisky with a thick and engaging mouthfeel.",
-            abv: "59.5%",
-            age: "11",
+              "A combination of 5 2010 vintage ex bourbon casks from the famous farm to bottle distillery. A juicy sweetly fruity whisky, impressively thick and engaging mouth feel.",
           },
           {
             name: "Glenkinchie 12 Year Old",
             price: "£5.95",
             description:
-              "Dry, floral notes develop into refreshing citrus taste with subtle creaminess. From a distillery just 20 miles from Edinburgh.",
+              "Our local distillery, just 20 miles from Edinburgh. Dry, floral notes on the nose develop into a refreshing citrus taste with a subtle creaminess.",
           },
           {
-            name: "Lindores Abbey MCDXCIV (1494)",
+            name: "Lindores Abbey MCDXCIV (1494) 46%",
             price: "£5.60",
             description:
-              "Matured in bourbon barrels, wine barriques, and sherry butts. Light yet rich with aromatic spice, black pepper, creamy caramel, and vanilla.",
-            abv: "46%",
+              "Matured in a selection of bourbon barrels, wine barriques and sherry butts. Impressively light yet rich aromatic spice and black pepper cuts through creamy caramel and vanilla.",
           },
           {
-            name: "Lindores Abbey Friar John Cor",
+            name: "Lindores Abbey Friar John Cor – 60.2%",
             price: "£7.10",
             description:
-              "Matured in bourbon, monbazillac sweet wine, STR, and sherry casks. Silky profile with honeyed stone fruit, spiced nuts, figs, and dates.",
-            abv: "60.2%",
+              "Matured in a combination of bourbon, monbazillac sweet wine, STR and sherry casks give us a silky profile with lots of honeyed stone fruit, spiced nuts, figs & dates.",
           },
           {
             name: "Kingsbarns The Doocot",
             price: "£5.80",
             description:
-              "Young single malt matured in ex-bourbon casks. Fruity, complex, and light spirit.",
+              "This young single malt is distilled, matured and bottled in Kingsbarns, Fife. Matured in ex fill bourbon casks creating a fruity, complex & light spirit.",
           },
         ],
       },
@@ -603,76 +716,79 @@ export const menuItems = [
             name: "Aberfeldy 12 Year Old",
             price: "£6.20",
             description:
-              "Sweet and malty with faint smokiness and crisp citrus finish. Our personal favourite.",
+              "Our personal favourite, sweet and malty with a faint smokiness and crisp citrus finish.",
           },
           {
             name: "AnCnoc 12 Year Old",
             price: "£5.90",
             description:
-              "Robust whisky with oak and barley notes, complemented by subtle coffee flavors.",
+              "A nice robust whisky that wears its oak and barley on its sleeve with subtle coffee notes.",
           },
           {
             name: "Arran 10 Year Old",
             price: "£5.95",
             description:
-              "Honeyed richness with herbal biscuit and grass notes, finishing with green fruits.",
+              "This 10 year old exudes the honeyed richness we associate with the island distillery. With herbal biscuityness and grass on the nose it finishes with a malty feel along with green fruits.",
           },
           {
-            name: "Arran Machrie Moor",
+            name: "Arran Machrie Moor, 10yr, 46%",
             price: "£6.45",
             description:
-              "Peated expression with baked earth and orchard fruit on the nose, finishing with orange zest and lemongrass.",
-            abv: "46%",
+              "Named after the famous peat bog and standing stones on Arran. This peated expression has baked earth balanced with orchard fruit on the nose yet finishes with orange zest & maybe lemongrass.",
           },
           {
             name: "Clynelish 14 Year Old",
             price: "£6.25",
             description:
-              "Fruity with slight smokiness, rich and drying finish. Influenced by the maritime climate.",
+              "A Highland Malt on the coast where the maritime climate influences this delicious malt. Fruity with slight smokiness, rich and a drying finish. A great dram.",
           },
           {
             name: "Dalmore 12 Year Old",
             price: "£6.60",
             description:
-              "Aged 9 years in ex-Bourbon casks, then 3 years in ex-oloroso sherry casks. Combines sweetness with rich sherried flavors.",
+              "Aged for the first 9 years in American White Oak ex-Bourbon casks, before half is transferred to ex-oloroso sherry casks for the final 3 years. The result is a whisky with a combination of sweetness and rich, sherried flavours.",
           },
           {
             name: "Dalwhinnie 15 Year Old",
             price: "£6.75",
             description:
-              "Full of nuts, honey, and floral notes with a hint of vanilla and toffee.",
+              "A gorgeous whisky from a bleak landscape, full of nuts, honey and floral notes with a hint of vanilla and toffee.",
           },
           {
             name: "Glenmorangie 10 Year Old",
             price: "£5.95",
             description:
-              "Citrus and peaches softened by vanilla notes, finishing with flowery fruitiness.",
+              "The scent of citrus and peaches is softened by notes of aroma in the whisky where those same vanilla notes can be tasted before finishing with a flowery fruitiness.",
           },
           {
-            name: "Glenmorangie The Quinta Ruban",
+            name: "Glenmorangie 14 Year Old, The Quinta Ruban",
             price: "£7.30",
             description:
-              "Aged in ex-bourbon casks, then finished in ruby port casks. Dark, velvety whisky with bold chocolate notes.",
-            age: "14",
+              "First aged in ex-bourbon casks then finished in ruby port casks which develop this smooth fruity spirit into a dark deep velvety whisky with bold chocolate notes.",
           },
           {
             name: "Oban 14 Year Old",
             price: "£7.45",
             description:
-              "Initial peat smoke and salty maritime flavors balanced with citrus orange notes and a smooth, honeyed finish.",
+              "Initial hints of peat smoke, combined with a salty maritime flavour are balanced with citrus orangey notes. The finish contains sweeter honeyed notes endowing this malt a smoother silky finish.",
+          },
+          {
+            name: "Teaninich 15 Year Old, Sauternes Cask, 46%",
+            price: "£7.80",
+            description:
+              "From Cadenheads on the royal mile this Teaninich has been finished for 3 years in Sauternes casks, instilling an abundance of sweet fruity notes such as peaches in syrup, honey, apricots and banana loaf.",
           },
           {
             name: "Tomatin 12 Year Old",
             price: "£5.95",
             description:
-              "Smooth and silky, matured in Scotch Whisky, ex-Bourbon, and ex-Spanish sherry casks. Notes of apples, citrus, and sweet spice.",
+              "Smooth and silky, having been matured in traditional Scotch Whisky, ex-Bourbon and ex-Spanish sherry casks. The result is a sweet whisky with notes of apples, citrus and sweet spice.",
           },
           {
-            name: "Tullibardine 26 Year Old",
+            name: "Tullibardine 26 Year Old, 43.9%",
             price: "£9.95",
             description:
-              "Notes of mango, golden syrup, and freshly whipped cream, finishing with caramelized bananas, honey, and a hint of wood shavings.",
-            abv: "43.9%",
+              "Mangos, golden syrup, freshly whipped cream leads to a finish of caramelised bananas, honey with a hint of wood shavings.",
           },
         ],
       },
@@ -683,108 +799,103 @@ export const menuItems = [
             name: "Aberlour 12 Year Old",
             price: "£6.20",
             description:
-              "Strong sherry notes with orchard fruits and gentle ginger spiciness. Deliciously complex.",
+              "An easy going Speyside, the 12 Year Old has strong sherry notes with orchard fruits and gentle ginger spiciness. A deliciously complex whisky from an historic distillery.",
           },
           {
             name: "The Balvenie Doublewood 12 Year Old",
             price: "£6.25",
             description:
-              "Second maturation in Sherry Casks gives rich, full flavor with summer fruits, chocolate, cinnamon, and black pepper spice.",
+              "A second maturation in Sherry Casks gives a rich, full flavour with notes of summer fruits and chocolate, overlaid with subtle cinnamon and black pepper spice.",
           },
           {
             name: "The Glenlivet 12 Year Old",
             price: "£5.95",
             description:
-              "Sweet orchard fruits on the palate with a grassy aroma. Perfect for a summer's evening.",
+              "Sweet orchard fruits on the palate, coupled with a grassy aroma make this the perfect dram for a summer’s evening.",
           },
           {
-            name: "Glenallachie 10 Year Old Cask Strength",
+            name: "Glenallachie 10 Year Old, Cask Strength 57.2%",
             price: "£7.05",
             description:
-              "Heather honey, mocha, brittle toffee, grapefruit, cinnamon, earthy tannins, and ginger.",
-            abv: "57.2%",
+              "Heather honey, Mocha & brittle toffee with grapefruit, cinnamon, earthy tannins & ginger to finish.",
           },
           {
             name: "Glenallachie 12 Year Old",
             price: "£5.95",
             description:
-              "Bursts of orange zest, heather honey, damsons, mocha, dark chocolate, cinnamon, figs, and dates.",
+              "Bursts of Orange zest, heather honey & damsons, followed by lashings of mocha, dark chocolate, cinnamon, figs & dates.",
           },
           {
             name: "Glenallachie 15 Year Old",
             price: "£7.10",
             description:
-              "Fig syrup, mocha, treacle, dark chocolate, sweet spice, heather honey, and a hint of ginger.",
+              "Lashings of fig syrup, mocha & treacle lead to dark chocolate, sweet spice, heather honey & a hint of ginger.",
           },
           {
             name: "Glenallachie 18 Year Old",
             price: "£11.25",
             description:
-              "Casks selected from 16 warehouses dating back to the 1970s. Notes of toffee, robust malt, and honeyed fruit.",
+              "A glorious single malt. Casks were selected from across the distilleries 16 warehouses dating back to the 1970`s. Impressive stuff with notes of toffee, robust malt and honeyed fruit.",
           },
           {
             name: "Glenfarclas 10 Year Old",
             price: "£5.95",
             description:
-              "Malty with a touch of spice and rich sweetness typical of high-quality Speyside whiskies.",
+              "Malty, with a touch of spice and full of the rich sweetness a high quality Speyside can deliver.",
           },
           {
-            name: "Glenfarclas 21 Year Old Madeira Cask Finish",
+            name: "Glenfarclas 21 Year Old, Madeira Cask Finish",
             price: "£11.75",
             description:
-              "Distilled in 2001, matured for 16 years, then finished for 5 years in a Madeira cask. Notes of peaches, toffee meringue, and mangoes with a spicy finish.",
+              "Distilled in 2001 matured for 16 years then finished for 5 years in a Madeira cask. Peaches, toffee meringue and mangoes with a little too much spice dominate the palate.",
           },
           {
             name: "Glenfiddich 12 Year Old",
             price: "£5.95",
             description:
-              "A consistent crowd pleaser with all typical Speyside characteristics.",
+              "A consistent crowd pleaser with all the typical characteristics of a Speyside.",
           },
           {
             name: "Glenfiddich 15 Year Old",
             price: "£7.50",
             description:
-              "Rich Christmas pudding-like malt, matured in bourbon, sherry, and virgin oak casks.",
+              "Bourbon, sherry and virgin oak casks all play a part in producing this rich Christmas pudding-like malt.",
           },
           {
             name: "Glenfiddich 18 Year Old",
             price: "£9.10",
-            description: "Extra time in the cask enhances rich autumnal notes.",
+            description:
+              "The extra time spent in the cask enhances the rich autumnal notes of this classic.",
           },
           {
-            name: "Glen Keith 25 Year Old",
+            name: "Glen Keith 25 Year Old, 47.8%",
             price: "£11.95",
             description:
-              "Aged for 25 years in 100% Bourbon casks. Sweet with zingy pineapple, poached pears, and melted milk chocolate.",
-            abv: "47.8%",
+              "Aged for 25 years in 100% Bourbon casks. Sweet with an abundance of fruit on the palate, this whisky features notes of zingy pineapple, poached pears and melted milk chocolate.",
           },
           {
-            name: "Linkwood 17 Year Old",
+            name: "Linkwood 17 Year Old, 57.1%",
             price: "£7.75",
             description:
-              "Matured in PX hogsheads and Oloroso sherry butts. Rich and fruity with almonds and brownies.",
-            abv: "57.1%",
+              "This addition to Signatory`s exceptional cask 100 proof edition comes from the Linkwood distillery. This has spent 17 years in a selection of PX hogsheads and Olorosso sherry butts.",
           },
           {
-            name: "Mortlach 12 Year Old",
+            name: "Mortlach 12 Year Old, 43.4%",
             price: "£6.75",
             description:
-              "Beautifully balanced, combining darker sherry notes with fresher orchard-fruit flavors.",
-            abv: "43.4%",
+              "Matured in both bourbon and sherry casks. This is a beautifully balanced, combining darker sherry notes with fresher Orchard-fruit flavours.",
           },
           {
-            name: "The Speyside Distillery 26 Year Old",
+            name: "The Speyside Distillery 26 Year Old, 48.9%",
             price: "£9.40",
             description:
-              "Creamy caramel and almond flakes lead to a finish of bark, peppermint slice, and dark chocolate.",
-            abv: "48.9%",
+              "Creamy caramel and almond flakes lead to a finish of bark, peppermint slice & dark chocolate.",
           },
           {
-            name: "Strathmill 27 Year Old",
+            name: "Strathmill 27 Year Old, 1991, 51.2%",
             price: "£11.80",
             description:
-              "Rich and fruity with almonds and brownies. Salted caramel on the palate with hints of cloves, pineapple, and lemon drizzle cake.",
-            abv: "51.2%",
+              "Rich & fruity on the nose with almonds and brownies. Salted caramel on the palate with a hint of cloves, pineapple & lemon drizzle cake.",
           },
         ],
       },
@@ -792,73 +903,64 @@ export const menuItems = [
         category: "Campbeltown",
         items: [
           {
-            name: "Springbank 10 Year Old",
+            name: "Springbank 10 Year Old – 46%",
             price: "£6.05",
             description:
-              "Matured in bourbon and sherry casks. Perfectly balanced with a full, rich finish.",
-            abv: "46%",
+              "The perfect introduction to the Springbank range. Matured in a combination of bourbon and sherry casks, it is perfectly balanced with a full, rich finish.",
           },
           {
-            name: "Springbank 15 Year Old",
+            name: "Springbank 15 Year Old – 46%",
             price: "£7.70",
             description:
-              "Plenty of sherry notes and spice, with dried fruits and nuts.",
-            abv: "46%",
+              "A 15 year old from the Springbank distillery with plenty of sherry notes and spice, dried fruits & nuts.",
           },
           {
-            name: "Glen Scotia 15 Year Old",
+            name: "Glen Scotia 15 Year Old, 46%",
             price: "£7.40",
             description:
-              "Aged in American oak. Beautifully fruity, salty, and slightly spicy.",
-            abv: "46%",
+              "Aged in American oak in Campbeltown creating a beautifully fruity, salty and slightly spicy single malt.",
           },
           {
-            name: "Glen Scotia 18 Year Old",
+            name: "Glen Scotia 18 Year Old, 46%",
             price: "£9.70",
             description:
-              "Finished in Oloroso sherry casks. Balances fruity sweetness with classic Campbeltown salinity.",
-            abv: "46%",
+              "Finished in Oloroso sherry casks this delicious 18 year old shows off a good balance between fruity sweetness and classic Campbeltown salinity.",
           },
           {
-            name: "Hazleburn 21 Year Old",
+            name: "Hazleburn 21 Year Old – 46%",
             price: "£14.70",
-            description: "Triple distilled, non-peated. Vibrant and fruity.",
-            abv: "46%",
+            description:
+              "Triple distilled, non peated from the Springbank distillery. A rare chance to sample this highly collectible whisky. Vibrant & fruity.",
           },
           {
-            name: "Kilkerran Batch No.6",
+            name: "Kilkerran Batch No.6 – 57.4%",
             price: "£5.95",
             description:
-              "Heavily peated with sweet peat smoke, honeycomb, and a peppery finish.",
-            abv: "57.4%",
+              "Heavily Peated version of the usually lightly peated Kilkerran. Sweet peat smoke with notes of honeycomb lead to a peppery finish and a lot of peat smoke.",
           },
           {
-            name: "Kilkerran 12 Year Old",
+            name: "Kilkerran 12 Year Old, 46%",
             price: "£6.10",
             description:
-              "Lightly peated with fruity citrus notes, vanilla, honeycomb, and digestive biscuits.",
-            abv: "46%",
+              "Lightly peated and matured in a combination of bourbon & sherry casks. Fruitycitrus notes lead to vanilla, honeycomb & digestive biscuits.",
           },
           {
-            name: "Kilkerran 16 Year Old",
+            name: "Kilkerran 16 Year Old, 46%",
             price: "£7.70",
             description:
-              "Bourbon matured with dried apricot, earthy peat, peppery spice, biscuits, and a hint of brine.",
-            abv: "46%",
+              "A gorgeous Bourbon matured Campbeltown from Kilkerran. A touch of dried Apricot leads into earthy peat, peppery spice, biscuits & a hint of brine. Stone mineral notes to finish.",
           },
           {
-            name: "Longrow Peated",
+            name: "Longrow Peated Campbeltown Single Malt, 46%",
             price: "£5.95",
             description:
-              "Peaty, oily, and robust with notes of honey, butterscotch, and parma violets.",
-            abv: "46%",
+              "Named after a long lost distillery of Campbeltown. Lomgrow was first produced in 1973 to provide a peaty, oily and robust component to a blend being created at the time.",
           },
           {
-            name: "Longrow 18 Year Old",
+            name: "Longrow 18 Year Old, 46%",
             price: "£11.60",
             description:
-              "Fully sherry matured and heavily peated. Notes of honey, butterscotch, and orange.",
-            abv: "46%",
+              "Fully sherry matured and heavily peated. On the palate we have notes of honey, butterscotch and parma violets & hints of orange complement the subtle peat influence.",
           },
         ],
       },
@@ -869,21 +971,19 @@ export const menuItems = [
             name: "Highland Park 12 Year Old",
             price: "£6.15",
             description:
-              "Subtle floral smoky sweetness with rich malt delivery. Distilled on Orkney.",
-            abv: "40%",
+              "Distilled at the most northerly distillery in Scotland, on the island of Orkney. Highland Park has the distinction of being the last distillery that still cuts its own peat. The rewards of this labour are a whisky with an award-winning, subtle floral smoky sweetness that gives way to a rich malt delivery on the palate. The most approachable of the Island malts.",
           },
           {
             name: "Jura Origin",
             price: "£5.95",
             description:
-              "Sweet honey aroma with gentle oak flavors, caramel, and liquorice. Finished in ex-Bourbon casks.",
+              "A sweet honey aroma and gentile oak flavours leading to caramel and liquorice notes, finished in ex-Bourbon casks give Origin its distinctive Jura style.",
           },
           {
             name: "Talisker 10 Year Old",
             price: "£6.10",
             description:
-              "Powerful peat-smoke nose with sea-water saltiness. Warming barley-malt and dried-fruit flavors.",
-            abv: "45.8%",
+              "Distilled on the beautiful Isle of Skye, there is no mistaking Talisker’s maritime heritage; its powerful peat-smoke nose is cut through with sea-water saltiness. While the smoke carries though on the palate, it is complimented with warming barley-malt and dried-fruit flavours.",
           },
         ],
       },
@@ -894,78 +994,67 @@ export const menuItems = [
             name: "Ardbeg 10 Year Old",
             price: "£6.80",
             description:
-              "Highly acclaimed with sharp citrus, hints of vanilla, and a lingering smoke finish.",
-            abv: "46%",
+              "This highly acclaimed whisky softens its sharp citrus with hints of vanilla, with a lingering smoke finish.",
           },
           {
             name: "Ardbeg An Oa",
             price: "£6.75",
             description:
-              "Rounded and smoky with notes of toffee, aniseed, dates, and apricots.",
-            abv: "46%",
+              "Matured in a combination of Pedro Ximinez sherry casks and Bourbon barrels. This is a rounded & smoky dram with notes of toffee, aniseed, dates & apricots.",
           },
           {
             name: "Bowmore 12 Year Old",
             price: "£6.20",
             description:
-              "Subtle lemon and honey with trademark peaty smokiness. Long, mellow finish.",
-            abv: "40%",
+              "Subtle lemon and honey and Bowmore’s trademark peaty smokiness on the nose lead to a sweet heather-honey taste with a hit of peat smoke, giving it a long, mellow finish.",
           },
           {
-            name: "Bruichladdich The Classic Laddie",
+            name: "Bruichladdich-The Classic Laddie-50%",
             price: "£6.05",
             description:
-              "Sea salt and black pepper on the nose, with malty biscuit, apple, and pear on the palate.",
-            abv: "50%",
+              "Sea salt & black pepper on the nose, Malty biscuit, apple & pear on the palate, although unpeated it has a distinctive impression of faint smoke.",
           },
           {
             name: "Bunnahabhain 12 Year Old",
             price: "£5.95",
             description:
-              "Fresh and aromatic with hints of smoke. Light fruit and nut notes lead to malty sweetness.",
-            abv: "46.3%",
+              "Offering a fresh and aromatic experience with hints of smoke. The taste starts with a light fruit and nut note that leads to a malty sweetness, finishing with a full-bodied lingering experience.",
           },
           {
             name: "Caol Ila 12 Year Old",
             price: "£6.10",
             description:
-              "Bold smoky Islay flavors with an oily body and sweet peppery undertones.",
-            abv: "43%",
+              "An ideal introduction to the bold smoky Islay flavours. The peat is balanced with an oily body, and sweet peppery undertones.",
           },
           {
-            name: "Kilchoman Sanaig",
+            name: "Kilchoman – Sanaig- 49.8%",
             price: "£6.95",
             description:
-              "Matured in Bourbon and Sherry casks. Plenty of fruit and earthy peat with dark chocolate-covered raisins.",
-            abv: "49.8%",
+              "Matured in both Bourbon and Sherry casks. Plenty of fruit and earthy peat come through with a touch of dark chocolate covered raisins.",
           },
           {
-            name: "Kilchoman The 13th Edition",
+            name: "Kilchoman The 13th Edition, 50%",
             price: "£7.80",
             description:
-              "Distilled from barley grown on the farm. Wood spice, milk chocolate, peat smoke, and candied citrus.",
-            abv: "50%",
+              "Distilled from Barley grown on the farm at Kilchoman, this whisky has been aged for a minimum of 8 years in Bourbon barrels. Wood spice, milk chocolate, peat smoke & candied citrus.",
           },
           {
             name: "Laphroaig 10 Year Old",
             price: "£6.15",
             description:
-              "Classic Islay malt; dry and full of peat smoke. Develops complex spicy notes with water.",
-            abv: "40%",
+              "The classic Islay malt; dry and full of peat smoke. A drop of water opens up more complex spicy notes. A taste difficult to forget once acquired.",
           },
           {
             name: "Lagavulin 16 Year Old",
             price: "£7.80",
             description:
-              "Intensely rich dried-fruit sweetness with smoky barley-malt flavors and distinctive dryness.",
-            abv: "43%",
+              "An intensely, rich dried-fruit sweetness, smokey and strong with barley-malt flavours whisky, but also offering a dryness that turns it into a truly interesting dram.",
           },
           {
-            name: "Port Charlotte Heavily Peated",
+            name: "Port Charlotte, Heavily Peated, 10 Year Old, 50%",
             price: "£5.95",
             description:
-              "Matured in American whiskey and French wine casks. Deliciously smoky with rich flavors.",
-            abv: "50%",
+              "The flagships Port Charlotte expression from Bruichladdie distillery. A delicious smoky number indeed, matured in 1st & 2nd fill American whiskey casks & 2nd fill French wine casks.",
           },
         ],
       },
@@ -976,14 +1065,12 @@ export const menuItems = [
             name: "Paul John 7 Year Old (India)",
             price: "£7.90",
             description:
-              "Heavy peat and smoke with forest fruits and raisins. Distilled in Goa, India.",
-            abv: "55.4%",
+              "Distilled in Goa, India. This is an interesting offering with heavy peat and smoke. Rich, spicy & herbal on the nose aromas. The peat becomes bigger on the palate with forest fruits and raisins with more peat & honey on the finish.",
           },
         ],
       },
     ],
   },
-
   // Updated Wine Menu
   {
     menu: "Wine",
