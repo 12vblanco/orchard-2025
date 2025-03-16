@@ -36,8 +36,8 @@
   
   <script>
   import BookATable from './BookATable.vue';
-  import BurgerMenu from './BurgerMenu.vue';
-  import PoliciesComp from './PoliciesComp.vue';
+import BurgerMenu from './BurgerMenu.vue';
+import PoliciesComp from './PoliciesComp.vue';
   
   export default {
     name: "NavbarWrapper",
@@ -173,7 +173,8 @@
 
 .navMenu li {
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
   letter-spacing: 3px;
 }
 
