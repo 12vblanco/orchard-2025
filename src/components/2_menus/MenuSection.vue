@@ -288,6 +288,7 @@
     font-size: $font-base;
     font-weight: 300;
     overflow: hidden;
+    opacity: .8;
   }
   
   .menu-price {

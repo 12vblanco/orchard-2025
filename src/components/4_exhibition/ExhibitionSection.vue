@@ -78,6 +78,7 @@
     flex: 1;
     padding-left: 3rem;
     text-align: left;
+    opacity: .8;
     @media (max-width: 800px) {
       margin-top: 2rem;
       padding: 1rem;
