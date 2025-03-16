@@ -167,7 +167,7 @@ import PoliciesComp from './PoliciesComp.vue';
   justify-content: center;
   gap: 50px;
   @media (max-width: 759px) {
-    gap: 20px; /* Reduced gap for mobile */
+    gap: 20px; 
   }
 }
 

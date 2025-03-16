@@ -79,16 +79,15 @@
       <div class="menus-content_square3"></div>
       <div class="menus-content_square4"></div>
       <div v-if="selectedMenu" class="menus-text">
-        <!-- Dynamically render the content based on the selected menu -->
         <div v-for="(item, index) in menuItems" :key="index">
           <div v-if="item.menu === selectedMenu">
-            <h3 class="menu-type">{{ item.menu }}</h3>
+            <!-- <h3 class="menu-type">{{ item.menu }}</h3> -->
             <div v-for="(category, idx) in item.categories" :key="idx">
               <h4 class="menu-category">{{ category.category }}</h4>
               <ul>
                 <li v-for="(menuItem, i) in category.items" :key="i">
                   <div class="menu-name">{{ menuItem.name }} <span class="menu-price">{{ menuItem.price }}</span></div>
-                  <span class="menu-description">{{ menuItem.description }} </span><br />
+                  <div class="menu-description">{{ menuItem.description }} </div>
                 </li>
               </ul>
             </div>
@@ -288,6 +287,7 @@
   .menu-description {
     font-size: $font-base;
     font-weight: 300;
+    overflow: hidden;
   }
   
   .menu-price {
