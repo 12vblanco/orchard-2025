@@ -108,6 +108,9 @@ export default {
     margin-top: 2rem;
       padding: 1rem;
     }
+    @media (max-width: 800px) {
+      width: 100%;;
+    }
 }
 
 
@@ -119,6 +122,10 @@ export default {
   margin-left: 6rem;
   @media (max-width: 966px) {
       max-width: 100%;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+      margin-left: 0;
     }
 }
 
@@ -135,6 +142,9 @@ export default {
       margin-top: 2rem;
       margin-left: 0rem;
       padding: 0 1rem;
+    }
+    @media (max-width: 800px) {
+      width: 100%;;
     }
 }
 
