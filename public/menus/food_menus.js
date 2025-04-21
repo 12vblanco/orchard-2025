@@ -2,6 +2,8 @@ export const menuItems = [
   // Food Menu
   {
     menu: "Food Menu",
+    allergyNotice: "*** Please make your server aware of any allergies ***",
+    servingHours: "Food Served - Noon ‘til 8.30 pm",
     categories: [
       {
         category: "Starters & Lighter Bites",
@@ -113,7 +115,7 @@ export const menuItems = [
             price: "£19.95",
           },
           {
-            name: "Oven roasted Lamp Rump",
+            name: "Oven roasted Lamb Rump",
             description:
               "With new potatoes, green beans, tenderstem & sauce vierge",
             price: "£23.45",
@@ -145,6 +147,8 @@ export const menuItems = [
   // Sunday Roast Menu
   {
     menu: "Sunday Roasts",
+    allergyNotice: "*** Please make your server aware of any allergies ***",
+    servingHours: "Food Served - Noon ‘til 8.30 pm",
     categories: [
       {
         category: "Roasts, Sunday 12-8.30pm",
@@ -175,6 +179,8 @@ export const menuItems = [
   // Gluten-Free Menu
   {
     menu: "Gluten Free",
+    allergyNotice: "*** Please make your server aware of any allergies ***",
+    servingHours: "Food Served - Noon ‘til 8.30 pm",
     categories: [
       {
         category: "Starters & Lighter Bites",
@@ -269,6 +275,8 @@ export const menuItems = [
   // Kids Menu
   {
     menu: "Kids Menu",
+    allergyNotice: "*** Please make your server aware of any allergies ***",
+    servingHours: "Food Served - Noon ‘til 8.30 pm",
     categories: [
       {
         category: "Main Meals",

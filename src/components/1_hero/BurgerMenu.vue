@@ -14,10 +14,10 @@
     <div class="overlay-menu" :class="{ open: isOpen }">
       <ul class="menu-list">
         <li><a href="javascript:void(0);" @click="handleClick('MenusSection')">Food & Drinks</a></li>
-        <li><a href="#" @click="handleBookingsClick">Bookings</a></li>
+        <li><a href="javascript:void(0);" @click="handleClick('booking')">Book A Table</a></li>
         <li><a href="javascript:void(0);" @click="handleClick('AboutSection')">Contact</a></li>
         <li><a href="javascript:void(0);" @click="handleClick('ExhibitionsSection')">Art</a></li>
-        <li><a href="#" @click="handlePoliciesClick">Policies</a></li>
+        <li><a href="javascript:void(0);" @click="handleClick('Policies')">Policies</a></li>
       </ul>
     </div>
   </div>
@@ -53,31 +53,15 @@ export default {
   },
   
   methods: {
-    handleScroll() {
-      this.isScrolled = window.scrollY > 100;
-    },    
-
-    handlePoliciesClick() {
-      this.scrollToSection('HeroSection');
-      this.handleClick('Policies');
-    },
-
-    handleBookingsClick() {
-      this.scrollToSection('HeroSection');
-      this.handleClick('Bookings');  
-    },
-
-    handleClick(section) {
-      this.$emit('toggleMenu');
-      if (section === "Bookings") {
-        this.$emit("toggleBooking");
-      } else if (section === "Policies") {
-        this.$emit("togglePolicies");
-      } else {
-        this.$emit("scrollToSection", section);
-      }
-    },
-  },
+  handleClick(section) {
+    this.$emit('toggleMenu');
+    if (section === "Policies") {
+      this.$emit("togglePolicies");
+    } else {
+      this.scrollToSection(section);
+    }
+  }
+}
 };
 </script>
   

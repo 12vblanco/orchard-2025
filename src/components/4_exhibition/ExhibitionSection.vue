@@ -1,5 +1,6 @@
 <template>
     <section id="ExhibitionsSection" class="ExhibitionsSection">
+      <div class="inner-section">
       <h2 class="exhibitions-title">Exhibitions</h2>
       <div class="exhibitions-container">
         <div class="image-section">
@@ -25,7 +26,7 @@
           </p>
         </div>
         
-        
+      </div>
       </div>
     </section>
   </template>
@@ -41,17 +42,27 @@
     background-color: $color-background-black;
     color: $color-text-light;
     width: 100%;
+    padding: 5rem 3rem;
+    border-top: 2px solid $color-secondary;
+    @media (max-width: 930px) {
+    padding: 2rem 1rem 3rem 1rem;
+    }
+  }
+  
+  .inner-section {
     max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
     margin: 0 auto;
     padding: 5rem 3rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    border-top: 2px solid $color-secondary;
-    @media (max-width: 800px) {
-    padding: 2rem 1rem 3rem 1rem;
+    @media (max-width: 930px) {
+      padding: .4rem ;
+      max-width: 100%;
+      min-width: 100%;
     }
-  }
+    } 
   
   /* Title Styling */
   .exhibitions-title {
@@ -61,7 +72,9 @@
     font-weight: 500;
     text-align: left;
     margin-bottom: 1rem;
-
+    @media (max-width: 880px) {
+      text-align: center;
+    }
   }
   
   .exhibitions-container {
@@ -80,8 +93,8 @@
     text-align: left;
     opacity: .8;
     @media (max-width: 800px) {
-      margin-top: 2rem;
-      padding: 1rem;
+      margin-top: 1rem;
+      padding: .4rem;
     }
   }
   
@@ -116,13 +129,20 @@
     }
   }
   
-  .image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+  .image-section {
+    max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  @media (max-width: 800px) {
+      max-width: 100%;
+      margin-bottom: 0rem;
 
-  
+    }
+}
+img{
+  border-radius: 8px;
+}
 
   </style>
   

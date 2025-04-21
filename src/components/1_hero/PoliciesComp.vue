@@ -109,13 +109,13 @@ unless they are assistance dogs.
     border-radius: 12px;
   }
   
-  @media (max-width: 640px) {
+  @media (max-width: 800px) {
     .policies-container {
       width: 100%;
       height: 100%;
       top: 100px;
       border-radius: 0;
-      background: black;
+      background: $color-overlay;
       border-radius: 20px;
     }
   }

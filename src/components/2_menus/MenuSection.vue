@@ -1,5 +1,6 @@
 <template>
   <section id="MenusSection" class="MenusSection">
+    <div class="inner-section">
     <h2 class="menus-title">MENUS</h2>
     <div class="menus-options">
       <div class="menus-options_top">
@@ -79,23 +80,29 @@
       <div class="menus-content_square3"></div>
       <div class="menus-content_square4"></div>
       <div v-if="selectedMenu" class="menus-text">
-        <div v-for="(item, index) in menuItems" :key="index">
-          <div v-if="item.menu === selectedMenu">
-            <!-- <h3 class="menu-type">{{ item.menu }}</h3> -->
-            <div v-for="(category, idx) in item.categories" :key="idx">
-              <h4 class="menu-category">{{ category.category }}</h4>
-              <ul>
-                <li v-for="(menuItem, i) in category.items" :key="i">
-                  <div class="menu-name">{{ menuItem.name }} <span class="menu-price">{{ menuItem.price }}</span></div>
-                  <div class="menu-description">{{ menuItem.description }} </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <div v-for="(item, index) in menuItems" :key="index">
+    <div v-if="item.menu === selectedMenu">
+      <!-- Insert the notices here -->
+      <div class="menu-info-notices" v-if="item.allergyNotice || item.servingHours">
+        <p class="allergy-notice" v-if="item.allergyNotice">{{ item.allergyNotice }}</p>
+        <p class="serving-hours" v-if="item.servingHours">{{ item.servingHours }}</p>
       </div>
+      
+      <div v-for="(category, idx) in item.categories" :key="idx">
+        <h4 class="menu-category">{{ category.category }}</h4>
+        <ul>
+          <li v-for="(menuItem, i) in category.items" :key="i">
+            <div class="menu-name">{{ menuItem.name }} <span class="menu-price">{{ menuItem.price }}</span></div>
+            <div class="menu-description">{{ menuItem.description }} </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
       <p v-else class="menus-text"></p>
     </div>
+  </div>
   </section>
 </template>
   
@@ -124,22 +131,30 @@
 .MenusSection {
   background-color: black;
   color: $color-text-light;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 5rem 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  height: 100%;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
   border-top: 2px solid $color-secondary;
-
-  @media (max-width: 940px) {
-    padding: 2rem;
-  }
-  @media (max-width: 640px) {
-    padding: 2rem 1rem;
-  }
+  @media (max-width: 800px) {
+    padding: 1.4rem ;
+    }
 }
+
+.inner-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 800px) {
+      padding: .4rem ;
+      max-width: 100%;
+      min-width: 100%;
+    }
+    } 
 
 /* Title Styling */
 .menus-title {
@@ -148,6 +163,9 @@
   font-weight: 500;
   text-align: left;
   text-transform: uppercase;
+  @media (max-width: 880px) {
+      text-align: center;
+    }
 }
 
 /* Menu Options */
@@ -295,5 +313,23 @@
     font-size: $font-medium;
     margin-bottom: 2rem;
   }
+  .menu-info-notices {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+  
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+.allergy-notice {
+  color: $color-accent;
+  font-weight: 500;
+}
+
+.serving-hours {
+  opacity: 0.8;
+}
   </style>
   

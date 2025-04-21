@@ -16,7 +16,7 @@
           Welcome to <b>The Orchard Bar</b>. A casual, relaxed restaurant and bar
           located in Canonmills just a few minutes' walk from the botanic gardens.
           We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. 
-          <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')" ><b>See our menus</b><br/><br/></a><b style="text-transform: uppercase;">Please note only assistance dogs are allowed in The Orchard. </b></p>
+          <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')" ><b>See our menus</b><br/><br/></a><b style="text-transform: uppercase;">Please note <span>only assistance dogs</span> are allowed in The Orchard. </b></p>
       </div>
     </div>
   </section>
@@ -132,4 +132,8 @@ export default {
 .iframe-visible .iframe-container {
   display: flex; /* Show iframe when activated */
 }
+span{
+  color: $color-primary;
+}
+
 </style>

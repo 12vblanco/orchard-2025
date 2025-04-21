@@ -43,7 +43,6 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: $font-family-primary;
-  overflow-x: hidden;
 }
 
 html, body {
