@@ -11,8 +11,8 @@
     <div class="navbarBottom">
       <ul class="navMenu">
         <li><a href="javascript:void(0);" @click="scrollToSection('MenusSection')">Food & Drinks</a></li>
-        <li><a href="javascript:void(0);" @click="scrollToSection('booking')">Book A Table</a></li>
-        <li><a href="javascript:void(0);" @click="scrollToSection('AboutSection')">Contact</a></li>
+        <li><a href="javascript:void(0);" @click="scrollToSection('AboutSection')">Book A Table</a></li>
+        <li><a href="javascript:void(0);" @click="scrollToSection('contact')">Contact</a></li>
         <li><a href="javascript:void(0);" @click="scrollToSection('ExhibitionsSection')">Art</a></li>
         <li><a href="javascript:void(0);" @click="showPoliciesModal">Policies</a></li>
       </ul>
@@ -52,7 +52,7 @@ export default {
       this.$nextTick(() => {
         const element = document.getElementById(sectionId);
         if (element) {
-          const offset =230; // 2rem offset
+          const offset =0; // 2rem offset
           const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
           window.scrollTo({
             top: elementPosition - offset,
