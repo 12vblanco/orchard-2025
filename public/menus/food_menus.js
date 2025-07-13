@@ -143,6 +143,38 @@ export const menuItems = [
     ],
   },
 
+  // Sunday Roast Menu
+  {
+    menu: "Sunday Roasts",
+    allergyNotice: "*** Please make your server aware of any allergies ***",
+    servingHours: "Food Served - Noon ‘til 8.30 pm",
+    categories: [
+      {
+        category: "Roasts, Sunday 12-8.30pm",
+        items: [
+          {
+            name: "Sirloin of Scotch Beef or Lamb",
+            description:
+              "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy ",
+            price: "£25.95",
+          },
+          {
+            name: "Chicken Supreme",
+            description:
+              "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy ",
+            price: "£24.95",
+          },
+          {
+            name: "",
+            description:
+              "**please help us by pre ordering your roast dinner if possible. This will help to guarantee availability for all.",
+            price: "",
+          },
+        ],
+      },
+    ],
+  },
+
   // Gluten-Free
   {
     menu: "Gluten Free",
