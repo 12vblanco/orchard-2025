@@ -1139,6 +1139,7 @@ export const menuItems = [
     ],
   },
   // Updated Wine Menu
+  // Updated Wine Menu - replace the existing "Wine" object completely
   {
     menu: "Wine",
     categories: [
@@ -1146,19 +1147,93 @@ export const menuItems = [
         category: "White Wines",
         items: [
           {
-            name: "2023 Garganega",
-            description: "Alpha Zeta, Veneto - Citrus & almond",
-            price: "£26.00/bottle",
+            name: "2023 'G' Garganega | 12.5%",
+            description:
+              "Alpha Zeta, Veneto, Italy - Lively, crisp, honey, almond & lime",
+            price: "£5.25/£6.45/£26.00",
           },
           {
-            name: "2023 Sancerre",
-            description: "Domaine des Brosses - Mineral & citrus",
+            name: "2023 Dao Branco | 13%",
+            description:
+              "Grao Vasco, Portugal - Refreshing, pear, pineapple with a mineral bite",
+            price: "£5.50/£6.95/£28.00",
+          },
+          {
+            name: "2023 Sauvignon Blanc | 13.5%",
+            description:
+              "Montes Classic Series, Casablanca, Chile - Fresh, easy drinking with tropical fruit",
+            price: "£5.75/£7.45/£31.00",
+          },
+          {
+            name: "2023 Picpoul | 12.5%",
+            description:
+              "Richemer, Cotes De Thau France - Refreshing citrus, saline character, a perfect match with seafood",
+            price: "£5.95/£7.75/£33.00",
+          },
+          {
+            name: "2023 Pinot Grigio | 12.5%",
+            description:
+              "Ponte del Diavolo, Friuli, Italy - Fresh, pear, almond and elegant palate",
+            price: "£6.25/£8.25/£35.00",
+          },
+          {
+            name: "2023 Alvarinho Eschola | 13.5%",
+            description:
+              "Azevedo, Portugal - Broad rich & creamy with vibrant acidity",
+            price: "£6.50/£8.75/£37.00",
+          },
+          {
+            name: "2023 Viognier | 12.5%",
+            description:
+              "Bodega Garzon Estate, Maldonaldo, Portugal - Dried Apricots & white Peach, firm acidity",
+            price: "£6.75/£9.25/£39.00",
+          },
+          {
+            name: "2022 Mendoza Chardonnay | 14.5%",
+            description:
+              "Kaiken Ultra, Argentina - Fruity, mineral and a touch of smoke",
+            price: "£6.95/£9.95/£42.00",
+          },
+          {
+            name: "2023 Sauvignon Blanc | 12%",
+            description:
+              "Kim Crawford, Marlborough, NZ - Vibrant, passion fruit, melon and blackcurrant bud",
+            price: "£6.95/£9.45/£41.00",
+          },
+          {
+            name: "2020 Organic Estate Riesling | 12.0%",
+            description:
+              "Dreissigacker, Rheinhessen, Germany - Juicy, ripe fruit, subtle spice",
+            price: "£48.00/bottle",
+          },
+          {
+            name: "2023 Sancerre | 13.0%",
+            description:
+              "Domaine des Brosses, Loire, France - Pure, mineral, citrus, herbaceous notes",
             price: "£58.00/bottle",
           },
           {
-            name: "2019 Chablis Premier Cru",
-            description: "Domaine Laroche - Smoky minerality",
+            name: "2021 Old Vines White Blend | 13.5%",
+            description:
+              "Moulineux signature, South Africa - Fragrant, floral nose, richly textured",
+            price: "£60.00/bottle",
+          },
+          {
+            name: "2019 'La Rocca' Soave Classico | 13%",
+            description:
+              "Pieropan, Veneto, Italy - Intense, balanced, Garganega at its finest",
+            price: "£65.00/bottle",
+          },
+          {
+            name: "2018 'Les Vaudevey' Chablis Premier Cru | 12.5%",
+            description:
+              "Domaine Laroche, France - Ripe citrus, smoky notes, minerality",
             price: "£75.00/bottle",
+          },
+          {
+            name: "2017 Santa Rita Hills Chardonnay | 12.5%",
+            description: "Racines, California, USA",
+            price: "£85.00/bottle",
           },
         ],
       },
@@ -1166,22 +1241,203 @@ export const menuItems = [
         category: "Red Wines",
         items: [
           {
-            name: "2022 Chianti Ruffina",
-            description: "Selvepiana - Blackberry & cherry",
+            name: "2023 'C' Corvina | 12.5%",
+            description:
+              "Alpha Zeta, Veneto, Italy - Balanced, juicy, ripe cherries, plums",
+            price: "£5.25/£6.45/£26.00",
+          },
+          {
+            name: "2022 Vinho Regional Lisboa Tinto | 13%",
+            description:
+              "Evaristo, Portugal - Deep ruby in colour, ripe cherries, juicy blackberries and blackcurrants",
+            price: "£5.50/£6.95/£28.00",
+          },
+          {
+            name: "2022 Colchagua Merlot | 14.5%",
+            description:
+              "Montes Classic, Chile - Plum, blackberry, sweet spices",
+            price: "£5.75/£7.45/£30.00",
+          },
+          {
+            name: "2022 Familia de Vinos Organic Fairtrade Malbec | 13.5%",
+            description:
+              "Mendoza, Argentina - Plums, cherries & a hint of violet with round & velvety tannins",
+            price: "£5.95/£7.75/£33.00",
+          },
+          {
+            name: "2022 Primitivo di Puglia | 13.5%",
+            description:
+              "A Mano, Puglia, Italy - Fresh, complex, ripe dark fruits",
+            price: "£6.25/£8.25/£35.00",
+          },
+          {
+            name: "2022 Cabernet Shiraz Willunga 100 | 14.5%",
+            description:
+              "McLaren Vale, Australia - Red fruits, complemented with fresh blood orange, spices & fine tannins",
+            price: "£6.50/£8.75/£37.00",
+          },
+          {
+            name: "2022 Cotes-du-Rhône | 14%",
+            description:
+              "Famille Perrin, Southern Rhône, France - Redcurrant, peppery spice, soft, balanced",
+            price: "£6.75/£9.25/£39.00",
+          },
+          {
+            name: "2020 Rioja Reserva | 14.5%",
+            description:
+              "Izadi, Rioja, Spain - Rich and concentrated with black fruit, hints of tobacco and liquorice",
+            price: "£7.25/£9.95/£42.00",
+          },
+          {
+            name: "2022 Tannat, Bodega Garzon Reserve | 14%",
+            description:
+              "Maldonado, Uruguay - Full bodied, ripe tannins, dark fruit",
+            price: "£45.00/bottle",
+          },
+          {
+            name: "2022 Chianti Ruffina | 13.5%",
+            description:
+              "Selvepiana, Tuscany, Italy - Ripe blackberry, cherry, floral finish",
             price: "£48.00/bottle",
           },
           {
-            name: "2021 Barossa Valley Shiraz",
-            description: "Peter Lehmann - Dark chocolate notes",
+            name: "2022 Morgon 'Les Grand Cras' | 13.0%",
+            description:
+              "Jean Marc Burgaud, Beaujolais, France - Dark berry fruits, lifted acidity",
+            price: "£52.00/bottle",
+          },
+          {
+            name: "2022 'Crimson' Martinborough Pinot Noir | 13%",
+            description:
+              "Ata Rangi, New Zealand - Food friendly, aromatically enticing, structured",
+            price: "£60.00/bottle",
+          },
+          {
+            name: "2017 Syrah Mullineux Signature | 14.5%",
+            description:
+              "Coastal Region, South Africa - Aromatic, fresh acidity, dusty tannins",
+            price: "£65.00/bottle",
+          },
+          {
+            name: "2021 '8 Songs' Barossa Valley Shiraz | 14.5%",
+            description:
+              "Peter Lehmann Masters, South Australia - Full bodied, Ripe plums with notes of deep dark chocolate, coffee & warm spice",
             price: "£70.00/bottle",
+          },
+          {
+            name: "2016 Saint-Émillion Grand Cru | 14.5%",
+            description:
+              "Chateau Fleur de Lisse, Bordeaux, France - Flavourful, fine grain tannins, fresh finish",
+            price: "£75.00/bottle",
+          },
+          {
+            name: "2018 Chateauneuf-du-Pape 'Les Sinards' | 14.5%",
+            description:
+              "Famille Perrin 'Les Crus', France - Fresh, forward, spicy red/ black fruit",
+            price: "£85.00/bottle",
           },
         ],
       },
       {
-        category: "Champagne",
+        category: "Rosé Wine",
         items: [
-          { name: "NV Piper Heidseck Essential Cuvée", price: "£65.00/bottle" },
-          { name: "2014 Vintage Piper Heidseck", price: "£110.00/bottle" },
+          {
+            name: "2023 'R' Rosato | 12.5%",
+            description:
+              "Alpha Zeta, Veneto, Italy - Strawberries, Jasmine, savoury finish",
+            price: "£5.45/£6.75/£28.00",
+          },
+          {
+            name: "2023 Grenache Rosé | 12.5%",
+            description:
+              "Willunga 100, McLaren Vale, Australia - Crisp, dry and pale full of red fruit and rose petal aromas",
+            price: "£6.25/£8.45/£38.00",
+          },
+        ],
+      },
+      {
+        category: "Champagne & Sparkling Wines",
+        items: [
+          {
+            name: "NV Prosecco Superiore Spumante",
+            description:
+              "Ca' Morlin, Veneto, Italy - Clean, floral, pear, fine bubbles",
+            price: "£7.95/£36.00",
+          },
+          {
+            name: "NV Blanc de Blanc Cava",
+            description:
+              "Penedes, Cataluna, Spain - Fresh & fruity with serious flair",
+            price: "£8.95/£46.00",
+          },
+          {
+            name: "NV Essential Cuvée Extra Brut",
+            description:
+              "Piper Heidseck, Champagne, France - Fine bubbles, apples, almonds, finesse",
+            price: "£65.00/bottle",
+          },
+          {
+            name: "NV Rosé Sauvage",
+            description:
+              "Piper Heidseck, Champagne, France - Well balanced, long smoky finish",
+            price: "£75.00/bottle",
+          },
+          {
+            name: "NV Essential Blanc de Blancs Extra Brut",
+            description:
+              "Piper Heidseck, Champagne, France - Lemon, brioche, full bodied, entrancing mid palate",
+            price: "£85.00/bottle",
+          },
+          {
+            name: "2014 Vintage",
+            description:
+              "Piper Heidseck, Champagne, France - Magnificent maturity, perfectly balanced",
+            price: "£110.00/bottle",
+          },
+        ],
+      },
+      {
+        category: "Sherry, Port & Pudding Wines",
+        items: [
+          {
+            name: "NV Fino Innocente Single Vineyard",
+            description:
+              "Valdespina, Andalucia, Spain - Complex, almonds, apples & a little saltiness",
+            price: "£6.45/£28.00",
+          },
+          {
+            name: "2023 Barosa Valley Botrytis Semillon",
+            description:
+              "Peter Lehman, Australia - Luscious apricot honey & butterscotch",
+            price: "£6.45/£28.00",
+          },
+          {
+            name: "NV Rutherglen Muscat",
+            description:
+              "Chambers Rosewood, Victoria, Australia - Sweet, rich and unctuous yet zesty & balanced",
+            price: "£6.75/£29.00",
+          },
+          {
+            name: "2019 Sauternes",
+            description:
+              "Chateau Laville, Bordeaux, France - Candied fruits, honey, spice with a citrus finish",
+            price: "£8.45/£42.00",
+          },
+          {
+            name: "2018 Unfiltered LBV Port",
+            description: "Sandeman, Douro, Portugal",
+            price: "£6.25/£48.00",
+          },
+          {
+            name: "NV 10 year old Tawny Port",
+            description: "Sandeman, Douro, Portugal",
+            price: "£6.95/£55.00",
+          },
+          {
+            name: "NV 20 year old Tawny Port",
+            description: "Sandeman, Douro, Portugal",
+            price: "£9.25/£85.00",
+          },
         ],
       },
     ],
