@@ -503,6 +503,7 @@ export const menuItems = [
   },
 
   // Updated Whisky Menu (simplified structure)
+  // Updated Simple Whisky Menu - replace the existing "Whisky" object
   {
     menu: "Whisky",
     categories: [
@@ -519,8 +520,6 @@ export const menuItems = [
           { name: "Ardnamurchan AD/09 Cask 58.4%", price: "£6.95" },
           { name: "Ardnamurchan Thomson Brothers 6yr", price: "£8.40" },
           { name: "Arran 10", price: "£5.95" },
-          { name: "Arran, Sauternes Cask 50%", price: "£5.95" },
-          { name: "Arran, Amarone Cask 50%", price: "£5.95" },
           { name: "Arran Machrie Moor, 46%", price: "£6.45" },
           { name: "Arran small batch, RMW Excl 57.4%", price: "£7.80" },
           { name: "Auchentoshan 12", price: "£5.95" },
@@ -536,19 +535,19 @@ export const menuItems = [
           { name: "Balvenie 12", price: "£6.25" },
           { name: "Balvenie 14, Caribbean Cask", price: "£7.90" },
           { name: "Ben Nevis 10", price: "£6.10" },
+          { name: "Ben Nevis 9, Small parcels, 48%", price: "£7.05" },
           { name: "Benrinnes 9, RMW, 46%", price: "£6.45" },
           { name: "Ben Riach 12", price: "£5.95" },
-          { name: "Bimber Batch no.4", price: "£7.80" },
           { name: "Bowmore 12", price: "£6.20" },
           { name: "Bruichladdich 8, The Classic Laddie", price: "£6.05" },
           { name: "Bunnahabhain 12", price: "£5.95" },
           { name: "Campbeltown Loch, Blend", price: "£5.10" },
           { name: "Caol Ila 12", price: "£6.10" },
           { name: "Caol Ila 9, Carn Mor, Ruby Port cask", price: "£7.40" },
-          { name: "Caol Ila, 10, Bourbon Cask, 58.7%", price: "£7.75" },
+          { name: "Caol ila, 10, Bourbon Cask, 58.7%", price: "£7.75" },
           { name: "Clynelish 14", price: "£6.25" },
           { name: "Craigellachie 16, Oloroso cask, 57.1%", price: "£7.75" },
-          { name: "Daftmill 2010, 11 year old 59.5%", price: "£9.40" },
+          { name: "Daftmill 2010, 11year old 59.5%", price: "£9.40" },
           {
             name: "Daftmill 2011, RMW, Oloroso Sherry, 59.3%",
             price: "£11.15",
@@ -557,7 +556,6 @@ export const menuItems = [
           { name: "Dalmore 12", price: "£6.60" },
           { name: "Dalwhinnie 15", price: "£6.75" },
           { name: "Deanston 12, 46.3%", price: "£5.95" },
-          { name: "Fettercairn 14, Carvelos wine cask, 56.1%", price: "£7.60" },
           { name: "Glenallachie 8, Scottish Oak cask, 46%", price: "£6.40" },
           { name: "Glenallachie 10 cask strength 57.2%", price: "£7.05" },
           { name: "Glenallachie 12", price: "£5.95" },
@@ -566,7 +564,6 @@ export const menuItems = [
           { name: "Glendronach 12", price: "£6.15" },
           { name: "Glendronach no11 Cask, 59.8%", price: "£7.80" },
           { name: "Glendronach Port wood", price: "£5.95" },
-          { name: "Glen Elgin 12, RMW, 57.1%", price: "£6.95" },
           { name: "Glenfarclas 10", price: "£5.95" },
           { name: "Glenfiddich 12", price: "£5.95" },
           { name: "Glenfiddich 15", price: "£7.50" },
@@ -574,9 +571,13 @@ export const menuItems = [
           { name: "Glen Keith 25, Cadenheads 47.8%", price: "£11.95" },
           { name: "Glenlivet 15", price: "£7.45" },
           { name: "Glenmorangie 14, Quinta Ruben", price: "£7.30" },
-          { name: "Glenrothes 16, Olorosso cask, 57.4%", price: "£7.40" },
+          { name: "Glen Ord 10, Rarefind, CDP finish, 57.6%", price: "£8.40" },
           { name: "Glen Scotia 15", price: "£7.40" },
           { name: "Glen Scotia 18", price: "£9.70" },
+          {
+            name: "Glen Scotia 9, Heavy peat, Ribera del deuro, 54.3%",
+            price: "£6.70",
+          },
           {
             name: "Glen Scotia 12, The Mermaid, Palo Cortado 54.1%",
             price: "£8.10",
@@ -586,14 +587,17 @@ export const menuItems = [
             price: "£8.20",
           },
           { name: "Glen Scotia Victoriana 54.2%", price: "£6.95" },
+          { name: "Glentauchers 16, RMW, Sherry cask, 46%", price: "£8.20" },
           { name: "Hazelburn 12, Olorroso cask 49.9%", price: "£8.10" },
           { name: "Hazelburn 21", price: "£14.70" },
+          { name: "Hearach, 46%", price: "£6.50" },
           { name: "Hibiki Harmony", price: "£7.80" },
           { name: "Highland Park 12", price: "£6.15" },
-          { name: "Highland Park 15, Bourbon cask, RMW 54%", price: "£8.80" },
+          { name: "Highland Park 14, Oloroso cask, 57.1%", price: "£7.75" },
           { name: "Highland Park 18", price: "£9.40" },
           { name: "Inchgower 13, refill PX hogshead, 58.3%", price: "£6.15" },
-          { name: "Jura 10", price: "£5.95" },
+          { name: "Jura 12", price: "£5.95" },
+          { name: "Jura 31, Bourbon cask, Cadenheads, 44.4%", price: "£17.85" },
           {
             name: "Kilchoman, 10, `Loch Gorm`, Sherry cask, 46%",
             price: "£7.75",
@@ -606,13 +610,13 @@ export const menuItems = [
           { name: "Lagavulin 16", price: "£7.80" },
           { name: "Laphroaig 10, 40%", price: "£6.25" },
           { name: "Laphroaig 10, Cask strength, 56.5%", price: "£7.60" },
+          { name: "Ledaig 14, Bourbon cask, 46%", price: "£8.10" },
           { name: "Lindores Abbey, Friar John Cor, 60.2%", price: "£7.10" },
           { name: "Lindores Abbey, `The Owners Cask`, 60.4%", price: "£7.15" },
           {
-            name: "Linkwood 17, Signatory, PX & Olorosso casks, 57.1%",
+            name: "Linkwood 17,Signatory,PX & Olorosso casks,57.1%",
             price: "£7.75",
           },
-          { name: "Lochlea Harvest", price: "£5.60" },
           { name: "Lochlea Our Barley", price: "£5.60" },
           { name: "Longmorn 14, Sherry Octave, 60.5%", price: "£8.80" },
           { name: "Longrow 18", price: "£11.60" },
@@ -623,7 +627,11 @@ export const menuItems = [
             name: "Macallan 13, Signatory, Oloroso Cask, 57.1%",
             price: "£7.40",
           },
-          { name: "Miltonduff 33, RMW, 50.5%", price: "£13.40" },
+          { name: "Miltonduff 11, Cadenheads, 55%", price: "£7.15" },
+          {
+            name: "Miltonduff 17, Cadenheads, Carcavelos cask, 51%",
+            price: "£7.60",
+          },
           { name: "Mortlach 12", price: "£6.75" },
           {
             name: "Mortlach 13, Signatory, Sherry Cask, 57.1%",
@@ -649,13 +657,9 @@ export const menuItems = [
           },
           { name: "Springbank 10", price: "£6.40" },
           { name: "Springbank 15", price: "£7.70" },
-          { name: "Strathmill 27, Cadenheads 51.2%", price: "£11.80" },
+          { name: "Tamdhu 12, 43%", price: "£6.75" },
           { name: "Tomatin 12", price: "£5.95" },
           { name: "Tomatin 9, Rarefind, Sherry casks, 58.3%", price: "£7.10" },
-          {
-            name: "Tomintoul 16, Cadenheads, Fino cask, 54.1%",
-            price: "£7.85",
-          },
           { name: "Tullibardine 26, Cadenheads 43.9%", price: "£9.95" },
           { name: "Yamazaki 12", price: "£11.25" },
         ],
@@ -663,7 +667,7 @@ export const menuItems = [
     ],
   },
 
-  // Updated Whisky-Detailed Menu
+  // Updated Detailed Whisky Menu - replace the existing "Whisky-Detailed" object
   {
     menu: "Whisky-Detailed",
     categories: [
@@ -701,6 +705,12 @@ export const menuItems = [
             price: "£11.15",
             description:
               "Bottled exclusively for Royal Mile Whiskies this Daftmill Single Sherry Cask is packed with honey, dark chocolate, stone fruits and much more.",
+          },
+          {
+            name: "Girvan 28, Bourbon Cask, Cadenheads, 54.7%",
+            price: "£",
+            description:
+              "Distilled in 1988 this 28 year old single grain whisky from the Girvan distillery was bottled by Cadenheads in 2016. With a nose of butterscotch and jam tarts, the whisky progresses with a hint of cloves and nutmeg with sweet caramel and butterscotch.",
           },
           {
             name: "Glenkinchie 12 Year Old",
@@ -843,8 +853,8 @@ export const menuItems = [
               "A glorious single malt. Casks were selected from across the distilleries 16 warehouses dating back to the 1970's. Impressive stuff with notes of toffee, robust malt and honeyed fruit.",
           },
           {
-            name: "Glenfarclas 10 Year Old",
-            price: "£5.95",
+            name: "Glenfarclas 12 Year Old",
+            price: "£6.45",
             description:
               "Malty, with a touch of spice and full of the rich sweetness a high quality Speyside can deliver.",
           },
@@ -890,12 +900,6 @@ export const menuItems = [
             description:
               "Creamy caramel and almond flakes lead to a finish of bark, peppermint slice & dark chocolate.",
           },
-          {
-            name: "Strathmill 27 Year Old, 1991, 51.2%",
-            price: "£11.80",
-            description:
-              "Rich & fruity on the nose with almonds and brownies. Salted caramel on the palate with a hint of cloves, pineapple & lemon drizzle cake.",
-          },
         ],
       },
       {
@@ -934,8 +938,8 @@ export const menuItems = [
               "Triple distilled, non peated from the Springbank distillery. A rare chance to sample this highly collectible whisky. Vibrant & fruity.",
           },
           {
-            name: "Kilkerran 8 Year Old, Bourbon Cask, 55.6%",
-            price: "£6.95",
+            name: "Kilkerran Batch No.6 – 57.4%",
+            price: "£5.95",
             description:
               "Heavily Peated version of the usually lightly peated Kilkerran. Sweet peat smoke with notes of honeycomb lead to a peppery finish and a lot of peat smoke.",
           },
@@ -987,6 +991,12 @@ export const menuItems = [
             price: "£5.95",
             description:
               "A sweet honey aroma and gentile oak flavours leading to caramel and liquorice notes, finished in ex-Bourbon casks give Origin its distinctive Jura style.",
+          },
+          {
+            name: "Jura 31 Year Old, 44.4%, Cadenheads",
+            price: "£17.85",
+            description:
+              "Matured in a single Bourbon barrel, this 31 year old whisky has dried Mango on the nose with a lovely minerality and melon on the palate, with an earthy, dried ginger to finish.",
           },
           {
             name: "Talisker 10 Year Old",
@@ -1093,36 +1103,36 @@ export const menuItems = [
             name: "The Regions",
             description:
               "Auchentoshan 12 (Lowland), Dalmore 12 (Highland), Glenallachie 12 (Speyside), Bowmore 12 (Islay)",
-            price: "£25",
+            price: "£30",
           },
           {
             name: "Speyside",
             description:
               "Glenallachie 12, The Balvenie, Glenfiddich 12, Mortlach 12",
-            price: "£25",
+            price: "£30",
           },
           {
             name: "Islay",
             description:
               "Ardbeg 10, Laphroaig 10, Port Charlotte 10, Bunnahabhain 12",
-            price: "£25",
+            price: "£30",
           },
           {
             name: "Campbeltown",
             description: "Springbank 10, Glen Scotia 15, Kilkerran 12, Longrow",
-            price: "£25",
+            price: "£35",
           },
           {
             name: "Sherry Bombs",
             description:
-              "Craigellachie 16 Oloroso cask, 57.1%, Glenrothes 16 Oloroso cask 57.4%, Tomatin 9 Sherry casks 58.3%, Tomintoul Fino cask 54.1%",
-            price: "£30",
+              "Tamdhu 12, Sherry Oak casks 43%, Highland Park 14, Oloroso Sherry butts 57.1%, Tomatin 9 Sherry casks 58.3%, Strathmill 12, Oloroso Sherry butts 57.1%",
+            price: "£35",
           },
           {
             name: "Old & Rare",
             description:
-              "Glen Keith 25 year old 47.8%, Daftmill 11 year old, 59.5%, Miltonduff 33 year old, 50.5%, Hazelburn 21 year old 46%",
-            price: "£50",
+              "Glen Keith 25 year old 47.8%, Daftmill 11 year old, 59.5%, Girvan 28 year old, 54.7%, Hazelburn 21 year old 46%",
+            price: "£60",
           },
         ],
       },
