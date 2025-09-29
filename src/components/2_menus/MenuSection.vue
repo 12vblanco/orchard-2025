@@ -136,6 +136,7 @@
   position: relative;
   overflow: hidden;
   border-top: 2px solid $color-secondary;
+    white-space: pre-line;
   @media (max-width: 800px) {
     padding: 1.4rem ;
     }
