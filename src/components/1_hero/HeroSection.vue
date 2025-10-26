@@ -18,6 +18,22 @@
           We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. 
           <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')" ><b>See our menus</b><br/><br/></a><b style="text-transform: uppercase;">Please note <span>only assistance dogs</span> are allowed in The Orchard. </b></p>
       </div>
+      <div class="hero-text-rugby">
+        <div class="tnt-logo">
+          
+          <div class="nations-flags">
+            <img class="tnt-img" src="@/assets/images/tnt.png" alt="TNT Sports Logo" />
+          <img src="@/assets/images/scot.png" alt="Scotland Flag" />
+          <img src="@/assets/images/eng.png" alt="England Flag" />
+          <img src="@/assets/images/ira.png" alt="Ireland Flag" />
+          <img src="@/assets/images/wal.png" alt="Wales Flag" />
+        </div>
+        </div>
+        <p class="hero-paragraph-rugby">
+          <b>From the 1st of November, we show the Autumn Nations series with TNT Sports!! </b>
+          </p>
+           
+      </div>
     </div>
   </section>
 </template>
@@ -86,7 +102,7 @@ export default {
 /* Hero Text */
 .hero-text {
   position: relative;
-  top: 12rem;
+  top: 6rem;
   z-index: 1; 
   max-width: 540px;
   text-align: justify;
@@ -118,6 +134,74 @@ export default {
     line-height: 1.5;
     font-weight: 500;  
     font-size: 17px}
+}
+/* Hero Text Rugby*/
+.hero-text-rugby {
+  position: relative;
+  top: 8rem;
+  z-index: 1; 
+  max-width: 540px;
+  text-align: justify;
+  margin-top: 4rem;
+  
+  @media (max-width: 420px){
+    max-width: 100%;
+    padding: 0 1.4rem 0 .3rem;
+    text-align: center;
+  }
+  @media (max-width: 620px){
+    max-width: 100%;
+    padding: 0 1.4rem 0 .3rem;
+    text-align: center;
+  }
+}
+
+.hero-paragraph-rugby {
+  color: $color-text-light;
+  font-size: $font-medium;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  @media (max-width: 420px){
+    font-size: $font-medium;
+    line-height: 1.5;
+    font-weight: 500;  
+    font-size: 17px}
+    @media (max-width: 620px){
+    font-size: $font-medium;
+    line-height: 1.5;
+    font-weight: 500;  
+    font-size: 17px}
+}
+
+.tnt-img {
+  width: 140px !important;
+  margin: 0 auto;
+  background-color: none;
+  background: none;
+}
+
+  /* Nations Flags Container */
+.nations-flags {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 88%;
+  margin: 1rem auto 0;
+  gap: 1rem;
+
+  img {
+    width: 80px;
+    
+    border-radius: 6px;
+    height: auto;
+    @media (max-width: 420px) {
+      max-width: 80px;
+    }
+    @media (max-width: 620px) {
+      max-width: 80px;
+    }
+  }
 }
 
 .inline-menus {
