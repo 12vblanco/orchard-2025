@@ -138,7 +138,7 @@ export default {
 /* Hero Text Rugby*/
 .hero-text-rugby {
   position: relative;
-  top: 8rem;
+  top: 6rem;
   z-index: 1; 
   max-width: 540px;
   text-align: justify;
