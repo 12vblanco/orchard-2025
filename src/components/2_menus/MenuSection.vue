@@ -28,7 +28,6 @@
           @click.prevent="setSelectedMenu('Kids Menu')"
           :class="{ active: selectedMenu === 'Kids Menu' }"
           >Kids Menu</a>
-        
       </div>
       
       <div class="menus-options_bottom">
