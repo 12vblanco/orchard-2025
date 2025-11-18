@@ -11,6 +11,13 @@
           >Food Menu</a>
         <span class="menu-divider">&#10020;</span>
         <a
+          href="#gluten-free"
+          @click.prevent="setSelectedMenu('Gluten Free')"
+          :class="{ active: selectedMenu === 'Gluten Free' }"
+          >Gluten Free</a>
+        <span class="menu-divider">&#10020;</span>
+
+        <a
           href="#sunday-roast"
           @click.prevent="setSelectedMenu('Sunday Roasts')"
           :class="{ active: selectedMenu === 'Sunday Roast' }"
@@ -21,12 +28,7 @@
           @click.prevent="setSelectedMenu('Kids Menu')"
           :class="{ active: selectedMenu === 'Kids Menu' }"
           >Kids Menu</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#gluten-free"
-          @click.prevent="setSelectedMenu('Gluten Free')"
-          :class="{ active: selectedMenu === 'Gluten Free' }"
-          >Gluten Free</a>
+        
       </div>
       
       <div class="menus-options_bottom">
