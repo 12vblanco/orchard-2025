@@ -151,7 +151,7 @@ export default {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 44px;
   @media (max-width: 759px) {
     gap: 20px; 
   }
@@ -160,8 +160,8 @@ export default {
 .navMenu li {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 22px;
-  letter-spacing: 3px;
+  border-radius: 2px;
+  letter-spacing: 1px;
 }
 
 .navMenu a {
@@ -171,7 +171,7 @@ export default {
   text-transform: uppercase;
   transition: color 0.3s ease;
   font-weight: 500;
-  font-size: $font-small;
+  font-size: 19px;
   cursor: pointer;
 }
 
