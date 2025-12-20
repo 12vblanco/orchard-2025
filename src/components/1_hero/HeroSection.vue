@@ -13,7 +13,7 @@
       />
       <!-- <div class="hero-text"> -->
       <div class="hero-xmas">
-        <img class="xmas-img" src="@/assets/images/xmas-times-25.jpeg" alt="xmas opening hours" />
+        <img class="xmas-img" src="@/assets/images/xmas-times-25.jpg" alt="xmas opening hours" />
         <!-- <p class="hero-paragraph">
           Welcome to <b>The Orchard Bar</b>. A casual, relaxed restaurant and bar
           located in Canonmills just a few minutes' walk from the botanic gardens.
