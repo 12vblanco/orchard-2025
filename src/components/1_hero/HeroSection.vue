@@ -11,6 +11,7 @@
         @update:showBooking="showBooking = $event"
         :scrollToSection="scrollToSection" 
       />
+      
       <!-- <div class="hero-text"> -->
       <div class="hero-xmas">
         <img class="xmas-img" src="@/assets/images/xmas-times-25.jpg" alt="xmas opening hours" />
