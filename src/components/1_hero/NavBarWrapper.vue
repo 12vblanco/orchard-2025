@@ -170,8 +170,8 @@ export default {
   font-weight: bold;
   text-transform: uppercase;
   transition: color 0.3s ease;
-  font-weight: 300;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 19px;
   cursor: pointer;
 }
 
