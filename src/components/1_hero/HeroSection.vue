@@ -202,17 +202,20 @@ export default {
 }
 
 .xmas-img {
-  width: 46vh;
+  max-width: 46vh; 
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   text-align: center;
   border-radius: 12px;
   margin-top: 8rem;
   margin-bottom: 5rem;
+  object-fit: contain;
+  display: block;
 
   @media (max-width: 420px){
     width: 96vw;
-    /* margin: 0  5rem; */
-    /* padding: 0 1.4rem 0 .3rem; */
+    height: auto;
   }
 }
 
