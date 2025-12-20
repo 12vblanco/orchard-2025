@@ -199,7 +199,7 @@ export default {
 }
 
 .xmas-img {
-  width: 340px;
+  width: 46vh;
   margin: 0 auto;
   text-align: center;
   border-radius: 12px;
