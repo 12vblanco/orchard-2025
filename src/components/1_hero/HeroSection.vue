@@ -141,7 +141,7 @@ export default {
     font-size: 17px}
 }
 /* Hero Text Rugby*/
-.hero-text-rugby {
+/* .hero-text-rugby {
   position: relative;
   top: 6rem;
   z-index: 1; 
@@ -177,7 +177,7 @@ export default {
     line-height: 1.5;
     font-weight: 500;  
     font-size: 17px}
-}
+} */
 
 /* Hero Text */
 .hero-text {
@@ -199,14 +199,14 @@ export default {
 }
 
 .xmas-img {
-  width: 20vw;
+  width: 340px;
   margin: 0 auto;
   text-align: center;
   border-radius: 12px;
   margin-top: 8rem;
   margin-bottom: 5rem;
 
-  @media (min-width: 420px){
+  @media (max-width: 420px){
     width: 96vw;
     /* margin: 0  5rem; */
     /* padding: 0 1.4rem 0 .3rem; */
