@@ -2,45 +2,40 @@
   "name": "the-orchard-2025",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "clean": "rm -rf node_modules dist && yarn install"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.vue --fix",
+    "clean": "rm -rf node_modules dist package-lock.json && npm install"
   },
   "dependencies": {
-    "@vue/cli": "^4.2.2",
-    "core-js": "^3.8.3",
     "vue": "^3.5.13",
-    "vue-loader": "^17.4.2",
     "vue-router": "^4.0.13",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/eslint-parser": "^7.26.5",
-    "@babel/preset-env": "^7.26.0",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "babel-loader": "^9.2.1",
-    "eslint": "^7.32.0",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.32.0",
     "sass": "^1.83.4",
-    "sass-loader": "^16.0.4"
+    "vite": "^7.3.0"
   },
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "browser": true,
+      "es2021": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
     "parserOptions": {
-      "ecmaVersion": 2020,
-      "parser": "@babel/eslint-parser"
+      "ecmaVersion": 2021,
+      "sourceType": "module"
     },
     "rules": {
       "no-console": "off",
@@ -50,7 +45,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead",
-    "not ie 11"
+    "not dead"
   ]
 }

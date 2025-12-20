@@ -38,6 +38,8 @@ export default {
 </script>
 
 <style lang="scss">
+      @import '@/styles/styles.scss';
+
 * {
   margin: 0;
   padding: 0;
