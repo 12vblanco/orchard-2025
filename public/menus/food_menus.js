@@ -1,5 +1,5 @@
 export const menuItems = [
-  // Food Menu
+  // Food Menu - Updated to match Winter menu '25.docx 
   {
     menu: "Food Menu",
     allergyNotice: "*** Please make your server aware of any allergies ***",
@@ -11,28 +11,28 @@ export const menuItems = [
         items: [
           {
             name: "Meat, Cheese and Bread selection",
-            description: "Designed for sharing, with cured meats, assorted cheese, bread and dips",
+            description: "designed for sharing, with cured meats, assorted cheese, bread and dips",
             price: "£17.45"
           },
           {
             name: "The Orchard's Soup of the Day (V)",
-            description: "With crusty bread & butter",
+            description: "with crusty bread & butter",
             price: "£6.25",
             vegetarian: true
           },
           {
             name: "Cockburn's of Dingwall Award Winning Haggis Fritters",
-            description: "With tomato chilli jam and balsamic glaze",
+            description: "with tomato chilli jam and balsamic glaze",
             price: "£9.95/£15.25"
           },
           {
             name: "The Orchard's Cullen Skink",
-            description: "Served with crusty bread & butter",
+            description: "served with crusty bread & butter",
             price: "£10.25"
           },
           {
             name: "Spiced Muhammara topped with Pomegranate (Vegan)(N)",
-            description: "Served with whipped feta & crostini",
+            description: "served with whipped feta & crostini",
             price: "£9.75",
             vegan: true
           }
@@ -44,32 +44,33 @@ export const menuItems = [
         items: [
           {
             name: "Flat Iron Steak Sandwich",
-            description: "With mixed leaves, tomato chilli jam & mayonnaise",
+            description: "with mixed leaves, tomato chilli jam & mayonnaise",
             price: "£10.45"
           },
           {
             name: "Chicken Shawarma & Asian Slaw Sandwich",
-            description: "With baby gem lettuce & mayonnaise",
+            description: "with baby gem lettuce & mayonnaise",
             price: "£10.45"
           },
           {
             name: "Roasted Red Pepper & Whipped Feta Sandwich (Vegan)(N)",
-            description: "With muhammara and mixed leaves",
+            description: "with muhammara and mixed leaves",
             price: "£9.75",
             vegan: true
           },
           {
             name: "Battered Haddock Sandwich",
-            description: "With tartare sauce, pea puree & baby gem lettuce",
+            description: "with tartare sauce, pea puree & baby gem lettuce",
             price: "£9.95"
           },
           {
             name: "Brie, Bacon & Cranberry Sandwich",
-            description: "With baby gem & mayonnaise",
+            description: "with baby gem & mayonnaise",
             price: "£9.95"
           },
           {
             name: "Add a bowl of soup, chips or a house salad to your sandwich",
+            description: "",
             price: "£4.25"
           }
         ]
@@ -79,40 +80,42 @@ export const menuItems = [
         items: [
           {
             name: "Fresh Haddock & Hand cut Potato Chips",
-            description: "Crispy beer battered (or breaded for an extra £1) with petit pois & homemade tartare sauce",
+            description: "crispy beer battered (or breaded for an extra £1) with petit pois & homemade tartare sauce",
             price: "£18.75"
           },
           {
             name: "Twice Baked Goats Cheese Soufflé (V)",
-            description: "With oven roasted cherry tomatoes. Add a house salad OR chips for £4.25",
+            description: "with oven roasted cherry tomatoes",
+            note: "add a house salad OR chips for £4.25",
             price: "£17.95",
             vegetarian: true
           },
           {
             name: "The Orchard's Legendary Steak Pie",
-            description: "With a puff pastry bonnet, green beans & hand cut potato chips",
+            description: "with a puff pastry bonnet, green beans & hand cut potato chips",
             price: "£18.75"
           },
           {
             name: "Wild Mushroom & Chestnut Stroganoff (Vegan)",
-            description: "With vegan crème fraiche & pearl couscous",
+            description: "with vegan crème fraiche & pearl couscous",
             price: "£17.95",
             vegan: true
           },
           {
             name: "Pheasant Roulade wrapped in Streaky Bacon",
-            description: "With a black pudding & haggis stuffing, celeriac puree, red cabbage & a juniper gravy",
+            description: "with a black pudding & haggis stuffing, celeriac puree, red cabbage & a juniper gravy",
             price: "£24.75"
           },
           {
             name: "The Orchard's Veggie Burger (V)",
-            description: "Sweet potato, black eyed bean & sweetcorn burger with Asian slaw, sriracha vegan mayo & baby gem on a seeded bap with hand cut chips",
+            description: "sweet potato, black eyed bean & sweetcorn burger with Asian slaw, sriracha vegan mayo & baby gem on a seeded bap with hand cut chips",
             price: "£17.45",
             vegetarian: true
           },
           {
             name: "The Orchard's Prime Scotch Beef Burger",
-            description: "With smoked cheddar, onion relish, gherkins, mayo & baby gem on a seeded bap and with hand cut chips. Add bacon for an extra £1.50",
+            description: "with smoked cheddar, onion relish, gherkins, mayo & baby gem on a seeded bap and with hand cut chips",
+            note: "add bacon for an extra £1.50",
             price: "£17.75"
           },
           {
@@ -123,32 +126,21 @@ export const menuItems = [
         ]
       },
       {
-        category: "Sunday Roasts",
-        note: "Sunday 12-8.30pm",
-        roastNote: "*** Please help us by pre ordering your roast dinner if possible. This will help to guarantee availability for all.**",
+        category: "Sunday Roasts, Sunday 12-8.30pm",
+        note: "*** Please help us by pre ordering your roast dinner if possible. This will help to guarantee availability for all.**",
         items: [
           {
             name: "Sirloin of Scotch Beef or Lamb",
-            description: "With Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy",
+            description: "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy",
             price: "£24.95"
           },
           {
             name: "Chicken Supreme",
-            description: "With Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy",
+            description: "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy",
             price: "£22.95"
           }
         ]
       }
-    ]
-  },
-
-  // GLUTEN FREE (and the rest of your menus follow...)
-  {
-    menu: "Gluten Free",
-    allergyNotice: "*** Please make your server aware of any allergies. \nWe do not have a dedicated chip fryer. Cross contamination may occur***",
-    servingHours: "Food Served - Noon 'til 8.30 pm",
-    categories: [
-      // ... rest of gluten free menu
     ]
   },
 
