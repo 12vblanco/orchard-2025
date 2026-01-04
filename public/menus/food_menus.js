@@ -1,5 +1,7 @@
 export const menuItems = [
-  // Food Menu - Updated to match Winter menu '25.docx 
+  // Winter Menu '26 - Complete Menu Data
+
+  // FOOD MENU
   {
     menu: "Food Menu",
     allergyNotice: "*** Please make your server aware of any allergies ***",
@@ -12,12 +14,12 @@ export const menuItems = [
           {
             name: "Meat, Cheese and Bread selection",
             description: "designed for sharing, with cured meats, assorted cheese, bread and dips",
-            price: "£17.45"
+            price: "£16.75"
           },
           {
             name: "The Orchard's Soup of the Day (V)",
             description: "with crusty bread & butter",
-            price: "£6.25",
+            price: "£5.95",
             vegetarian: true
           },
           {
@@ -31,10 +33,10 @@ export const menuItems = [
             price: "£10.25"
           },
           {
-            name: "Spiced Muhammara topped with Pomegranate (Vegan)(N)",
-            description: "served with whipped feta & crostini",
+            name: "Goats Cheese & Roasted Red Pepper Salad (V)",
+            description: "served with mixed leaves, pearl cous cous, toasted seeds & balsamic glaze",
             price: "£9.75",
-            vegan: true
+            vegetarian: true
           }
         ]
       },
@@ -45,33 +47,33 @@ export const menuItems = [
           {
             name: "Flat Iron Steak Sandwich",
             description: "with mixed leaves, tomato chilli jam & mayonnaise",
-            price: "£10.45"
+            price: "£9.95"
           },
           {
-            name: "Chicken Shawarma & Asian Slaw Sandwich",
-            description: "with baby gem lettuce & mayonnaise",
-            price: "£10.45"
+            name: "Sticky Soy Chicken & Asian Slaw Sandwich",
+            description: "with baby gem lettuce & miso mayonnaise",
+            price: "£9.75"
           },
           {
-            name: "Roasted Red Pepper & Whipped Feta Sandwich (Vegan)(N)",
-            description: "with muhammara and mixed leaves",
+            name: "Roasted Red Pepper & Feta Sandwich (Vegan)",
+            description: "with mixed leaves & vegan mayonnaise",
             price: "£9.75",
             vegan: true
           },
           {
             name: "Battered Haddock Sandwich",
             description: "with tartare sauce, pea puree & baby gem lettuce",
-            price: "£9.95"
+            price: "£9.75"
           },
           {
-            name: "Brie, Bacon & Cranberry Sandwich",
+            name: "Brie, Bacon & Tomato Chilli Jam Sandwich",
             description: "with baby gem & mayonnaise",
-            price: "£9.95"
+            price: "£9.75"
           },
           {
             name: "Add a bowl of soup, chips or a house salad to your sandwich",
             description: "",
-            price: "£4.25"
+            price: "£3.95"
           }
         ]
       },
@@ -86,166 +88,132 @@ export const menuItems = [
           {
             name: "Twice Baked Goats Cheese Soufflé (V)",
             description: "with oven roasted cherry tomatoes",
-            note: "add a house salad OR chips for £4.25",
-            price: "£17.95",
+            note: "add a house salad OR chips for £3.95",
+            price: "£17.45",
             vegetarian: true
           },
           {
             name: "The Orchard's Legendary Steak Pie",
             description: "with a puff pastry bonnet, green beans & hand cut potato chips",
-            price: "£18.75"
+            price: "£17.95"
           },
           {
             name: "Wild Mushroom & Chestnut Stroganoff (Vegan)",
-            description: "with vegan crème fraiche & pearl couscous",
-            price: "£17.95",
+            description: "with pearl couscous",
+            price: "£17.25",
             vegan: true
           },
           {
-            name: "Pheasant Roulade wrapped in Streaky Bacon",
-            description: "with a black pudding & haggis stuffing, celeriac puree, red cabbage & a juniper gravy",
-            price: "£24.75"
+            name: "28 day aged Scottish Flat Iron Steak",
+            description: "with onion rings, tomato & hand cut chips",
+            note: "add peppercorn sauce for £2",
+            price: "£22.75"
           },
           {
             name: "The Orchard's Veggie Burger (V)",
             description: "sweet potato, black eyed bean & sweetcorn burger with Asian slaw, sriracha vegan mayo & baby gem on a seeded bap with hand cut chips",
-            price: "£17.45",
+            price: "£16.95",
             vegetarian: true
           },
           {
             name: "The Orchard's Prime Scotch Beef Burger",
             description: "with smoked cheddar, onion relish, gherkins, mayo & baby gem on a seeded bap and with hand cut chips",
-            note: "add bacon for an extra £1.50",
-            price: "£17.75"
+            note: "add bacon for £1.50",
+            price: "£17.25"
           },
           {
             name: "Sides",
             description: "Hand cut chips, onion rings, garlic bread, house salad, mixed olives",
-            price: "£5.75"
-          }
-        ]
-      },
-      {
-        category: "Sunday Roasts, Sunday 12-8.30pm",
-        note: "*** Please help us by pre ordering your roast dinner if possible. This will help to guarantee availability for all.**",
-        items: [
-          {
-            name: "Sirloin of Scotch Beef or Lamb",
-            description: "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy",
-            price: "£24.95"
-          },
-          {
-            name: "Chicken Supreme",
-            description: "with Yorkshire pudding, roast potatoes, beetroot, tenderstem broccoli, carrots & red wine gravy",
-            price: "£22.95"
+            price: "£5.25"
           }
         ]
       }
     ]
   },
 
-  // GLUTEN FREE
+  // GLUTEN FREE MENU
   {
-    menu: "Gluten Free",
-    allergyNotice: "*** Please make your server aware of any allergies. \nWe do not have a dedicated chip fryer. Cross contamination may occur***",
-    servingHours: "Food Served - Noon 'til 8.30 pm",
+    menu: "Gluten Free Menu",
+    allergyNotice: "We do not have a dedicated chip fryer. Cross contamination may occur",
     categories: [
       {
-        category: "Starters & Lighter Bites",
+        category: "Starters & Lighter bites",
         items: [
           {
             name: "Meat & Cheese Selection",
-            description: "Designed for sharing, with cured meats, assorted cheese, gluten free oatcakes and a selection of dips",
-            price: "£17.45",
+            description: "designed for sharing, with cured meats, assorted cheese, gluten free oatcakes and a selection of dips",
+            price: "£16.75"
           },
           {
             name: "The Orchard's Soup of the Day (V)",
-            description: "With gluten free oatcakes",
-            price: "£6.25",
-            vegetarian: true,
+            description: "with gluten free oatcakes",
+            price: "£5.95",
+            vegetarian: true
           },
           {
             name: "The Orchard's Cullen Skink",
-            description: "With gluten free oatcakes",
-            price: "£10.25",
-          },
-          {
-            name: "Mulled Wine Poached Pear and Blue Cheese Salad (V)(N)",
-            description: "With candied walnuts, cranberries and mixed leaves",
-            price: "£9.95",
-            vegetarian: true,
-          },
-          {
-            name: "Spiced Muhammara topped with Pomegranate Seeds (Vegan)(N)",
-            description: "Served with whipped vegan feta and gluten free oatcakes",
-            price: "£9.75",
-            vegan: true,
-          },
-        ],
+            description: "with gluten free oatcakes",
+            price: "£10.25"
+          }
+        ]
       },
       {
         category: "Salads",
+        note: "All served with fresh mixed leaves, cucumber, peppers, cherry tomatoes and our house dressing",
         items: [
           {
-            name: "Brie, Bacon, Cranberry",
-            description: "Served with fresh mixed leaves, cucumber, peppers, cherry tomatoes and our house dressing",
-            price: "£9.95",
-          },
-          {
-            name: "Chicken Shawarma, Asian Slaw",
-            description: "Served with fresh mixed leaves, cucumber, peppers, cherry tomatoes and our house dressing",
-            price: "£10.45",
+            name: "Brie, Bacon, Tomato Chilli Jam",
+            description: "",
+            price: "£9.75"
           },
           {
             name: "Flat Iron Steak, Tomato Chilli Jam",
-            description: "Served with fresh mixed leaves, cucumber, peppers, cherry tomatoes and our house dressing",
-            price: "£10.45",
+            description: "",
+            price: "£9.95"
           },
           {
-            name: "Roasted Red Pepper, Whipped Feta, Muhammara (Vegan)(N)",
-            description: "Served with fresh mixed leaves, cucumber, peppers, cherry tomatoes and our house dressing",
+            name: "Roasted Red Pepper, Whipped Feta (Vegan)",
+            description: "",
             price: "£9.75",
-            vegan: true,
-          },
-        ],
+            vegan: true
+          }
+        ]
       },
       {
         category: "Mains",
+        note: "*please be advised we do not have a dedicated chip fryer, cross contamination may occur*",
         items: [
           {
             name: "Fresh hand cut Grilled Haddock fillet & hand cut chips OR salad",
-            description: "Petit pois and homemade tartare sauce",
-            price: "£18.75",
+            description: "petit pois and homemade tartare sauce",
+            price: "£18.75"
           },
           {
             name: "Twice Baked Goats Cheese Souffle (V)",
-            description: "Add house salad for £3.75",
-            price: "£17.95",
-            vegetarian: true,
-          },
-          {
-            name: "Pan fried fillet of Cod with a Champagne Beurre Blanc",
-            description: "On a bed of leek & potato mash and buttered greens",
-            price: "£23.95",
+            description: "add house salad for £3.75",
+            price: "£17.45",
+            vegetarian: true
           },
           {
             name: "The Orchard's Prime Scotch Beef Burger (NO BUN)",
-            description: "With cheddar cheese, baby gem & onion relish with hand cut chips OR salad. Add bacon for an extra £1.50",
-            price: "£17.75",
+            description: "with cheddar cheese, baby gem & onion relish with hand cut chips OR salad",
+            note: "add bacon for an extra £1.50",
+            price: "£17.25"
           },
           {
             name: "The Orchard's Veggie Burger (NO BUN) (V)",
-            description: "Sweet potato, black eyed bean & sweetcorn burger with Asian slaw & vegan sriracha mayo with hand cut chips OR salad",
-            price: "£17.45",
-            vegetarian: true,
+            description: "sweet potato, black eyed bean & sweetcorn burger with Asian slaw & vegan sriracha mayo with hand cut chips OR salad",
+            price: "£16.95",
+            vegetarian: true
           },
           {
             name: "Our Sunday Roasts",
-            description: "Served on Sunday -- Beef, Chicken & Lamb (see our main menu for details)",
-          },
-        ],
-      },
-    ],
+            description: "served on Sunday -- Beef, Chicken & Lamb (see our main menu for details)",
+            price: null
+          }
+        ]
+      }
+    ]
   },
 
   // Sunday Roast Menu
