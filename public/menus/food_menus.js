@@ -131,9 +131,9 @@ export const menuItems = [
     ]
   },
 
-  // GLUTEN FREE MENU
+  // GLUTEN FREE
   {
-    menu: "Gluten Free Menu",
+    menu: "Gluten Free",
     allergyNotice: "We do not have a dedicated chip fryer. Cross contamination may occur",
     categories: [
       {
