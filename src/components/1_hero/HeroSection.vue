@@ -12,16 +12,16 @@
         :scrollToSection="scrollToSection" 
       />
 
-      <!-- <div class="hero-text"> -->
+      <div class="hero-text">
       <div class="hero-cover">
-        <img class="cover-img" src="@/assets/images/cover-img.jpg" alt="Special Promo" />
-        <!-- <p class="hero-paragraph">
+        <!-- <img class="cover-img" src="@/assets/images/cover-img.jpg" alt="Special Promo" /> -->
+        <p class="hero-paragraph">
           Welcome to <b>The Orchard Bar</b>. A casual, relaxed restaurant and bar
           located in Canonmills just a few minutes' walk from the botanic gardens.
           We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. 
           <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')" ><b>See our menus</b>
             </a> <br/><br/>
-            </p>-->
+            </p>
             <p class="hero-paragraph"><b style="text-transform: uppercase;">Please note <span>only assistance dogs</span> are allowed in The Orchard. </b></p> 
       </div>
       <!-- RUGBY INSERT -->
@@ -38,7 +38,7 @@
         <p class="hero-paragraph-rugby">
           <b>From the 1st of November, we show the Autumn Nations series with TNT Sports!! </b>
           </p> -->
-      <!-- </div> -->
+      </div>
 
     </div>
   </section>
