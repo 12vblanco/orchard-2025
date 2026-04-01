@@ -1,230 +1,230 @@
 export const menuItems = [
   // Winter Menu '26 - Complete Menu Data
 
-  // FOOD MENU
-  {
-    menu: "Food Menu",
-    allergyNotice: "*** Please make your server aware of any allergies ***",
-    chipFryerNotice: "*please be advised we do not have a dedicated chip fryer, cross contamination may occur*",
-    servingHours: "Food Served - Noon 'til 8.30 pm",
-    categories: [
-      {
-        category: "Starters & Lighter Bites",
-        items: [
-          {
-            name: "Meat, Cheese and Bread selection",
-            description: "designed for sharing, with cured meats, assorted cheese, bread and dips",
-            price: "£17.50"
-          },
-          {
-            name: "The Orchard's Soup of the Day (V)",
-            description: "with crusty bread & butter",
-            price: "£6.50",
-            vegetarian: true
-          },
-          {
-            name: "Cockburn's of Dingwall Award Winning Haggis Fritters",
-            description: "with tomato chilli jam and balsamic glaze",
-            price: "£10.50/£16"
-          },
-          {
-            name: "Cockburn's Black Pudding",
-            description: "with salad on toasted bread with a soft poached egg and hollandaise sauce",
-            price: "£10.50/£16"
-          },
-          {
-            name: "Harissa Roasted Carrot and Sweet Potatoes (Vegan)",
-            description: "served with smoky tabbouleh, coriander, lemon, pomegranate and tahini dressing",
-            price: "£10.50/£18",
-            vegan: true
-          }
-        ]
-      },
-      {
-        category: "The Orchard's Rustic Sandwiches",
-        note: "Available till 4pm",
-        items: [
-          {
-            name: "Flat Iron Steak Sandwich",
-            description: "with mixed leaves, tomato chilli jam & mayonnaise",
-            price: "£10.50"
-          },
-          {
-            name: "Sticky Soy Chicken & Coleslaw Sandwich",
-            description: "with baby gem lettuce & miso mayonnaise",
-            price: "£10.50"
-          },
-          {
-            name: "Roasted Red Pepper & Feta Sandwich (Vegan)",
-            description: "with mixed leaves & vegan mayonnaise",
-            price: "£10",
-            vegan: true
-          },
-          {
-            name: "Battered Haddock Sandwich",
-            description: "with tartare sauce, pea puree & baby gem lettuce",
-            price: "£10.50"
-          },
-          {
-            name: "Brie, Bacon & Tomato Chilli Jam Sandwich",
-            description: "with baby gem & mayonnaise",
-            price: "£10.50"
-          },
-          {
-            name: "Add a bowl of soup, chips or a house salad to your sandwich",
-            description: "",
-            price: "£4.50"
-          }
-        ]
-      },
-      {
-        category: "Mains",
-        items: [
-          {
-            name: "Fresh Haddock & Hand cut Potato Chips",
-            description: "crispy beer battered (or breaded for an extra £1) with petit pois & homemade tartare sauce",
-            price: "£19"
-          },
-          {
-            name: "Twice Baked Goats Cheese Soufflé (V)",
-            description: "with oven roasted cherry tomatoes",
-            note: "add a house salad OR chips for £4.50",
-            price: "£17.50",
-            vegetarian: true
-          },
-          {
-            name: "The Orchard's Legendary Steak Pie",
-            description: "with a puff pastry bonnet, green beans & hand cut potato chips",
-            price: "£19"
-          },
-          {
-            name: "Spring Green Risotto (V)",
-            description: "With mangetout, tenderstem broccoli & peas, topped with vegetarian parmesan(v) or Feta(vegan)",
-            price: "£18",
-            vegetarian: true
-          },
-          {
-            name: "Oven Baked Lamb Rump",
-            description: "served with sauteed baby pot, spring salad and mint chimichurri",
-            price: "£24.50"
-          },
-          {
-            name: "Pan-Fried Fillet of Seabass",
-            description: "served with tenderstem broccoli on a lemon, roasted cherry tomato & garlic linguine",
-            price: "£21"
-          },
-          {
-            name: "The Orchard's Veggie Burger (V)",
-            description: "sweet potato, black eyed bean & sweetcorn burger with coleslaw, sriracha vegan mayo & baby gem on a seeded bap with hand cut chips",
-            price: "£17.50",
-            vegetarian: true
-          },
-          {
-            name: "The Orchard's Prime Scotch Beef Burger",
-            description: "with smoked cheddar, onion relish, gherkins, mayo & baby gem on a seeded bap and with hand cut chips",
-            note: "add bacon for £1.50",
-            price: "£18"
-          },
-          {
-            name: "Sides",
-            description: "Hand cut chips, onion rings, garlic bread, house salad, mixed olives",
-            price: "£5.50"
-          }
-        ]
-      }
-    ]
-  },
+// FOOD MENU
+{
+  menu: "Food Menu",
+  allergyNotice: "*** Please make your server aware of any allergies ***",
+  chipFryerNotice: "*please be advised we do not have a dedicated chip fryer, cross contamination may occur*",
+  servingHours: "Food Served - Noon 'til 8.30 pm",
+  categories: [
+    {
+      category: "Starters & Lighter Bites",
+      items: [
+        {
+          name: "Meat, Cheese and Bread selection",
+          description: "designed for sharing, with cured meats, assorted cheese, bread and dips",
+          price: "£17.50"
+        },
+        {
+          name: "The Orchard's Soup of the Day (V)",
+          description: "with crusty bread & butter",
+          price: "£6.50",
+          vegetarian: true
+        },
+        {
+          name: "Cockburn's of Dingwall Award Winning Haggis Fritters",
+          description: "with tomato chilli jam and balsamic glaze",
+          price: "£10.50/£16"
+        },
+        {
+          name: "Cockburn's Black Pudding",
+          description: "with salad on toasted bread with a soft poached egg and hollandaise sauce",
+          price: "£10.50/£16"
+        },
+        {
+          name: "Harissa Roasted Carrot and Sweet Potatoes (Vegan)",
+          description: "served with smoky tabbouleh, coriander, lemon, pomegranate and tahini dressing",
+          price: "£10.50/£18",
+          vegan: true
+        }
+      ]
+    },
+    {
+      category: "The Orchard's Rustic Sandwiches",
+      note: "Available till 4pm",
+      items: [
+        {
+          name: "Flat Iron Steak Sandwich",
+          description: "with mixed leaves, tomato chilli jam & mayonnaise",
+          price: "£10.50"
+        },
+        {
+          name: "Sticky Soy Chicken & Coleslaw Sandwich",
+          description: "with baby gem lettuce & miso mayonnaise",
+          price: "£10.50"
+        },
+        {
+          name: "Roasted Red Pepper & Feta Sandwich (Vegan)",
+          description: "with mixed leaves & vegan mayonnaise",
+          price: "£10",
+          vegan: true
+        },
+        {
+          name: "Battered Haddock Sandwich",
+          description: "with tartare sauce, pea puree & baby gem lettuce",
+          price: "£10.50"
+        },
+        {
+          name: "Brie, Bacon & Tomato Chilli Jam Sandwich",
+          description: "with baby gem & mayonnaise",
+          price: "£10.50"
+        },
+        {
+          name: "Add a bowl of soup, chips or a house salad to your sandwich",
+          description: "",
+          price: "£4.50"
+        }
+      ]
+    },
+    {
+      category: "Mains",
+      items: [
+        {
+          name: "Fresh Haddock & Hand cut Potato Chips",
+          description: "crispy beer battered (or breaded for an extra £1) with petit pois & homemade tartare sauce",
+          price: "£19"
+        },
+        {
+          name: "Twice Baked Goats Cheese Soufflé (V)",
+          description: "with oven roasted cherry tomatoes",
+          note: "add a house salad OR chips for £4.50",
+          price: "£17.50",
+          vegetarian: true
+        },
+        {
+          name: "The Orchard's Legendary Steak Pie",
+          description: "with a puff pastry bonnet, green beans & hand cut potato chips",
+          price: "£19"
+        },
+        {
+          name: "Spring Green Risotto (V)",
+          description: "With mangetout, tenderstem broccoli & peas, topped with vegetarian parmesan(v) or Feta(vegan)",
+          price: "£18",
+          vegetarian: true
+        },
+        {
+          name: "Oven Baked Lamb Rump",
+          description: "served with sauteed baby pot, spring salad and mint chimichurri",
+          price: "£24.50"
+        },
+        {
+          name: "Pan-Fried Fillet of Seabass",
+          description: "served with tenderstem broccoli on a lemon, roasted cherry tomato & garlic linguine",
+          price: "£21"
+        },
+        {
+          name: "The Orchard's Veggie Burger (V)",
+          description: "sweet potato, black eyed bean & sweetcorn burger with vegan coleslaw and sriracha mayo & baby gem on a seeded bap with hand cut chips",
+          price: "£17.50",
+          vegetarian: true
+        },
+        {
+          name: "The Orchard's Prime Scotch Beef Burger",
+          description: "with smoked cheddar, onion relish, gherkins, mayo & baby gem on a seeded bap and with hand cut chips",
+          note: "add bacon for £1.50",
+          price: "£18"
+        },
+        {
+          name: "Sides",
+          description: "Hand cut chips, onion rings, garlic bread, house salad, mixed olives",
+          price: "£5.50"
+        }
+      ]
+    }
+  ]
+},
 
-  // GLUTEN FREE
-  {
-    menu: "Gluten Free",
-    allergyNotice: "We do not have a dedicated chip fryer. Cross contamination may occur",
-    categories: [
-      {
-        category: "Starters & Lighter bites",
-        items: [
-          {
-            name: "Meat & Cheese Selection",
-            description: "designed for sharing, with cured meats, assorted cheese, gluten free oatcakes and a selection of dips",
-            price: "£17.50"
-          },
-          {
-            name: "The Orchard's Soup of the Day (V)",
-            description: "with gluten free oatcakes",
-            price: "£6.50",
-            vegetarian: true
-          }
-        ]
-      },
-      {
-        category: "Salads",
-        note: "All served with fresh mixed leaves, cucumber, peppers, cherry tomatoes and our house dressing",
-        items: [
-          {
-            name: "Brie, Bacon, Tomato Chilli Jam",
-            description: "",
-            price: "£10.50"
-          },
-          {
-            name: "Flat Iron Steak, Tomato Chilli Jam",
-            description: "",
-            price: "£10.50"
-          },
-          {
-            name: "Roasted Red Pepper, Whipped Feta (Vegan)",
-            description: "",
-            price: "£10",
-            vegan: true
-          }
-        ]
-      },
-      {
-        category: "Mains",
-        note: "*please be advised we do not have a dedicated chip fryer, cross contamination may occur*",
-        items: [
-          {
-            name: "Fresh hand cut Grilled Haddock fillet & hand cut chips OR salad",
-            description: "petit pois and homemade tartare sauce",
-            price: "£19"
-          },
-          {
-            name: "Twice Baked Goats Cheese Souffle (V)",
-            description: "add house salad for £4.50",
-            price: "£17.50",
-            vegetarian: true
-          },
-          {
-            name: "The Orchard's Prime Scotch Beef Burger (NO BUN)",
-            description: "with cheddar cheese, baby gem & onion relish with hand cut chips OR salad",
-            note: "add bacon for an extra £1.50",
-            price: "£18"
-          },
-          {
-            name: "The Orchard's Veggie Burger (NO BUN) (V)",
-            description: "sweet potato, black eyed bean & sweetcorn burger with Asian slaw & vegan sriracha mayo with hand cut chips OR salad",
-            price: "£17.50",
-            vegetarian: true
-          },
-          {
-            name: "Spring Green Risotto (V)",
-            description: "With mangetout, tenderstem broccoli & peas, topped with vegetarian parmesan(v) or Feta(vegan)",
-            price: "£18",
-            vegetarian: true
-          },
-          {
-            name: "Oven Baked Lamb Rump",
-            description: "served with sauteed baby pot, spring salad and mint chimichurri",
-            price: "£24.50"
-          },
-          {
-            name: "Our Sunday Roasts",
-            description: "served on Sunday -- Beef, Chicken & Lamb (see our main menu for details)",
-            price: null
-          }
-        ]
-      }
-    ]
-  },
+// GLUTEN FREE
+{
+  menu: "Gluten Free",
+  allergyNotice: "We do not have a dedicated chip fryer. Cross contamination may occur",
+  categories: [
+    {
+      category: "Starters & Lighter bites",
+      items: [
+        {
+          name: "Meat & Cheese Selection",
+          description: "designed for sharing, with cured meats, assorted cheese, gluten free oatcakes and a selection of dips",
+          price: "£17.50"
+        },
+        {
+          name: "The Orchard's Soup of the Day (V)",
+          description: "with gluten free oatcakes",
+          price: "£6.50",
+          vegetarian: true
+        }
+      ]
+    },
+    {
+      category: "Salads",
+      note: "All served with fresh mixed leaves, cucumber, peppers, cherry tomatoes and our house dressing",
+      items: [
+        {
+          name: "Brie, Bacon, Tomato Chilli Jam",
+          description: "",
+          price: "£10.50"
+        },
+        {
+          name: "Flat Iron Steak, Tomato Chilli Jam",
+          description: "",
+          price: "£10.50"
+        },
+        {
+          name: "Roasted Red Pepper, Whipped Feta (Vegan)",
+          description: "",
+          price: "£10",
+          vegan: true
+        }
+      ]
+    },
+    {
+      category: "Mains",
+      note: "*please be advised we do not have a dedicated chip fryer, cross contamination may occur*",
+      items: [
+        {
+          name: "Fresh hand cut Grilled Haddock fillet & hand cut chips OR salad",
+          description: "petit pois and homemade tartare sauce",
+          price: "£19"
+        },
+        {
+          name: "Twice Baked Goats Cheese Souffle (V)",
+          description: "add house salad for £4.50",
+          price: "£17.50",
+          vegetarian: true
+        },
+        {
+          name: "The Orchard's Prime Scotch Beef Burger (NO BUN)",
+          description: "with cheddar cheese, baby gem & onion relish with hand cut chips OR salad",
+          note: "add bacon for an extra £1.50",
+          price: "£18"
+        },
+        {
+          name: "The Orchard's Veggie Burger (NO BUN) (V)",
+          description: "sweet potato, black eyed bean & sweetcorn burger with Vegan coleslaw & sriracha mayo with hand cut chips OR salad",
+          price: "£17.50",
+          vegetarian: true
+        },
+        {
+          name: "Spring Green Risotto (V)",
+          description: "With mangetout, tenderstem broccoli & peas, topped with vegetarian parmesan(v) or Feta(vegan)",
+          price: "£18",
+          vegetarian: true
+        },
+        {
+          name: "Oven Baked Lamb Rump",
+          description: "served with sauteed baby pot, sweetcorn and mint chimichurri",
+          price: "£24.50"
+        },
+        {
+          name: "Our Sunday Roasts",
+          description: "served on Sunday -- Beef, Chicken & Lamb (see our main menu for details)",
+          price: null
+        }
+      ]
+    }
+  ]
+},
 
   // Sunday Roast Menu
   {
