@@ -105,7 +105,7 @@ export const menuItems = [
         },
         {
           name: "Oven Baked Lamb Rump",
-          description: "served with sauteed baby pot, spring salad and mint chimichurri",
+          description: "served with sauteed baby pot, sweetcorn and mint chimichurri",
           price: "£24.50"
         },
         {
