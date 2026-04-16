@@ -19,7 +19,7 @@
     <!-- Bottom Row: Copyright -->
     <div class="footer-bottom">
       <p class="copy">
-         <a href="https://www.victorblancoweb.com" target="_blank" class="vic-copy">Victor Blanco Website</a>          <img src="./icons/heart.svg" alt="Heart Icon" class="heart-icon" /> <span class="copy-orchard">&copy; {{ currentYear }} The Orchard Bar</span>
+         <a href="http://victorblancoweb.com" target="_blank" class="vic-copy">Victor Blanco Website</a>          <img src="./icons/heart.svg" alt="Heart Icon" class="heart-icon" /> <span class="copy-orchard">&copy; {{ currentYear }} The Orchard Bar</span>
         
       </p>
     </div>
