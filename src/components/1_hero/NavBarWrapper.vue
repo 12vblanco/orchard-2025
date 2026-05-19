@@ -95,6 +95,7 @@ export default {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  z-index: 2000;
 }
 
 .navbarTop {
