@@ -1,25 +1,23 @@
 <template>
   <div class="dynamic-background">
-    <!-- Current and next background images -->
-    <div 
-      class="background-image current" 
-      :style="{ backgroundImage: `url(${currentImage})` }"
-    ></div>
-    <div 
-      class="background-image next" 
-      :style="{ backgroundImage: `url(${nextImage})` }"
-      :class="{ loaded: nextImageLoaded }"
-    ></div>
-    
+    <!-- Crossfading background images -->
+    <transition name="bg-fade">
+      <div
+        :key="currentIndex"
+        class="background-image"
+        :style="{ backgroundImage: `url(${images[currentIndex]})` }"
+      ></div>
+    </transition>
+
     <!-- Loading progress indicator -->
     <div class="progress-bar" :style="{ width: `${progress}%` }"></div>
-    
+
     <!-- Image indicator dots -->
     <div class="loading-indicator">
-      <div 
-        v-for="(image, index) in images" 
+      <div
+        v-for="(image, index) in images"
         :key="index"
-        class="dot" 
+        class="dot"
         :class="{ active: currentIndex === index }"
       ></div>
     </div>
@@ -27,50 +25,46 @@
 </template>
 
 <script>
-// Import both WebP and JPG versions
-import img1Jpg from '../../assets/images/home1.jpg';
-import img1Webp from '../../assets/images/home1.webp';
-import img3Jpg from '../../assets/images/home3.jpg';
-import img3Webp from '../../assets/images/home3.webp';
-import img4Jpg from '../../assets/images/home4.jpg';
-import img4Webp from '../../assets/images/home4.webp';
-import img5Jpg from '../../assets/images/home5.jpg';
-import img5Webp from '../../assets/images/home5.webp';
+import img1 from '../../assets/images/home1.webp';
+import img3 from '../../assets/images/home3.webp';
+import img4 from '../../assets/images/home4.webp';
+import img5 from '../../assets/images/home5.webp';
+
+const IMAGES = [img4, img5, img1, img3];
+const ROTATION_MS = 32000; // Change image every 32 seconds
+
+// Pick the initial image and start downloading it the moment the bundle
+// executes, instead of waiting for the component to mount.
+const initialIndex = Math.floor(Math.random() * IMAGES.length);
+const initialImage = new Image();
+initialImage.fetchPriority = 'high';
+initialImage.src = IMAGES[initialIndex];
 
 export default {
   name: 'DynamicBackground',
   data() {
     return {
-      images: [
-        { webp: img4Webp, jpg: img4Jpg, loaded: false },
-        { webp: img5Webp, jpg: img5Jpg, loaded: false },
-        { webp: img1Webp, jpg: img1Jpg, loaded: false },
-        { webp: img3Webp, jpg: img3Jpg, loaded: false },
-      ],
-      currentIndex: 0,
-      nextIndex: 1,
-      supportsWebP: false,
-      nextImageLoaded: false,
+      images: IMAGES,
+      currentIndex: initialIndex,
+      preloaded: IMAGES.map((url, index) => index === initialIndex),
       progress: 0,
       rotationInterval: null,
       progressInterval: null,
     };
   },
-  computed: {
-    currentImage() {
-      const currentImageSet = this.images[this.currentIndex];
-      return this.supportsWebP ? currentImageSet.webp : currentImageSet.jpg;
-    },
-    nextImage() {
-      const nextImageSet = this.images[this.nextIndex];
-      return this.supportsWebP ? nextImageSet.webp : nextImageSet.jpg;
-    },
-  },
   mounted() {
-    this.checkWebPSupport();
-    this.setRandomInitialImage();
-    this.preloadInitialImages();
-    this.startImageRotation();
+    // The rest of the slideshow can wait: only fetch the next image once
+    // the visible one has finished loading.
+    const startSlideshow = () => {
+      this.preloadImage((this.currentIndex + 1) % this.images.length);
+      this.startImageRotation();
+    };
+
+    if (initialImage.complete) {
+      startSlideshow();
+    } else {
+      initialImage.onload = initialImage.onerror = startSlideshow;
+    }
   },
   beforeUnmount() {
     // Clean up intervals when component is destroyed
@@ -78,94 +72,44 @@ export default {
     if (this.progressInterval) clearInterval(this.progressInterval);
   },
   methods: {
-    async checkWebPSupport() {
-      return new Promise((resolve) => {
-        const webP = new Image();
-        webP.onload = webP.onerror = () => {
-          this.supportsWebP = (webP.height === 2);
-          resolve();
-        };
-        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-      });
-    },
-    setRandomInitialImage() {
-      this.currentIndex = Math.floor(Math.random() * this.images.length);
-      this.nextIndex = (this.currentIndex + 1) % this.images.length;
-    },
-    preloadInitialImages() {
-      // Preload the next image immediately
-      this.preloadImage(this.nextIndex);
-      
-      // Preload the image after next for smoother transitions
-      const nextNextIndex = (this.nextIndex + 1) % this.images.length;
-      this.preloadImage(nextNextIndex);
-    },
     preloadImage(index) {
-      return new Promise((resolve) => {
-        const imageSet = this.images[index];
-        const imageUrl = this.supportsWebP ? imageSet.webp : imageSet.jpg;
-        
-        const img = new Image();
-        img.onload = () => {
-          this.images[index].loaded = true;
-          // If this is the next image, mark it as loaded for transition
-          if (index === this.nextIndex) {
-            this.nextImageLoaded = true;
-          }
-          resolve();
-        };
-        img.onerror = () => {
-          console.warn(`Failed to load image: ${imageUrl}`);
-          resolve();
-        };
-        img.src = imageUrl;
-      });
+      if (this.preloaded[index]) return;
+
+      const img = new Image();
+      img.onload = () => {
+        this.preloaded[index] = true;
+      };
+      img.onerror = () => {
+        console.warn(`Failed to load image: ${this.images[index]}`);
+      };
+      img.src = this.images[index];
     },
     startImageRotation() {
-      // Start progress bar animation
       this.startProgressBar();
-      
-      // Set interval for image rotation
+
       this.rotationInterval = setInterval(() => {
         this.transitionToNextImage();
-      }, 32000); // Change image every 32 seconds
+      }, ROTATION_MS);
     },
     startProgressBar() {
       this.progress = 0;
-      
-      // Reset progress bar
+
       this.progressInterval = setInterval(() => {
-        this.progress += (100 / 320) * 0.1; // Increment progress based on 32s interval
-        
-        if (this.progress >= 100) {
-          this.progress = 0;
-        }
+        this.progress = Math.min(this.progress + 100 / (ROTATION_MS / 100), 100);
       }, 100);
     },
-    async transitionToNextImage() {
-      // Reset progress
+    transitionToNextImage() {
+      const next = (this.currentIndex + 1) % this.images.length;
+
+      // If the next image hasn't finished downloading yet, stay on the
+      // current one until the following rotation.
+      if (!this.preloaded[next]) return;
+
+      this.currentIndex = next;
       this.progress = 0;
-      
-      // Update indices
-      this.currentIndex = this.nextIndex;
-      this.nextIndex = (this.currentIndex + 1) % this.images.length;
-      
-      // Reset next image loaded state
-      this.nextImageLoaded = false;
-      
-      // Preload the next image if not already loaded
-      if (!this.images[this.nextIndex].loaded) {
-        await this.preloadImage(this.nextIndex);
-      } else {
-        // If already loaded, we can show it immediately
-        this.nextImageLoaded = true;
-      }
-      
-      // Preload the image after next for future transitions
-      const nextNextIndex = (this.nextIndex + 1) % this.images.length;
-      if (!this.images[nextNextIndex].loaded) {
-        this.preloadImage(nextNextIndex);
-      }
+
+      // Preload the image after next for the upcoming transition
+      this.preloadImage((next + 1) % this.images.length);
     },
   },
 };
@@ -190,20 +134,25 @@ export default {
   height: 100%;
   background-size: cover;
   background-position: center;
+}
+
+/* Crossfade: the incoming image fades in on top while the outgoing one
+   stays fully visible underneath until it is removed. */
+.bg-fade-enter-active {
   transition: opacity 1.5s ease-in-out;
-}
-
-.background-image.current {
-  opacity: 1;
-  z-index: 1;
-}
-
-.background-image.next {
-  opacity: 0;
   z-index: 2;
 }
 
-.background-image.next.loaded {
+.bg-fade-leave-active {
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.bg-fade-enter-from {
+  opacity: 0;
+}
+
+.bg-fade-leave-to {
   opacity: 1;
 }
 

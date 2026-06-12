@@ -6,7 +6,7 @@
       
       <!-- Contact Details Section -->
       <div class="text-section" id="contact">
-        <img src="../../assets/images/front.jpg" alt="About Us Image" />
+        <img src="../../assets/images/front.webp" alt="About Us Image" width="640" height="509" loading="lazy" decoding="async" />
         <div class="text"><h3>Contact Details:</h3>
         <p>1-2 Howard Place, Canonmills</p>
         <p>Edinburgh, EH3 5JZ</p>

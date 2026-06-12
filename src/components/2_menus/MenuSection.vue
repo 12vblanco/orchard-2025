@@ -1,133 +1,156 @@
 <template>
   <section id="MenusSection" class="MenusSection">
     <div class="inner-section">
-    <h2 class="menus-title">MENUS</h2>
-    <div class="menus-options">
-      <div class="menus-options_top">
-        <a
-          href="#food-menu"
-          @click.prevent="setSelectedMenu('Food Menu')"
-          :class="{ active: selectedMenu === 'Food Menu' }"
-          >Food Menu</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#gluten-free"
-          @click.prevent="setSelectedMenu('Gluten Free')"
-          :class="{ active: selectedMenu === 'Gluten Free' }"
-          >Gluten Free</a>
-        <span class="menu-divider">&#10020;</span>
+      <h2 class="menus-title">MENUS</h2>
+      <div class="menus-options">
+        <div class="menus-options_top">
+          <a
+            href="#food-menu"
+            @click.prevent="setSelectedMenu('Food Menu')"
+            :class="{ active: selectedMenu === 'Food Menu' }"
+            >Food Menu</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#gluten-free"
+            @click.prevent="setSelectedMenu('Gluten Free')"
+            :class="{ active: selectedMenu === 'Gluten Free' }"
+            >Gluten Free</a
+          >
+          <span class="menu-divider">&#10020;</span>
 
-        <a
-          href="#sunday-roast"
-          @click.prevent="setSelectedMenu('Sunday Roasts')"
-          :class="{ active: selectedMenu === 'Sunday Roast' }"
-          >Sunday Roast</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#kids-menu"
-          @click.prevent="setSelectedMenu('Kids Menu')"
-          :class="{ active: selectedMenu === 'Kids Menu' }"
-          >Kids Menu</a>
-      </div>
-      
-      <div class="menus-options_bottom">
-        <a
-          href="#wine"
-          @click.prevent="setSelectedMenu('Wine')"
-          :class="{ active: selectedMenu === 'Wine' }"
-          >Wine</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#beers"
-          @click.prevent="setSelectedMenu('Beers')"
-          :class="{ active: selectedMenu === 'Beers' }"
-          >Beers</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#whisky"
-          @click.prevent="setSelectedMenu('Whisky')"
-          :class="{ active: selectedMenu === 'Whisky' }"
-          >Whisky</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#whisky-detailed"
-          @click.prevent="setSelectedMenu('Whisky-Detailed')"
-          :class="{ active: selectedMenu === 'Whisky-Detailed' }"
-          >Whisky-Detailed</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#rums"
-          @click.prevent="setSelectedMenu('Rums')"
-          :class="{ active: selectedMenu === 'Rums' }"
-          >Rums</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#gins"
-          @click.prevent="setSelectedMenu('Gins')"
-          :class="{ active: selectedMenu === 'Gins' }"
-          >Gins</a>
-        <span class="menu-divider">&#10020;</span>
-        <a
-          href="#tea-coffee-sherry"
-          @click.prevent="setSelectedMenu('Tea, Coffee & Sherry')"
-          :class="{ active: selectedMenu === 'Tea, Coffee & Sherry' }"
-          >Tea Coffee & Sherry</a>
-      </div>
-    </div>
+          <a
+            href="#sunday-roast"
+            @click.prevent="setSelectedMenu('Sunday Roasts')"
+            :class="{ active: selectedMenu === 'Sunday Roast' }"
+            >Sunday Roast</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#kids-menu"
+            @click.prevent="setSelectedMenu('Kids Menu')"
+            :class="{ active: selectedMenu === 'Kids Menu' }"
+            >Kids Menu</a
+          >
+        </div>
 
-    <div class="menus-content">
-      <div class="menus-content_square1"></div>
-      <div class="menus-content_square2"></div>
-      <div class="menus-content_square3"></div>
-      <div class="menus-content_square4"></div>
-      <div v-if="selectedMenu" class="menus-text">
-  <div v-for="(item, index) in menuItems" :key="index">
-    <div v-if="item.menu === selectedMenu">
-      <!-- Insert the notices here -->
-      <div class="menu-info-notices" v-if="item.allergyNotice || item.servingHours">
-        <p class="allergy-notice" v-if="item.allergyNotice">{{ item.allergyNotice }}</p>
-        <p class="serving-hours" v-if="item.servingHours">{{ item.servingHours }}</p>
+        <div class="menus-options_bottom">
+          <a
+            href="#wine"
+            @click.prevent="setSelectedMenu('Wine')"
+            :class="{ active: selectedMenu === 'Wine' }"
+            >Wine</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#beers"
+            @click.prevent="setSelectedMenu('Beers')"
+            :class="{ active: selectedMenu === 'Beers' }"
+            >Beers</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#whisky"
+            @click.prevent="setSelectedMenu('Whisky')"
+            :class="{ active: selectedMenu === 'Whisky' }"
+            >Whisky</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#whisky-detailed"
+            @click.prevent="setSelectedMenu('Whisky-Detailed')"
+            :class="{ active: selectedMenu === 'Whisky-Detailed' }"
+            >Whisky-Detailed</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#rums"
+            @click.prevent="setSelectedMenu('Rums')"
+            :class="{ active: selectedMenu === 'Rums' }"
+            >Rums</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#gins"
+            @click.prevent="setSelectedMenu('Gins')"
+            :class="{ active: selectedMenu === 'Gins' }"
+            >Gins</a
+          >
+          <span class="menu-divider">&#10020;</span>
+          <a
+            href="#tea-coffee-sherry"
+            @click.prevent="setSelectedMenu('Tea, Coffee & Sherry')"
+            :class="{ active: selectedMenu === 'Tea, Coffee & Sherry' }"
+            >Tea Coffee & Sherry</a
+          >
+        </div>
       </div>
-      
-      <div v-for="(category, idx) in item.categories" :key="idx">
-        <h4 class="menu-category">{{ category.category }}</h4>
-        <ul>
-          <li v-for="(menuItem, i) in category.items" :key="i">
-            <div class="menu-name">{{ menuItem.name }} <span class="menu-price">{{ menuItem.price }}</span></div>
-            <div class="menu-description">{{ menuItem.description }} </div>
-          </li>
-        </ul>
+
+      <div class="menus-content">
+        <div class="menus-content_square1"></div>
+        <div class="menus-content_square2"></div>
+        <div class="menus-content_square3"></div>
+        <div class="menus-content_square4"></div>
+        <div v-if="selectedMenu" class="menus-text">
+          <div v-for="(item, index) in menuItems" :key="index">
+            <div v-if="item.menu === selectedMenu">
+              <!-- Insert the notices here -->
+              <div
+                class="menu-info-notices"
+                v-if="item.allergyNotice || item.servingHours"
+              >
+                <p class="allergy-notice" v-if="item.allergyNotice">
+                  {{ item.allergyNotice }}
+                </p>
+                <p class="serving-hours" v-if="item.servingHours">
+                  {{ item.servingHours }}
+                </p>
+              </div>
+
+              <div v-for="(category, idx) in item.categories" :key="idx">
+                <h4 class="menu-category">{{ category.category }}</h4>
+                <ul>
+                  <li v-for="(menuItem, i) in category.items" :key="i">
+                    <div class="menu-name">
+                      {{ menuItem.name }}
+                      <span class="menu-price">{{ menuItem.price }}</span>
+                    </div>
+                    <div class="menu-description">
+                      {{ menuItem.description }}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p v-else class="menus-text"></p>
       </div>
     </div>
-  </div>
-</div>
-      <p v-else class="menus-text"></p>
-    </div>
-  </div>
   </section>
 </template>
-  
-  <script>
-  import { menuItems } from "../../../public/menus/food_menus.js"; // Ensure the correct path
-  
-  export default {
-    data() {
-      return {
-        selectedMenu: 'Food Menu', 
-        menuItems, 
-      };
+
+<script>
+import { menuItems } from "../../../public/menus/food_menus.js"; // Ensure the correct path
+
+export default {
+  data() {
+    return {
+      selectedMenu: "Food Menu",
+      menuItems,
+    };
+  },
+  methods: {
+    setSelectedMenu(menuName) {
+      this.selectedMenu = menuName;
     },
-    methods: {
-      setSelectedMenu(menuName) {
-        this.selectedMenu = menuName;
-      },
-    },
-  };
-  </script>
-  
-  <style lang="scss" scoped>
-    @import '@/styles/styles.scss';
-    
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@import "@/styles/styles.scss";
+
 /* Main Menus Section */
 .MenusSection {
   background-color: black;
@@ -137,37 +160,38 @@
   position: relative;
   overflow: hidden;
   border-top: 2px solid $color-secondary;
-    white-space: pre-line;
+  white-space: pre-line;
   @media (max-width: 800px) {
-    padding: 1.4rem ;
-    }
+    padding: 1.4rem;
+  }
 }
 
 .inner-section {
-    max-width: 1400px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 5rem 3rem;
-    display: flex;
-    flex-direction: column;
-    @media (max-width: 800px) {
-      padding: .4rem ;
-      max-width: 100%;
-      min-width: 100%;
-    }
-    } 
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 800px) {
+    padding: 0.4rem;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
 
 /* Title Styling */
 .menus-title {
   font-size: $font-xxl;
   letter-spacing: 8px;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
+  margin-bottom: 0.6rem;
   text-transform: uppercase;
   @media (max-width: 880px) {
-      text-align: center;
-    }
+    text-align: center;
+  }
 }
 
 /* Menu Options */
@@ -232,7 +256,7 @@
   overflow: visible;
 }
 
-  .menus-content_square1,
+.menus-content_square1,
 .menus-content_square2,
 .menus-content_square3,
 .menus-content_square4 {
@@ -266,60 +290,59 @@
   border-radius: 0 0 12px 0;
 }
 
-  .menus-text{
-    text-align: center;
-  }
-  
-  .menu-divider {
-    font-size: $font-small;
-    font-weight: 300;
-    @media (max-width: 420px){
-      display: none;
-  }
+.menus-text {
+  text-align: center;
+}
 
+.menu-divider {
+  font-size: $font-small;
+  font-weight: 300;
+  @media (max-width: 420px) {
+    display: none;
   }
-  
-  .MenusSection li {
-    list-style: none;
-    line-height: 1.25;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-  }
-  
-  .menu-type {
-    font-size: $font-xl;
-    margin-bottom: 10px;
-  }
-  
-  .menu-category {
-    color: $color-accent;
-    font-size: $font-large;
-    margin-top: 12px;
-    margin-bottom: 6px;
-    font-weight: 500;
-  }
-  
-  .menu-name {
-    font-size: $font-large;
-  }
-  
-  .menu-description {
-    font-size: $font-base;
-    font-weight: 300;
-    overflow: hidden;
-    opacity: .8;
-  }
-  
-  .menu-price {
-    font-size: $font-medium;
-    margin-bottom: 2rem;
-  }
-  .menu-info-notices {
+}
+
+.MenusSection li {
+  list-style: none;
+  line-height: 1.25;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.menu-type {
+  font-size: $font-xl;
+  margin-bottom: 10px;
+}
+
+.menu-category {
+  color: $color-accent;
+  font-size: $font-large;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.menu-name {
+  font-size: $font-large;
+}
+
+.menu-description {
+  font-size: $font-base;
+  font-weight: 300;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.menu-price {
+  font-size: $font-medium;
+  margin-bottom: 2rem;
+}
+.menu-info-notices {
   text-align: center;
   margin-bottom: 2rem;
   font-style: italic;
-  
+
   p {
     margin: 0.5rem 0;
   }
@@ -333,5 +356,4 @@
 .serving-hours {
   opacity: 0.8;
 }
-  </style>
-  
+</style>
