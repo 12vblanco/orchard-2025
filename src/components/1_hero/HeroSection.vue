@@ -6,28 +6,47 @@
     <div class="overlay"></div>
     <!-- Hero Content -->
     <div class="hero-content">
-      <NavbarWrapper 
+      <NavbarWrapper
         :show-booking="showBooking"
         @update:showBooking="showBooking = $event"
-        :scrollToSection="scrollToSection" 
+        :scrollToSection="scrollToSection"
       />
 
       <div class="hero-text">
-      <div class="hero-cover">
-        <img class="cover-img" src="@/assets/images/cover-img.webp" alt="Special Promo" width="1080" height="1080" fetchpriority="high" />
-        <p class="hero-paragraph">
-          Welcome to <b>The Orchard Bar</b>. A casual, relaxed restaurant and bar
-          located in Canonmills just a few minutes' walk from the botanic gardens.
-          We offer a regularly changing menu with seasonal produce, providing classic meals with a modern twist and a wide range of drinks. 
-          <a href="#menus" class="inline-menus" @click="scrollToSection('MenusSection')" ><b>See our menus</b>
-            </a> <br/><br/>
-            </p>
-            <p class="hero-paragraph"><b style="text-transform: uppercase;">Please note <span>only assistance dogs</span> are allowed in The Orchard. </b></p> 
-      </div>
-      <!-- RUGBY INSERT -->
-      <!-- <div class="hero-text-rugby">
+        <div class="hero-cover">
+          <img
+            class="cover-img"
+            src="@/assets/images/cover-img.webp"
+            alt="Special Promo"
+            width="900"
+            height="1125"
+            fetchpriority="high"
+          />
+          <p class="hero-paragraph">
+            Welcome to <b>The Orchard Bar</b>. A casual, relaxed restaurant and
+            bar located in Canonmills just a few minutes' walk from the botanic
+            gardens. We offer a regularly changing menu with seasonal produce,
+            providing classic meals with a modern twist and a wide range of
+            drinks.
+            <a
+              href="#menus"
+              class="inline-menus"
+              @click="scrollToSection('MenusSection')"
+              ><b>See our menus</b>
+            </a>
+            <br /><br />
+          </p>
+          <p class="hero-paragraph">
+            <b style="text-transform: uppercase"
+              >Please note <span>only assistance dogs</span> are allowed in The
+              Orchard.
+            </b>
+          </p>
+        </div>
+        <!-- RUGBY INSERT -->
+        <!-- <div class="hero-text-rugby">
         <div class="tnt-logo"> -->
-          <!-- <div class="nations-flags">
+        <!-- <div class="nations-flags">
             <img class="tnt-img" src="@/assets/images/tnt.png" alt="TNT Sports Logo" />
           <img src="@/assets/images/scot.png" alt="Scotland Flag" />
           <img src="@/assets/images/eng.png" alt="England Flag" />
@@ -39,41 +58,40 @@
           <b>From the 1st of November, we show the Autumn Nations series with TNT Sports!! </b>
           </p> -->
       </div>
-
     </div>
   </section>
 </template>
 
 <script>
-import DynamicBackground from './DynamicBackground.vue';
-import NavbarWrapper from './NavBarWrapper.vue';
+import DynamicBackground from "./DynamicBackground.vue";
+import NavbarWrapper from "./NavBarWrapper.vue";
 
 export default {
   components: {
     NavbarWrapper,
-    DynamicBackground, 
+    DynamicBackground,
   },
   props: {
-    scrollToSection: Function 
+    scrollToSection: Function,
   },
   data() {
     return {
-      showBooking: false
+      showBooking: false,
     };
   },
   methods: {
     toggleBooking() {
       this.showBooking = !this.showBooking;
-    }
+    },
   },
   mounted() {
-    console.log('HeroSection.vue - scrollToSection:', this.scrollToSection);
-  }
+    console.log("HeroSection.vue - scrollToSection:", this.scrollToSection);
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-      @import '@/styles/styles.scss';
+@import "@/styles/styles.scss";
 
 /* Hero Section */
 .HeroSection {
@@ -111,17 +129,17 @@ export default {
 .hero-text {
   position: relative;
   top: 6rem;
-  z-index: 1; 
+  z-index: 1;
   max-width: 540px;
   text-align: justify;
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     max-width: 100%;
-    padding: 0 1.4rem 0 .3rem;
+    padding: 0 1.4rem 0 0.3rem;
     text-align: center;
   }
-  @media (max-width: 620px){
+  @media (max-width: 620px) {
     max-width: 100%;
-    padding: 0 1.4rem 0 .3rem;
+    padding: 0 1.4rem 0 0.3rem;
     text-align: center;
   }
 }
@@ -132,16 +150,18 @@ export default {
   line-height: 1.5;
   letter-spacing: 1.2px;
   font-weight: 500;
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     font-size: $font-medium;
     line-height: 1.5;
-    font-weight: 500;  
-    font-size: 17px}
-    @media (max-width: 620px){
+    font-weight: 500;
+    font-size: 17px;
+  }
+  @media (max-width: 620px) {
     font-size: $font-medium;
     line-height: 1.5;
-    font-weight: 500;  
-    font-size: 17px}
+    font-weight: 500;
+    font-size: 17px;
+  }
 }
 /* Hero Text Rugby*/
 /* .hero-text-rugby {
@@ -186,40 +206,40 @@ export default {
 .hero-text {
   position: relative;
   top: 2rem;
-  z-index: 1; 
+  z-index: 1;
   max-width: 540px;
   text-align: justify;
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     max-width: 100%;
     text-align: center;
   }
-  @media (max-width: 620px){
+  @media (max-width: 620px) {
     max-width: 100%;
-    padding: 0 .6rem 0 .6rem;
+    padding: 0 0.6rem 0 0.6rem;
     text-align: center;
   }
 }
 
 .cover-img {
-  max-width: 42vh; 
+  max-width: 34vh;
   width: 100%;
   height: auto;
   margin: 0 auto;
   text-align: center;
   border-radius: 12px;
-  margin-top: 8rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   object-fit: contain;
   display: block;
 
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     width: 96vw;
     max-width: 82vw;
     height: auto;
   }
 }
 
-  /* Nations Flags Container */
+/* Nations Flags Container */
 /* .nations-flags {
   display: flex;
   justify-content: space-evenly;
@@ -248,14 +268,14 @@ export default {
   transition: color 0.3s ease;
 }
 .inline-menus:hover {
-  color: $color-primary; }
+  color: $color-primary;
+}
 
 /* Button Activation Styling (Optional CSS for JS toggle) */
 .iframe-visible .iframe-container {
   display: flex; /* Show iframe when activated */
 }
-span{
+span {
   color: $color-primary;
 }
-
 </style>
